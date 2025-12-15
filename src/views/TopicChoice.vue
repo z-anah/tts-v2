@@ -21,6 +21,10 @@ function goToReading() {
 function goToShowMe() {
   router.push(`/topic/${topicId}/showme`);
 }
+
+function goToGrid() {
+  router.push(`/topic/${topicId}/grid`);
+}
 </script>
 
 <template>
@@ -39,6 +43,9 @@ function goToShowMe() {
       <div class="choice-card" @click="goToShowMe">
         <h2 class="choice-title">Show Me</h2>
       </div>
+      <div class="choice-card" @click="goToGrid">
+        <h2 class="choice-title">Grid View</h2>
+        </div>  
     </div>
   </div>
 </template>
@@ -108,5 +115,38 @@ function goToShowMe() {
   font-size: 1.5rem;
   font-weight: 600;
   color: #333;
+}
+
+@media (max-width: 768px) {
+  .choice-container {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .choices-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .choice-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .choice-title {
+    font-size: 1.25rem;
+  }
+
+  .home-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
 }
 </style>

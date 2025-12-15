@@ -3,6 +3,9 @@ import Home from '../views/Home.vue';
 import TopicChoice from '../views/TopicChoice.vue';
 import Reading from '../views/Reading.vue';
 import ShowMe from '../views/ShowMe.vue';
+import QuestionsList from '../views/QuestionsList.vue';
+import QuestionsDetail from '../views/QuestionsDetail.vue';
+import TopicGrid from '../views/TopicGrid.vue';
 
 const routes = [
   {
@@ -25,10 +28,25 @@ const routes = [
     name: 'ShowMe',
     component: ShowMe,
   },
+  {
+    path: '/topic/:id/grid',
+    name: 'Grid',
+    component: TopicGrid,
+  },
+  {
+    path: '/questions',
+    name: 'QuestionsList',
+    component: QuestionsList,
+  },
+  {
+    path: '/questions/:id',
+    name: 'QuestionsDetail',
+    component: QuestionsDetail,
+  },
 ];
 
 const router = createRouter({
-  history: createWebHistory('/linea-proto-construction/'),
+  history: createWebHistory('/tts-v2/'),
   routes,
 });
 

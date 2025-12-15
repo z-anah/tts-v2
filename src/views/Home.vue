@@ -10,6 +10,12 @@ const pages = ref(getAllTopics());
 function navigateToPage(path) {
   router.push(path);
 }
+
+function goToQuestions() {
+  router.push('/questions');
+}
+
+
 </script>
 
 <template>
@@ -18,6 +24,10 @@ function navigateToPage(path) {
       <h1>Arabic</h1>
       <p class="subtitle">Choose the topic</p>
     </div>
+
+    <button class="questions-btn" @click="goToQuestions">
+      📝 Questions
+    </button>
 
     <div class="pages-grid">
       <div
@@ -82,5 +92,59 @@ function navigateToPage(path) {
   font-size: 1rem;
   font-weight: 600;
   color: #333;
+}
+
+.questions-btn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.questions-btn:hover {
+  background: #43A047;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .questions-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pages-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .page-card {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.25rem;
+  }
 }
 </style>

@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  base: '/linea-proto-construction/',
+  base: '/tts-v2/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

@@ -10,57 +10,83 @@ const topicId = route.params.id;
 const topic = computed(() => getTopicById(topicId));
 const allWords = computed(() => topic.value?.words || []);
 
-const displayedWords = ref([]);
+const randomizedWords = ref([]);
+const remainingWords = ref([]);
 const targetWord = ref(null);
 const score = ref(0);
 const rounds = ref(0);
-const maxRounds = 10;
 const selectedId = ref(null);
 const isCorrect = ref(null);
 const isSpeaking = ref(false);
 const canClick = ref(true);
+const choices = ref([]);
+const preparedUtterance = ref(null);
+const greyFinished = ref(true); // New state for grey out option
 
-function shuffleArray(array) {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+
+function setupGame() {
+  // Do not randomize images; keep original order
+  randomizedWords.value = [...allWords.value];
+  remainingWords.value = [...allWords.value];
+  score.value = 0;
+  rounds.value = 0;
+  setupRound();
+}
+
+function prepareUtterance(text) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'ar-SA';
+    utterance.rate = 0.8;
+    preparedUtterance.value = utterance;
   }
-  return shuffled;
+}
+
+function speakWord(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    // Use prepared utterance if available and matches text
+    if (preparedUtterance.value && preparedUtterance.value.text === text) {
+      preparedUtterance.value.onstart = () => { isSpeaking.value = true; };
+      preparedUtterance.value.onend = () => { isSpeaking.value = false; };
+      window.speechSynthesis.speak(preparedUtterance.value);
+    } else {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ar-SA';
+      utterance.rate = 0.8;
+      utterance.onstart = () => { isSpeaking.value = true; };
+      utterance.onend = () => { isSpeaking.value = false; };
+      window.speechSynthesis.speak(utterance);
+    }
+  }
 }
 
 function setupRound() {
   selectedId.value = null;
   isCorrect.value = null;
   canClick.value = true;
-  
-  // Pick 4 random words to display
-  const shuffled = shuffleArray(allWords.value);
-  displayedWords.value = shuffled.slice(0, Math.min(4, shuffled.length));
-  
-  // Pick one as the target (can be any of the displayed)
-  const randomIndex = Math.floor(Math.random() * displayedWords.value.length);
-  targetWord.value = displayedWords.value[randomIndex];
-  
-  // Speak the target word after a short delay
-  setTimeout(() => {
-    speakWord(targetWord.value.arabic);
-  }, 500);
-}
 
-function speakWord(text) {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'ar-SA';
-    utterance.rate = 0.8;
-    
-    utterance.onstart = () => { isSpeaking.value = true; };
-    utterance.onend = () => { isSpeaking.value = false; };
-    
-    window.speechSynthesis.speak(utterance);
+  // If no more words, game over
+  if (remainingWords.value.length === 0) {
+    setTimeout(() => {
+      alert(`Game Over! Your score: ${score.value}/${rounds.value}`);
+      router.push(`/topic/${topicId}`);
+    }, 100);
+    return;
   }
+
+  // Randomly pick the next word to ask (from remaining, no repeats)
+  const idx = Math.floor(Math.random() * remainingWords.value.length);
+  targetWord.value = remainingWords.value[idx];
+
+  // Choices are always in topic order
+  choices.value = randomizedWords.value;
+
+  // Prepare utterance for instant playback
+  prepareUtterance(targetWord.value.arabic);
+
+  // Play sound
+  speakWord(targetWord.value.arabic);
 }
 
 function repeatWord() {
@@ -71,27 +97,28 @@ function repeatWord() {
 
 function handleChoice(word) {
   if (!canClick.value) return;
-  
+
   canClick.value = false;
   selectedId.value = word.id;
   rounds.value++;
-  
-  if (word.id === targetWord.value.id) {
+
+  // Accept any card with the same image as the target word
+  if ((word.image === targetWord.value.image && word.image != null) ||
+      (word.emoji === targetWord.value.emoji && word.emoji != null) ||
+      (word.text === targetWord.value.text && word.text != null)) {
     isCorrect.value = true;
     score.value++;
+    // Remove the word from remainingWords (by id)
+    const idx = remainingWords.value.findIndex(w => w.id === targetWord.value.id);
+    if (idx !== -1) remainingWords.value.splice(idx, 1);
   } else {
     isCorrect.value = false;
+    // Do not remove, so it will be asked again
   }
-  
-  // Move to next round after delay
+
   setTimeout(() => {
-    if (rounds.value >= maxRounds) {
-      alert(`Game Over! Your score: ${score.value}/${maxRounds}`);
-      router.push(`/topic/${topicId}`);
-    } else {
-      setupRound();
-    }
-  }, 1500);
+    setupRound();
+  }, 100);
 }
 
 function goHome() {
@@ -104,8 +131,13 @@ function goBack() {
 
 onMounted(() => {
   if (allWords.value.length > 0) {
-    setupRound();
+    setupGame();
   }
+});
+
+// Helper to check if a word is finished
+const isWordFinished = computed(() => (wordId) => {
+  return !remainingWords.value.some(w => w.id === wordId);
 });
 </script>
 
@@ -118,26 +150,51 @@ onMounted(() => {
     
     <div class="header">
       <div class="score">Score: {{ score }}/{{ rounds }}</div>
-      <div class="round">Round {{ rounds + 1 }}/{{ maxRounds }}</div>
+      <div class="round">Remaining: {{ remainingWords.length }}</div>
     </div>
 
     <button class="repeat-btn" @click="repeatWord" :class="{ speaking: isSpeaking }">
       🔊 Repeat Word
     </button>
 
-    <div class="images-grid">
+    <div class="options">
+      <label class="grey-option">
+        <input type="checkbox" v-model="greyFinished" />
+        Grey finished words
+      </label>
+    </div>
+
+    <div class="images-grid" :style="{ gridTemplateColumns: `repeat(${Math.min(7, randomizedWords.length)}, 1fr)` }">
       <div
-        v-for="word in displayedWords"
+        v-for="word in choices"
         :key="word.id"
         class="image-card"
         :class="{
           correct: selectedId === word.id && isCorrect,
           wrong: selectedId === word.id && isCorrect === false,
-          reveal: selectedId && word.id === targetWord.id && !isCorrect
+          reveal: selectedId && word.id === targetWord.id && !isCorrect,
+          finished: greyFinished && isWordFinished(word.id)
         }"
         @click="handleChoice(word)"
       >
-        <span class="emoji">{{ word.image }}</span>
+        <!-- if word.image -->
+         <img
+           v-if="word.image"
+           :src="word.image"
+           :alt="word.arabic"
+           class="img-image"
+         />
+         <!-- if word.emoji -->
+          <span
+            v-else-if="word.emoji"
+            class="img-emoji"
+          >{{ word.emoji }}</span>
+
+          <!-- if word.text -->
+          <span
+            v-else-if="word.text"
+            class="img-text"
+          >{{ word.text }}</span>
       </div>
     </div>
 
@@ -227,6 +284,25 @@ onMounted(() => {
   animation: pulse 0.5s ease-in-out infinite;
 }
 
+.options {
+  margin-bottom: 1.5rem;
+}
+
+.grey-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.grey-option input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
@@ -238,12 +314,14 @@ onMounted(() => {
   gap: 1.5rem;
   max-width: 500px;
   width: 100%;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .image-card {
   background: white;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -254,6 +332,11 @@ onMounted(() => {
 .image-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-card.finished {
+  opacity: 0.3;
+  filter: grayscale(100%);
 }
 
 .image-card.correct {
@@ -272,8 +355,34 @@ onMounted(() => {
 }
 
 .emoji {
+  display: block;
+}
+
+
+.img-emoji {
   font-size: 5rem;
   display: block;
+  width: 6rem;
+  height: 6rem;
+}
+.img-text {
+  font-size: 1rem;
+  color: #888;
+  display: block;
+  margin: 0 auto;
+  word-break: break-all;
+  text-align: center;
+  padding: 0.2rem 0.4rem;
+  width: 6rem;
+  height: 6rem;
+
+}
+.img-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
 }
 
 .instructions {
@@ -285,5 +394,71 @@ onMounted(() => {
 .instructions p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .showme-container {
+    padding: 1rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .back-btn,
+  .home-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+
+  .repeat-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .images-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+
+  .image-card {
+    padding: 0.75rem;
+    border: 3px solid transparent;
+  }
+
+  .img-emoji {
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .img-text {
+    font-size: 0.85rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .img-image {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .instructions {
+    margin-top: 1rem;
+  }
+
+  .instructions p {
+    font-size: 0.8rem;
+  }
 }
 </style>

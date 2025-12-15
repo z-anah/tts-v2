@@ -120,7 +120,24 @@ onMounted(async () => {
 
     <div class="word-card" @click="handleImageClick">
       <div class="word-image" :class="{ speaking: isSpeaking }">
-        {{ words[currentIndex].image }}
+        <!-- if words[currentIndex].image -->
+         <img
+           v-if="words[currentIndex].image"
+           :src="words[currentIndex].image"
+           :alt="words[currentIndex].arabic"
+           class="img-image"
+         />
+         <!-- if words[currentIndex].emoji -->
+          <span
+            v-else-if="words[currentIndex].emoji"
+            class="img-emoji"
+          >{{ words[currentIndex].emoji }}</span>
+
+          <!-- if words[currentIndex].text -->
+          <span
+            v-else-if="words[currentIndex].text"
+            class="img-text"
+          >{{ words[currentIndex].text }}</span>
       </div>
       <div class="word-text">
         <p class="arabic">{{ words[currentIndex].arabic }}</p>
@@ -209,15 +226,31 @@ onMounted(async () => {
   font-size: 8rem;
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.word-image.speaking {
-  animation: pulse 0.5s ease-in-out infinite;
+.img-emoji {
+  max-width: 8rem;
+  max-height: 8rem;
+  display: block;
 }
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+.img-text {
+  font-size: 1.2rem;
+  color: #888;
+  display: block;
+  margin: 0 auto;
+  word-break: break-all;
+  text-align: center;
+  padding: 0.2rem 0.4rem;
+}
+.img-image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
 }
 
 .word-text {
@@ -241,5 +274,63 @@ onMounted(async () => {
 .instructions p {
   margin: 0.5rem 0;
   font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .reading-container {
+    padding: 1rem;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .back-btn,
+  .home-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .progress {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .word-card {
+    padding: 2rem 1.5rem;
+    max-width: 100%;
+  }
+
+  .word-image {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .img-emoji {
+    max-width: 5rem;
+    max-height: 5rem;
+  }
+
+  .img-text {
+    font-size: 1rem;
+  }
+
+  .img-image {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .arabic {
+    font-size: 2rem;
+  }
+
+  .instructions {
+    margin-top: 2rem;
+  }
+
+  .instructions p {
+    font-size: 0.8rem;
+  }
 }
 </style>
