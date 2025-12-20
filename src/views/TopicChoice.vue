@@ -25,6 +25,10 @@ function goToShowMe() {
 function goToGrid() {
   router.push(`/topic/${topicId}/grid`);
 }
+
+function goToPictureQuiz() {
+  router.push(`/topic/${topicId}/picturequiz`);
+}
 </script>
 
 <template>
@@ -45,7 +49,10 @@ function goToGrid() {
       </div>
       <div class="choice-card" @click="goToGrid">
         <h2 class="choice-title">Grid View</h2>
-        </div>  
+      </div>
+      <div class="choice-card" @click="goToPictureQuiz">
+        <h2 class="choice-title">Picture Quiz</h2>
+      </div>
     </div>
   </div>
 </template>

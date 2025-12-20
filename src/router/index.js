@@ -6,6 +6,7 @@ import ShowMe from '../views/ShowMe.vue';
 import QuestionsList from '../views/QuestionsList.vue';
 import QuestionsDetail from '../views/QuestionsDetail.vue';
 import TopicGrid from '../views/TopicGrid.vue';
+import PictureQuiz from '../views/PictureQuiz.vue';
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: '/topic/:id/grid',
     name: 'Grid',
     component: TopicGrid,
+  },
+  {
+    path: '/topic/:id/picturequiz',
+    name: 'PictureQuiz',
+    component: PictureQuiz,
   },
   {
     path: '/questions',
