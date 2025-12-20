@@ -247,23 +247,26 @@ export const topics = {
     ],
   },
   13:{
-    // les transports : car, bus, train, airplane, bicycle, motorcycle, boat, ship, subway, taxi, truck, van, helicopter, scooter
     title: 'Transportation',
     words: [
       { id: 1, arabic: 'سَيَّارَةٌ', emoji: '🚗' },
-      { id: 2, arabic: 'حَافِلَةٌ', emoji: '🚌' },
-      { id: 3, arabic: 'قِطَارٌ', emoji: '🚆' },
-      { id: 4, arabic: 'طَائِرَةٌ', emoji: '✈️' },
-      { id: 5, arabic: 'دَرَّاجَةٌ', emoji: '🚲' },
-      { id: 6, arabic: 'دَرَّاجَة نَارِيَّةٌ', emoji: '🏍️' },
-      { id: 7, arabic: 'قَارِبٌ', emoji: '🛶' },
-      { id: 8, arabic: 'سَفِينَةٌ', emoji: '🚢' },
-      { id: 9, arabic: 'مِتْرُو', emoji: '🚇' },
-      { id: 10, arabic: 'تَاكْسِي', emoji: '🚕' },
-      { id: 11, arabic: 'شَاحِنَةٌ', emoji: '🚚' },
-      { id: 12, arabic: 'فَانٌ', emoji: '🚐' },
-      { id: 13, arabic: 'مِرْوَحِيَّةٌ', emoji: '🚁' },
-      { id: 14, arabic: 'سْكُوتِرٌ', emoji: '🛴' },
+      { id: 2, arabic: 'تَاكْسِي', emoji: '🚕' },
+      { id: 3, arabic: 'حَافِلَةٌ', emoji: '🚌' },
+      { id: 4, arabic: 'سَيَّارَةُ إِطْفَاءٍ', emoji: '🚒' },
+      { id: 5, arabic: 'سَيَّارَةُ شُرْطَةٍ', emoji: '🚓' },
+      { id: 6, arabic: 'سَيَّارَةُ إِسْعَافٍ', emoji: '🚑' },
+      { id: 7, arabic: 'شَاحِنَةٌ', emoji: '🚚' },
+      { id: 8, arabic: 'قِطَارٌ', emoji: '🚆' },
+      { id: 9, arabic: 'قِطَارُ الأَنْفَاقِ', emoji: '🚇' },
+      { id: 10, arabic: 'طَائِرَةٌ', emoji: '✈️' },
+      { id: 11, arabic: 'بَاخِرَةٌ', emoji: '🛳️' },
+      { id: 12, arabic: 'سَفِينَةٌ', emoji: '🚢' },
+      { id: 13, arabic: 'قَارِبٌ', emoji: '🛶' },
+      { id: 14, arabic: 'مِرْوَحِيَّةٌ', emoji: '🚁' },
+      { id: 15, arabic: 'دَرَّاجَةٌ', emoji: '🚲' },
+      { id: 16, arabic: 'دَرَّاجَة نَارِيَّةٌ', emoji: '🏍️' },
+      { id: 17, arabic: 'سْكُوتِرٌ', emoji: '🛴' },
+      { id: 18, arabic: 'وَسَائِلُ النَّقْلِ وَالمُوَاصَلَاتِ', text: 'transportation methods and vehicles' },
     ],
   },
   14:{
@@ -298,8 +301,41 @@ export const topics = {
       { id: 13, arabic: 'لِمَنْ', text: 'to whom' },
       { id: 14, arabic: 'مَعَ مَنْ', text: 'with whom' },
     ],
-
-  }
+  },
+  16:{
+    title: 'Rooms in the house',
+    words: [
+      { id: 1, arabic: 'مَنْزِلٌ', emoji: '🏠' },
+      { id: 2, arabic: 'بَيْتٌ', emoji: '🏠' },
+      { id: 3, arabic: 'طَابَقٌ', image: 'https://i.pinimg.com/236x/af/9d/bd/af9dbdd64edd4dcd64eb0033ff9813d7.jpg' }, // floor
+      { id: 4, arabic: 'مَطْبَخٌ', image: 'https://i.pinimg.com/736x/50/dd/33/50dd331e310f81ef761bb15da3ff26e7.jpg', }, // kitchen
+      { id: 5, arabic: 'طَبَقٌ', image: 'https://i.pinimg.com/236x/27/9e/f9/279ef960e88c0d267f2add0fac045be7.jpg', }, // plate
+      { id: 6, arabic: 'شَوْكَةٌ', image: 'https://i.pinimg.com/236x/7f/6d/32/7f6d328a55bcd07b1bb90d19be6129fa.jpg', }, // fork
+      { id: 7, arabic: 'مِلْعَقَةٌ', emoji: '🥄' }, // spoon
+      { id: 8, arabic: 'سِكِّينٌ', emoji: '🔪' }, // knife
+      { id: 9, arabic: 'فُرْنٌ', image: 'https://i.pinimg.com/236x/22/ee/f4/22eef410a8dbf9569c7111a60a103ae7.jpg', }, // oven
+      { id: 10, arabic: 'مَوْقِدٌ', image: 'https://i.pinimg.com/236x/8c/f7/ad/8cf7adcc07d7b91a8d5117bc205a4732.jpg', }, // stove
+      { id: 11, arabic: 'مِزْهَرِيَّةٌ', image: 'https://i.pinimg.com/236x/05/f2/c8/05f2c8bc4b0c8197b21ae394fdc26064.jpg', }, // vase
+      { id: 12, arabic: 'دَرَجٌ', image: 'https://i.pinimg.com/236x/1a/a3/07/1aa307742d2b75e440e2c46fdd194ae2.jpg', }, // stairs
+      { id: 13, arabic: 'طَبَقُ فُرْنٍ', image: 'https://i.pinimg.com/236x/1f/b9/07/1fb90709243775fffe379f4ebcbe33e3.jpg', }, // baking dish
+      { id: 14, arabic: 'كَأْسٌ', image: 'https://i.pinimg.com/236x/a3/fc/25/a3fc259abadd49f0fc4158889b750904.jpg', }, // glass
+      { id: 15, arabic: 'مِقْلَاةٌ', image: 'https://i.pinimg.com/236x/8e/38/b0/8e38b01b5d2f735e2144f789af4a2312.jpg', }, // pan
+      { id: 16, arabic: 'تَوَابِلٌ', image: 'https://i.pinimg.com/236x/51/94/7d/51947db7a9e4faa5764de43a6da9a634.jpg', }, // spices
+      { id: 17, arabic: 'مَائِدَةٌ', image: 'https://i.pinimg.com/236x/95/d0/15/95d015e7330f9da3cd00446f4b9b9ead.jpg', }, // dining table
+      { id: 18, arabic: 'غُرْفَةُ الْجُلُوسِ', image: 'https://i.pinimg.com/236x/7f/30/bd/7f30bd1c947a95c7b677bf1f48fe2eb4.jpg', }, // living room
+      { id: 19, arabic: 'تِلْفَازٌ', emoji: '📺' }, // television
+      { id: 20, arabic: 'سِتَارَةٌ', image: 'https://i.pinimg.com/236x/f1/08/7a/f1087affaa0450742172e389c86099d6.jpg', }, // curtain
+      { id: 21, arabic: 'بِسَاطٌ', image: 'https://i.pinimg.com/236x/ae/e3/d5/aee3d538b5bc3a8468d8dceecc3d0ceb.jpg', }, // carpet
+      { id: 22, arabic: 'سَجَّادٌ', image: 'https://i.pinimg.com/236x/ae/e3/d5/aee3d538b5bc3a8468d8dceecc3d0ceb.jpg', }, // carpet
+      { id: 23, arabic: 'غُرْفَةُ النَّوْمِ', image: 'https://i.pinimg.com/236x/52/3a/31/523a31a8fa135b5bca70fb70b401ad38.jpg', }, // bedroom
+      { id: 24, arabic: 'مِفْرُوشٌ', image: 'https://i.pinimg.com/236x/b7/db/ad/b7dbadd428507c183caff9c050a6d254.jpg', }, // mattress
+      { id: 25, arabic: 'مِصْبَاحٌ', emoji: '💡' }, // lamp
+      { id: 26, arabic: 'حَمَّامٌ', image: 'https://i.pinimg.com/236x/ec/13/71/ec137159f1637f92786c0ddb4defa682.jpg', }, // bathroom
+      { id: 27, arabic: 'مِرْآةٌ', emoji: '🪞' }, // mirror
+      { id: 28, arabic: 'حَوْضٌ', image: 'https://i.pinimg.com/236x/f4/a8/3b/f4a83b380bd5e5bc286d77ae243df5a4.jpg', }, // sink
+      { id: 29, arabic: 'حَدِيقَةٌ', image: 'https://i.pinimg.com/236x/60/3c/c3/603cc308cb01ffe570f2830c711a91af.jpg', }, // garden
+    ],
+  },
 };
 
 export function getTopicById(id) {
@@ -315,6 +351,4 @@ export function getAllTopics() {
 }
 
 
-// Je suis très satisfaite de mes cours d’arabe avec Mme Sarah à Inlingua. Elle est extrêmement claire dans ses explications, patiente, motivante, organisée et toujours à l’écoute. Grâce à sa méthode, j’ai beaucoup progressé : je أفهم mieux la grammaire, j’ve enrichi mon vocabulaire, je parle avec plus d’aisance et je me sens beaucoup plus confiante en arabe.
-// J’aime particulièrement l’ambiance du cours, la méthode d’enseignement, les exercices pratiques, les explications limpides et le rythme très agréable des sessions.
-// Je recommande absolument ses cours, ils sont vraiment excellents !
+// Je suis très satisfaite de mes cours d’arabe avec Mme Sarah à Inlingua. Elle est extrêmement claire dans ses explications, patiente, motivante, organisée et toujours à l’écoute. Grâce à sa méthode, j’ai beaucoup progressé : je أفهم mieux la grammaر
