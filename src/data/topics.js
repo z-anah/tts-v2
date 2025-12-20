@@ -336,6 +336,48 @@ export const topics = {
       { id: 29, arabic: 'حَدِيقَةٌ', image: 'https://i.pinimg.com/236x/60/3c/c3/603cc308cb01ffe570f2830c711a91af.jpg', }, // garden
     ],
   },
+  17:{
+    title: 'Body Parts', // 37 words
+    words: [
+      { id: 1, arabic: 'رَأْسٌ', emoji: '🧑‍🦲' }, // head
+      { id: 2, arabic: 'وَجْهٌ', image: 'https://i.pinimg.com/236x/bf/8c/b8/bf8cb8f60adf764c6fec2dfe123c8dff.jpg' }, // face
+      { id: 3, arabic: 'عَيْنٌ', emoji: '👁️' }, // eye
+      { id: 4, arabic: 'أُذُنٌ', emoji: '👂' }, // ear
+      { id: 5, arabic: 'أَنْفٌ', emoji: '👃' }, // nose
+      { id: 6, arabic: 'فَمٌ', emoji: '👄' }, // mouth
+      { id: 7, arabic: 'سِنٌّ', emoji: '🦷' }, // tooth
+      { id: 8, arabic: 'لِسَانٌ', emoji: '👅' }, // tongue
+      { id: 9, arabic: 'شَعْرٌ', image: 'https://i.pinimg.com/236x/af/0b/5d/af0b5dc4c118c0847c582bce42b9f0ff.jpg' }, // hair
+      { id: 10, arabic: 'رَقَبَةٌ', image: 'https://i.pinimg.com/236x/77/26/33/772633c5d4495752b198dd9ff4ac51e3.jpg' }, // neck
+      { id: 11, arabic: 'كَتِفٌ', image: 'https://i.pinimg.com/236x/bf/20/3b/bf203b2fc5ddb2b5d94154c952020d26.jpg' }, // shoulder
+      { id: 12, arabic: 'ذِرَاعٌ', emoji: '💪' }, // arm
+      { id: 13, arabic: 'مِرْفَقٌ', image: '' }, // elbow
+      { id: 14, arabic: 'يَدٌ', emoji: '✋' }, // hand
+      { id: 15, arabic: 'أَصَابِعُ الْيَدِ', emoji: '🖐️' }, // fingers
+      { id: 16, arabic: 'ظُفْرٌ', emoji: '💅' }, // nail
+      { id: 17, arabic: 'صَدْرٌ', image: 'https://i.pinimg.com/236x/ca/20/b0/ca20b0159aa5b0cb28151695f0e3fdea.jpg' }, // chest
+      { id: 18, arabic: 'بَطْنٌ', image: 'https://i.pinimg.com/236x/25/0a/da/250ada3d09f6aa9d2cd5d2dc4fdae729.jpg' }, // stomach
+      { id: 19, arabic: 'ظَهْرٌ', image: 'https://i.pinimg.com/236x/4d/e1/50/4de150cc10ac20c44f9f02d4c5f55b88.jpg' }, // back
+      { id: 20, arabic: 'حَوْضٌ', image: 'https://i.pinimg.com/236x/90/1f/23/901f23f2d316b3856fcc4e5e042e02ba.jpg' }, // waist
+      { id: 21, arabic: 'رِجْلٌ', emoji: '🦵' }, // leg
+      { id: 22, arabic: 'رُكْبَةٌ', image: 'https://i.pinimg.com/236x/e2/eb/65/e2eb65297e24856c27039bb36cab21c6.jpg' }, // knee
+      { id: 23, arabic: 'قَدَمٌ', emoji: '🦶' }, // foot
+      { id: 24, arabic: 'أَصَابِعُ الْقَدَمِ', image: 'https://i.pinimg.com/236x/0f/93/81/0f938146b51dac41e4030ab2a77b2d95.jpg' }, // toes
+      { id: 25, arabic: 'قَلْبٌ', emoji: '❤️' }, // heart
+      { id: 26, arabic: 'رِئَةٌ', image: 'https://i.pinimg.com/236x/f3/41/44/f34144cec92d416295a27d5978cebbde.jpg' }, // lung
+      { id: 27, arabic: 'مَعِدَةٌ', image: 'https://i.pinimg.com/236x/fd/81/3e/fd813ec0269f0408f58efc1402494f7b.jpg' }, // stomach (organ)
+      { id: 28, arabic: 'كَبِدٌ', image: 'https://i.pinimg.com/236x/1d/fc/36/1dfc36e2833e30cec300788e1f120214.jpg' }, // liver
+      { id: 29, arabic: 'كُلْيَةٌ', image: 'https://i.pinimg.com/236x/e3/8e/26/e38e26f30860a7e0f2036e4e3a563a62.jpg' }, // kidney / fr: rein
+      { id: 30, arabic: 'دِمَاغٌ', image: 'https://i.pinimg.com/236x/45/4e/2f/454e2fc2b61f5529ce011425a85a34cd.jpg' }, // brain
+      { id: 31, arabic: 'عَظْمٌ', image: 'https://i.pinimg.com/236x/c2/4d/22/c24d225cc4afc427c17858119b5bf28d.jpg' }, // bone
+      { id: 32, arabic: 'دَمٌ', emoji: '🩸' }, // blood
+      { id: 33, arabic: 'عَرَقٌ', image: 'https://i.pinimg.com/236x/65/50/0f/65500f3e3c4235d900d96a7f27ae878b.jpg' }, // sweat
+      { id: 34, arabic: 'دُهْنٌ', image: 'https://i.pinimg.com/236x/74/d7/c8/74d7c8085a894764b53e129b8f5f76b6.jpg' }, // fat
+      { id: 35, arabic: 'عَصَبٌ', image: 'https://i.pinimg.com/236x/c9/97/1b/c9971b4e0c4aa03c593f05fe4f605df8.jpg' }, // nerve
+      { id: 36, arabic: 'جِلْدٌ', image: 'https://i.pinimg.com/236x/4e/0a/b9/4e0ab91658526610b958a9656cb3720f.jpg' }, // skin
+      { id: 37, arabic: 'جِسْمٌ', text: 'body' },
+    ],
+  },
 };
 
 export function getTopicById(id) {
