@@ -21,8 +21,38 @@ const isSpeaking = ref(false);
 const canClick = ref(true);
 const choices = ref([]);
 const preparedUtterance = ref(null);
-const greyFinished = ref(true); // New state for grey out option
+const greyFinished = ref(true);
 
+// Arabic expressions for correct answers
+const correctExpressions = [
+  'أحسنت',      // Well done
+  'ممتاز',      // Excellent
+  'رائع',       // Wonderful
+  'صحيح',       // Correct
+  'برافو',      // Bravo
+  'عظيم',       // Great
+];
+
+// Arabic expressions for incorrect answers
+const incorrectExpressions = [
+  'حاول مرة أخرى',   // Try again
+  'لا بأس',          // It's okay
+  'يمكنك ذلك',       // You can do it
+  'استمر',           // Keep going
+];
+
+function getRandomExpression(expressions) {
+  return expressions[Math.floor(Math.random() * expressions.length)];
+}
+
+function speakExpression(text) {
+  if ('speechSynthesis' in window) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'ar-SA';
+    utterance.rate = 1.0;
+    window.speechSynthesis.speak(utterance);
+  }
+}
 
 function setupGame() {
   // Do not randomize images; keep original order
@@ -111,14 +141,21 @@ function handleChoice(word) {
     // Remove the word from remainingWords (by id)
     const idx = remainingWords.value.findIndex(w => w.id === targetWord.value.id);
     if (idx !== -1) remainingWords.value.splice(idx, 1);
+    // Speak encouraging expression
+    setTimeout(() => {
+      speakExpression(getRandomExpression(correctExpressions));
+    }, 300);
   } else {
     isCorrect.value = false;
-    // Do not remove, so it will be asked again
+    // Speak supportive expression
+    setTimeout(() => {
+      speakExpression(getRandomExpression(incorrectExpressions));
+    }, 300);
   }
 
   setTimeout(() => {
     setupRound();
-  }, 100);
+  }, 1200);
 }
 
 function goHome() {
@@ -143,19 +180,10 @@ const isWordFinished = computed(() => (wordId) => {
 
 <template>
   <div class="showme-container">
-    <div class="nav-buttons">
-      <button class="back-btn" @click="goBack">← Back</button>
-      <button class="home-btn" @click="goHome">🏠 Home</button>
+    <div class="floating-stats">
+      <span class="score">✓ {{ score }}/{{ rounds }}</span>
+      <span class="remaining">📋 {{ remainingWords.length }}</span>
     </div>
-    
-    <div class="header">
-      <div class="score">Score: {{ score }}/{{ rounds }}</div>
-      <div class="round">Remaining: {{ remainingWords.length }}</div>
-    </div>
-
-    <button class="repeat-btn" @click="repeatWord" :class="{ speaking: isSpeaking }">
-      🔊 Repeat Word
-    </button>
 
     <div class="options">
       <label class="grey-option">
@@ -177,30 +205,34 @@ const isWordFinished = computed(() => (wordId) => {
         }"
         @click="handleChoice(word)"
       >
-        <!-- if word.image -->
-         <img
-           v-if="word.image"
-           :src="word.image"
-           :alt="word.arabic"
-           class="img-image"
-         />
-         <!-- if word.emoji -->
-          <span
-            v-else-if="word.emoji"
-            class="img-emoji"
-          >{{ word.emoji }}</span>
-
-          <!-- if word.text -->
-          <span
-            v-else-if="word.text"
-            class="img-text"
-          >{{ word.text }}</span>
+        <img
+          v-if="word.image"
+          :src="word.image"
+          :alt="word.arabic"
+          class="img-image"
+        />
+        <span
+          v-else-if="word.emoji"
+          class="img-emoji"
+        >{{ word.emoji }}</span>
+        <span
+          v-else-if="word.text"
+          class="img-text"
+        >{{ word.text }}</span>
       </div>
     </div>
 
     <div class="instructions">
       <p>🔊 Listen to the word</p>
       <p>👆 Click the matching image</p>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="back-btn" @click="goBack">←</button>
+      <button class="home-btn" @click="goHome">🏠</button>
+      <button class="repeat-btn" @click="repeatWord" :class="{ speaking: isSpeaking }">
+        🔊 
+      </button>
     </div>
   </div>
 </template>
@@ -209,70 +241,69 @@ const isWordFinished = computed(() => (wordId) => {
 .showme-container {
   min-height: 100vh;
   padding: 2rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.nav-buttons {
-  position: absolute;
+.floating-stats {
+  position: fixed;
   top: 1rem;
-  left: 1rem;
+  right: 1rem;
   display: flex;
-  gap: 0.5rem;
-}
-
-.back-btn {
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.95);
   padding: 0.5rem 1rem;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  z-index: 100;
 }
 
-.back-btn:hover {
-  background: #e0e0e0;
-}
-
-.home-btn {
-  padding: 0.5rem 1rem;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.home-btn:hover {
-  background: #e0e0e0;
-}
-
-.header {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.25rem;
-}
-
-.score {
+.floating-stats .score {
   color: #4CAF50;
   font-weight: 600;
 }
 
-.round {
+.floating-stats .remaining {
   color: #666;
 }
 
+.nav-buttons {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.back-btn,
+.home-btn {
+  padding: 0.75rem 1.5rem;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover,
+.home-btn:hover {
+  background: #e0e0e0;
+}
+
 .repeat-btn {
-  padding: 1rem 2rem;
-  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   background: #2196F3;
   color: white;
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  margin-bottom: 2rem;
   transition: all 0.3s ease;
 }
 
@@ -310,23 +341,27 @@ const isWordFinished = computed(() => (wordId) => {
 
 .images-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  max-width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 700px;
   width: 100%;
   justify-content: center;
+  justify-items: center;
   margin: 0 auto;
 }
 
 .image-card {
   background: white;
   border-radius: 16px;
-  padding: 1rem;
+  padding: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
-  border: 4px solid transparent;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .image-card:hover {
@@ -354,35 +389,36 @@ const isWordFinished = computed(() => (wordId) => {
   background: #E8F5E9;
 }
 
-.emoji {
-  display: block;
-}
-
-
 .img-emoji {
   font-size: 5rem;
   display: block;
   width: 6rem;
   height: 6rem;
+  line-height: 6rem;
 }
+
 .img-text {
-  font-size: 1rem;
-  color: #888;
-  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  word-break: break-all;
+  word-break: break-word;
   text-align: center;
-  padding: 0.2rem 0.4rem;
+  padding: 0.25rem;
   width: 6rem;
   height: 6rem;
-
+  font-weight: 500;
 }
+
 .img-image {
   width: 6rem;
   height: 6rem;
-  border-radius: 12px;
+  border-radius: 10px;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .instructions {
@@ -399,62 +435,68 @@ const isWordFinished = computed(() => (wordId) => {
 @media (max-width: 768px) {
   .showme-container {
     padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .floating-stats {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 
   .nav-buttons {
-    flex-direction: column;
-    gap: 0.25rem;
+    bottom: 0.75rem;
+    gap: 0.75rem;
   }
 
   .back-btn,
   .home-btn {
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-  }
-
-  .header {
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
+    width: 5rem;
   }
 
   .repeat-btn {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    width: 5rem;
   }
 
   .images-grid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)) !important;
-    gap: 0.75rem;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem;
     max-width: 100%;
   }
 
   .image-card {
-    padding: 0.75rem;
-    border: 3px solid transparent;
+    padding: 0.35rem;
+    border: 2px solid transparent;
+    border-radius: 12px;
   }
 
   .img-emoji {
-    font-size: 3rem;
-    width: 4rem;
-    height: 4rem;
+    font-size: 3.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
   }
 
   .img-text {
-    font-size: 0.85rem;
-    width: 4rem;
-    height: 4rem;
+    font-size: 0.9rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   .img-image {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
   }
 
   .instructions {
     margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 
   .instructions p {

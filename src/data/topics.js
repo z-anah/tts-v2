@@ -1,6 +1,7 @@
 export const topics = {
   1: {
-    title: 'Food Vocabulary',
+    title: 'Food',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'تُفَّاحَةٌ', emoji: '🍎' },
       { id: 2, arabic: 'مَوْزٌ', emoji: '🍌' },
@@ -12,6 +13,7 @@ export const topics = {
   },
   2: {
     title: 'Animals',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'قِطٌّ', emoji: '🐱' },
       { id: 2, arabic: 'كَلْبٌ', emoji: '🐕' },
@@ -23,6 +25,7 @@ export const topics = {
   },
   3:{
     title: 'Day 1',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'بَابٌ', emoji: '🚪' },
       { id: 2, arabic: 'بَيْتٌ', emoji: '🏠' },
@@ -57,10 +60,10 @@ export const topics = {
       { id: 31, arabic: 'كُرَةٌ', emoji: '⚽' },
     ],
   },
-  // day 2 i learned prepositions of posession, family members, and prepositions of place
   4:{
     // family = 'عَائِلَةٌ'
     title: 'عَائِلَةٌ',
+    category: 'Ism',
     words: [
       // grandfather
       { id: 1, arabic: 'جَدٌّ', emoji: '👴' },
@@ -99,6 +102,7 @@ export const topics = {
   // colors masculine only
   5:{
     title: 'Colors masculine',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'أَحْمَرُ', emoji: '🟥' },
       { id: 2, arabic: 'أَزْرَقُ', emoji: '🟦' },
@@ -115,6 +119,7 @@ export const topics = {
   // days of the week
   6:{
     title: 'Days of the Week',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'الْأَحَدُ', image: 'https://img.icons8.com/?size=160&id=5fdtL2QemJVm&format=png' },
       { id: 2, arabic: 'الاثْنَيْنِ', image: 'https://img.icons8.com/?size=160&id=JIFhwlTPtA9k&format=png' },
@@ -136,6 +141,7 @@ export const topics = {
   // months of the year
   7:{
     title: 'Months of the Year',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'يَنَايِرُ', text: '1' },
       { id: 2, arabic: 'فِبْرَايِرُ', text: '2' },
@@ -151,9 +157,9 @@ export const topics = {
       { id: 12, arabic: 'دِيسَمْبَرُ', text: '12' },
     ],
   },
-  // numbers 1-20
   8:{
     title: 'Numbers 1-20',
+    category: 'Arqam',
     words: [
       { id: 1, arabic: 'وَاحِدٌ', text: '١' },
       { id: 2, arabic: 'اِثْنَانِ', text: '٢' },
@@ -179,6 +185,7 @@ export const topics = {
   },
   9:{
     title: 'Numbers 21-29',
+    category: 'Arqam',
     words: [
       { id: 1, arabic: 'وَاحِدٌ وَعِشْرُونَ', text: '٢١' },
       { id: 2, arabic: 'اِثْنَانِ وَعِشْرُونَ', text: '٢٢' },
@@ -194,6 +201,7 @@ export const topics = {
   10:{
     // 30; 40; 50; 60; 70; 80; 90; 100
     title: 'Numbers 30-100',
+    category: 'Arqam',
     words: [
       { id: 1, arabic: 'ثَلَاثُونَ', text: '٣٠' },
       { id: 2, arabic: 'أَرْبَعُونَ', text: '٤٠' },
@@ -208,6 +216,7 @@ export const topics = {
   11:{
     // 100,1000,10000,100000,1000000,10000000,100000000,1000000000
     title: 'Large Numbers',
+    category: 'Arqam',
     words: [
       { id: 1, arabic: 'مِئَةٌ', text: '١٠٠' },
       { id: 2, arabic: 'أَلْفٌ', text: '١ ٠٠٠' },
@@ -222,6 +231,7 @@ export const topics = {
   12:{
     // les habilles : chemise, t-shirt, pantalon, pantalon, chapeau, lunettes, lunettes de soleil, coat, dress, skirt, sandals, short, gants, sock, boucle d'oreille, headscarf, cache-nez, chaussure, chaussure de sport, pyjamas, watch, belt
     title: 'Clothing',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'قَمِيصٌ', emoji: '👕' },
       { id: 2, arabic: 'تِي شِيرْتٌ', emoji: '👕' },
@@ -248,6 +258,7 @@ export const topics = {
   },
   13:{
     title: 'Transportation',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'سَيَّارَةٌ', emoji: '🚗' },
       { id: 2, arabic: 'تَاكْسِي', emoji: '🚕' },
@@ -271,6 +282,7 @@ export const topics = {
   },
   14:{
     title: 'Prepositions',
+    category: 'Harf',
     words: [
       { id: 1, arabic: 'كَمَا', text: 'like, as' },
       { id: 2, arabic: 'مِنْ', text: 'from, of' },
@@ -285,6 +297,7 @@ export const topics = {
   15:{
     // kam, aina
     title: 'Question Words',
+    category: 'Harf',
     words: [
       { id: 1, arabic: 'هَلْ', text: 'y/n q' },
       { id: 2, arabic: 'أَ', text: 'y/n q' },
@@ -304,6 +317,7 @@ export const topics = {
   },
   16:{
     title: 'Rooms in the house',
+    category: 'Ism',
     words: [
       { id: 1, arabic: 'مَنْزِلٌ', emoji: '🏠' },
       { id: 2, arabic: 'بَيْتٌ', emoji: '🏠' },
@@ -337,47 +351,152 @@ export const topics = {
     ],
   },
   17:{
-    title: 'Body Parts', // 37 words
+    title: 'Body Parts',
+    category: 'Ism',
     words: [
+      // Head & Face
       { id: 1, arabic: 'رَأْسٌ', emoji: '🧑‍🦲' }, // head
       { id: 2, arabic: 'وَجْهٌ', image: 'https://i.pinimg.com/236x/bf/8c/b8/bf8cb8f60adf764c6fec2dfe123c8dff.jpg' }, // face
-      { id: 3, arabic: 'عَيْنٌ', emoji: '👁️' }, // eye
-      { id: 4, arabic: 'أُذُنٌ', emoji: '👂' }, // ear
-      { id: 5, arabic: 'أَنْفٌ', emoji: '👃' }, // nose
-      { id: 6, arabic: 'فَمٌ', emoji: '👄' }, // mouth
-      { id: 7, arabic: 'سِنٌّ', emoji: '🦷' }, // tooth
-      { id: 8, arabic: 'لِسَانٌ', emoji: '👅' }, // tongue
-      { id: 9, arabic: 'شَعْرٌ', image: 'https://i.pinimg.com/236x/af/0b/5d/af0b5dc4c118c0847c582bce42b9f0ff.jpg' }, // hair
-      { id: 10, arabic: 'رَقَبَةٌ', image: 'https://i.pinimg.com/236x/77/26/33/772633c5d4495752b198dd9ff4ac51e3.jpg' }, // neck
-      { id: 11, arabic: 'كَتِفٌ', image: 'https://i.pinimg.com/236x/bf/20/3b/bf203b2fc5ddb2b5d94154c952020d26.jpg' }, // shoulder
-      { id: 12, arabic: 'ذِرَاعٌ', emoji: '💪' }, // arm
-      { id: 13, arabic: 'مِرْفَقٌ', image: '' }, // elbow
-      { id: 14, arabic: 'يَدٌ', emoji: '✋' }, // hand
-      { id: 15, arabic: 'أَصَابِعُ الْيَدِ', emoji: '🖐️' }, // fingers
-      { id: 16, arabic: 'ظُفْرٌ', emoji: '💅' }, // nail
-      { id: 17, arabic: 'صَدْرٌ', image: 'https://i.pinimg.com/236x/ca/20/b0/ca20b0159aa5b0cb28151695f0e3fdea.jpg' }, // chest
-      { id: 18, arabic: 'بَطْنٌ', image: 'https://i.pinimg.com/236x/25/0a/da/250ada3d09f6aa9d2cd5d2dc4fdae729.jpg' }, // stomach
-      { id: 19, arabic: 'ظَهْرٌ', image: 'https://i.pinimg.com/236x/4d/e1/50/4de150cc10ac20c44f9f02d4c5f55b88.jpg' }, // back
-      { id: 20, arabic: 'حَوْضٌ', image: 'https://i.pinimg.com/236x/90/1f/23/901f23f2d316b3856fcc4e5e042e02ba.jpg' }, // waist
-      { id: 21, arabic: 'رِجْلٌ', emoji: '🦵' }, // leg
-      { id: 22, arabic: 'رُكْبَةٌ', image: 'https://i.pinimg.com/236x/e2/eb/65/e2eb65297e24856c27039bb36cab21c6.jpg' }, // knee
-      { id: 23, arabic: 'قَدَمٌ', emoji: '🦶' }, // foot
-      { id: 24, arabic: 'أَصَابِعُ الْقَدَمِ', image: 'https://i.pinimg.com/236x/0f/93/81/0f938146b51dac41e4030ab2a77b2d95.jpg' }, // toes
-      { id: 25, arabic: 'قَلْبٌ', emoji: '❤️' }, // heart
-      { id: 26, arabic: 'رِئَةٌ', image: 'https://i.pinimg.com/236x/f3/41/44/f34144cec92d416295a27d5978cebbde.jpg' }, // lung
-      { id: 27, arabic: 'مَعِدَةٌ', image: 'https://i.pinimg.com/236x/fd/81/3e/fd813ec0269f0408f58efc1402494f7b.jpg' }, // stomach (organ)
-      { id: 28, arabic: 'كَبِدٌ', image: 'https://i.pinimg.com/236x/1d/fc/36/1dfc36e2833e30cec300788e1f120214.jpg' }, // liver
-      { id: 29, arabic: 'كُلْيَةٌ', image: 'https://i.pinimg.com/236x/e3/8e/26/e38e26f30860a7e0f2036e4e3a563a62.jpg' }, // kidney / fr: rein
-      { id: 30, arabic: 'دِمَاغٌ', image: 'https://i.pinimg.com/236x/45/4e/2f/454e2fc2b61f5529ce011425a85a34cd.jpg' }, // brain
-      { id: 31, arabic: 'عَظْمٌ', image: 'https://i.pinimg.com/236x/c2/4d/22/c24d225cc4afc427c17858119b5bf28d.jpg' }, // bone
-      { id: 32, arabic: 'دَمٌ', emoji: '🩸' }, // blood
-      { id: 33, arabic: 'عَرَقٌ', image: 'https://i.pinimg.com/236x/65/50/0f/65500f3e3c4235d900d96a7f27ae878b.jpg' }, // sweat
-      { id: 34, arabic: 'دُهْنٌ', image: 'https://i.pinimg.com/236x/74/d7/c8/74d7c8085a894764b53e129b8f5f76b6.jpg' }, // fat
-      { id: 35, arabic: 'عَصَبٌ', image: 'https://i.pinimg.com/236x/c9/97/1b/c9971b4e0c4aa03c593f05fe4f605df8.jpg' }, // nerve
-      { id: 36, arabic: 'جِلْدٌ', image: 'https://i.pinimg.com/236x/4e/0a/b9/4e0ab91658526610b958a9656cb3720f.jpg' }, // skin
-      { id: 37, arabic: 'جِسْمٌ', text: 'body' },
+      { id: 3, arabic: 'جِسْمٌ', text: 'body' }, // body
+      { id: 4, arabic: 'شَعْرٌ', image: 'https://i.pinimg.com/236x/af/0b/5d/af0b5dc4c118c0847c582bce42b9f0ff.jpg' }, // hair
+      { id: 5, arabic: 'جَبْهَةٌ', image: 'https://i.pinimg.com/736x/2f/c1/6d/2fc16dc3df7b172373a7aa13bbfe7618.jpg' }, // forehead
+      { id: 6, arabic: 'حَاجِبٌ', image: 'https://i.pinimg.com/736x/dc/6b/4e/dc6b4e4c004f1de6b9f754c2200f37c4.jpg' }, // eyebrow
+      { id: 7, arabic: 'عَيْنٌ', emoji: '👁️' }, // eye
+      { id: 8, arabic: 'أُذُنٌ', emoji: '👂' }, // ear
+      { id: 9, arabic: 'أَنْفٌ', emoji: '👃' }, // nose
+      { id: 10, arabic: 'فَمٌ', emoji: '👄' }, // mouth
+      { id: 11, arabic: 'شَفَةٌ', image: 'https://i.pinimg.com/736x/bd/ee/18/bdee181b35201d08c3e413c6bfab2e1b.jpg' }, // lip
+      { id: 12, arabic: 'سِنٌّ', emoji: '🦷' }, // tooth
+      { id: 13, arabic: 'لِسَانٌ', emoji: '👅' }, // tongue
+      { id: 14, arabic: 'خَدٌّ', image: 'https://i.pinimg.com/736x/b4/53/89/b453891a5d07acbd2de7ca907dffa216.jpg' }, // cheek
+      { id: 15, arabic: 'ذَقَنٌ', image: 'https://i.pinimg.com/474x/7a/f5/c7/7af5c711d81e644aafb6e4fda9f59a19.jpg' }, // chin
+
+      // Neck & Torso
+      { id: 16, arabic: 'رَقَبَةٌ', image: 'https://i.pinimg.com/236x/77/26/33/772633c5d4495752b198dd9ff4ac51e3.jpg' }, // neck
+      { id: 17, arabic: 'كَتِفٌ', image: 'https://i.pinimg.com/236x/bf/20/3b/bf203b2fc5ddb2b5d94154c952020d26.jpg' }, // shoulder
+      { id: 18, arabic: 'صَدْرٌ', image: 'https://i.pinimg.com/236x/ca/20/b0/ca20b0159aa5b0cb28151695f0e3fdea.jpg' }, // chest
+      { id: 19, arabic: 'بَطْنٌ', image: 'https://i.pinimg.com/236x/25/0a/da/250ada3d09f6aa9d2cd5d2dc4fdae729.jpg' }, // belly
+      { id: 20, arabic: 'ظَهْرٌ', image: 'https://i.pinimg.com/236x/4d/e1/50/4de150cc10ac20c44f9f02d4c5f55b88.jpg' }, // back
+      { id: 21, arabic: 'حَوْضٌ', image: 'https://i.pinimg.com/236x/90/1f/23/901f23f2d316b3856fcc4e5e042e02ba.jpg' }, // waist
+
+      // Arm & Hand
+      { id: 22, arabic: 'ذِرَاعٌ', emoji: '💪' }, // arm
+      { id: 23, arabic: 'مِرْفَقٌ', image: 'https://i.pinimg.com/736x/b2/5d/ab/b25dab15b81d7c6bafe992ea2fb60787.jpg' }, // elbow
+      { id: 24, arabic: 'يَدٌ', emoji: '✋' }, // hand
+      { id: 25, arabic: 'مِعْصَمٌ', image: 'https://i.pinimg.com/736x/46/41/20/46412028bb863915619ad30eabdd9691.jpg' }, // wrist
+      { id: 26, arabic: 'إِصْبَعٌ', image: 'https://i.pinimg.com/236x/5d/e4/47/5de4473d4f1e8beb9e957b0bbf51b24c.jpg' }, // finger
+      { id: 27, arabic: 'ظُفْرٌ', emoji: '💅' }, // nail
+
+      // Leg & Foot
+      { id: 28, arabic: 'رِجْلٌ', emoji: '🦵' }, // leg
+      { id: 29, arabic: 'رُكْبَةٌ', image: 'https://i.pinimg.com/236x/e2/eb/65/e2eb65297e24856c27039bb36cab21c6.jpg' }, // knee
+      { id: 30, arabic: 'قَدَمٌ', emoji: '🦶' }, // foot
+      { id: 31, arabic: 'أَصَابِعُ الْقَدَمِ', image: 'https://i.pinimg.com/236x/0f/93/81/0f938146b51dac41e4030ab2a77b2d95.jpg' }, // toes
     ],
   },
+  18:{
+      // Internal Organs & Others
+    title: 'Internal Organs & Others',
+    category: 'Ism',
+    words:[
+      { id: 1, arabic: 'قَلْبٌ', emoji: '❤️' }, // heart
+      { id: 2, arabic: 'رِئَةٌ', image: 'https://i.pinimg.com/236x/f3/41/44/f34144cec92d416295a27d5978cebbde.jpg' }, // lung
+      { id: 3, arabic: 'مَعِدَةٌ', image: 'https://i.pinimg.com/236x/fd/81/3e/fd813ec0269f0408f58efc1402494f7b.jpg' }, // stomach (organ)
+      { id: 4, arabic: 'كَبِدٌ', image: 'https://i.pinimg.com/236x/1d/fc/36/1dfc36e2833e30cec300788e1f120214.jpg' }, // liver
+      { id: 5, arabic: 'كُلْيَةٌ', image: 'https://i.pinimg.com/236x/e3/8e/26/e38e26f30860a7e0f2036e4e3a563a62.jpg' }, // kidne
+      { id: 6, arabic: 'دِمَاغٌ', image: 'https://i.pinimg.com/236x/45/4e/2f/454e2fc2b61f5529ce011425a85a34cd.jpg' }, // brain
+      { id: 7, arabic: 'عَظْمٌ', image: 'https://i.pinimg.com/236x/c2/4d/22/c24d225cc4afc427c17858119b5bf28d.jpg' }, // bone
+      { id: 8, arabic: 'دَمٌ', emoji: '🩸' }, // blood
+      { id: 9, arabic: 'عَرَقٌ', image: 'https://i.pinimg.com/236x/65/50/0f/65500f3e3c4235d900d96a7f27ae878b.jpg' }, // sweat
+      { id: 10, arabic: 'دُهْنٌ', image: 'https://i.pinimg.com/236x/74/d7/c8/74d7c8085a894764b53e129b8f5f76b6.jpg' }, // fat
+      { id: 11, arabic: 'عَصَبٌ', image: 'https://i.pinimg.com/236x/c9/97/1b/c9971b4e0c4aa03c593f05fe4f605df8.jpg' }, // nerve
+      { id: 12, arabic: 'جِلْدٌ', image: 'https://i.pinimg.com/236x/4e/0a/b9/4e0ab91658526610b958a9656cb3720f.jpg' }, // skin
+    ]
+  },
+  19:{
+    // habites
+    title: 'Daily Routines',
+    category: 'Fiil',
+    words: [
+      { id: 1, arabic: 'أَنْهَضُُ', image: 'https://i.pinimg.com/736x/a0/44/a1/a044a1f275899df66190c9952c43910b.jpg' }, // wake up
+      { id: 2, arabic: 'أَجْلِسُُ', image: 'https://i.pinimg.com/236x/7a/13/08/7a1308a5d7ca4ab5af8c0def867d657d.jpg' }, // poop
+      { id: 3, arabic: 'أَجْلِسُُ', image: 'https://i.pinimg.com/236x/7a/13/08/7a1308a5d7ca4ab5af8c0def867d657d.jpg' }, // poop
+      { id: 4, arabic: 'أَسْتَحِمُُّ', image: 'https://i.pinimg.com/236x/c0/4e/6c/c04e6c47a126d2694197cf5575634b15.jpg' }, // take a shower
+      { id: 5, arabic: 'آكُلُ فُطُورِي' , image:'https://i.pinimg.com/236x/bf/15/93/bf15932d79baa20068b7898a8a2b0af9.jpg'}, // I eat breakfast
+      { id: 6, arabic: 'أَتَنَاوَلُ فُطُورِي' , image:'https://i.pinimg.com/236x/bf/15/93/bf15932d79baa20068b7898a8a2b0af9.jpg'}, // he eats breakfast
+      { id: 7, arabic: 'أَشْرَبُ' , image:'https://i.pinimg.com/736x/5c/b6/5f/5cb65f562f61f4bdd0f4c04bdfad4a75.jpg'}, // I drink
+      { id: 8, arabic: 'أَجْرِي' , image:'https://i.pinimg.com/736x/c8/ed/50/c8ed50f0337175d61dc3be3e9649faf9.jpg'}, // I run
+      { id: 9, arabic: 'أَمْشِي' , image:'https://i.pinimg.com/1200x/27/27/ae/2727ae90d50952ae6b76102f1233dd3c.jpg'}, // I walk
+      { id: 10, arabic: 'أَذْهَبُ' , image:'https://i.pinimg.com/1200x/27/27/ae/2727ae90d50952ae6b76102f1233dd3c.jpg'}, // I go
+      { id: 11, arabic: 'أَدْرُسُ' , image:'https://i.pinimg.com/736x/ed/d2/c8/edd2c8f977ecbe00cc251f3708091971.jpg'}, // I study
+      { id: 12, arabic: 'أَتَعَلَّمُ' , image:'https://i.pinimg.com/736x/ed/d2/c8/edd2c8f977ecbe00cc251f3708091971.jpg'}, // I learn
+      { id: 13, arabic: 'يَغْسِلُ أَسْنَانَهُ' , image:'https://i.pinimg.com/1200x/ec/c7/0f/ecc70fbb9e754ba2acbfa1f7c6e34f64.jpg'}, // he brushes his teeth
+      { id: 14, arabic: 'أَغْسِلُ وَجْهِي' , image:'https://i.pinimg.com/736x/bd/a5/5f/bda55fb87a0efcefcfe50f40d4179bfc.jpg'} // I wash my face
+    ],
+  },
+  // places airport, quartier, university, restaurant, café, park, supermarket, mall, hospital, pharmacy, school, library, mosque, church, temple, beach, hotel, bank, post office, police station, fire station, gas station, bakery, butcher shop, clothing store, shoe store, toy store, furniture store, electronics store
+  20:{
+    title: 'Places',
+    category: 'Ism',
+    words: [
+      { id: 1, arabic: 'مَطَارٌ', image: 'https://i.pinimg.com/736x/12/b4/29/12b429261d75b2bedd1a35eb7bcb6ba8.jpg' }, // airport
+      { id: 2, arabic: 'حَيٌّ', image: 'https://i.pinimg.com/736x/d0/ee/a9/d0eea959954ffefa1fe471abfdaab38d.jpg' }, // neighborhood
+      { id: 3, arabic: 'جَامِعَةٌ', image: 'https://i.pinimg.com/736x/06/cb/e1/06cbe1b989ece2a37b071772df649a53.jpg' }, // university
+      // { id: 4, arabic: 'مَطْعَمٌ', image: 'https://i.pinimg.com/736x/1a/26/b6/1a26b6c5722f26c07f808c6e54f1a978.jpg' }, // restaurant
+      // { id: 5, arabic: 'مَقْهَى', image: 'https://i.pinimg.com/736x/f4/40/f6/f440f63acc089e4e32274465e4873128.jpg' }, // café
+      // { id: 6, arabic: 'حَدِيقَةٌ', image: 'https://i.pinimg.com/1200x/7a/44/db/7a44db0aeda1baff9c8056dd38427105.jpg' }, // park
+      // { id: 7, arabic: 'سُوقٌ', image: 'https://i.pinimg.com/736x/77/d5/c0/77d5c0d5f3e800654811efcb01927475.jpg' }, // supermarket
+      // { id: 8, arabic: 'مَرْكَزُ تَجَارِيٍّ', image: 'https://i.pinimg.com/1200x/0b/c7/4a/0bc74ae98bda36926c0a3526302e7f75.jpg' }, // mall
+      // { id: 9, arabic: 'مُسْتَشْفَى', image: '' }, // hospital
+      // { id: 10, arabic: 'صَيْدَلِيَّةٌ', image: '' }, // pharmacy
+      // { id: 11, arabic: 'مَدْرَسَةٌ', image: '' }, // school
+      // { id: 12, arabic: 'مَكْتَبَةٌ', image: '' }, // library
+      // { id: 13, arabic: 'مَسْجِدٌ', image: '' }, // mosque
+      // { id: 14, arabic: 'كَنِيسَةٌ', image: '' }, // church
+      // { id: 15, arabic: 'هَيْكَلٌ', image: '' }, // temple
+      // { id: 16, arabic: 'شَاطِئٌ', image: '' }, // beach
+      // { id: 17, arabic: 'فُنْدُقٌ', image: '' }, // hotel
+      // { id: 18, arabic: 'بَنْكٌ', image: '' }, // bank
+      // { id: 19, arabic: 'مَكْتَبُ البَرِيدِ', image: '' }, // post office
+      // { id: 20, arabic: 'مَخْفَرُ الشُّرْطَةِ', image: '' }, // police station
+      // { id: 21, arabic: 'مَحَطَّةُ الإِطْفَاءِ', image: '' }, // fire station
+      // { id: 22, arabic: 'مَحَطَّةُ وَقُودٍ', image: '' }, // gas station
+      // { id: 23, arabic: 'مَخْبَزٌ', image: '' }, // bakery
+      // { id: 24, arabic: 'مَلْحَمَةٌ', image: '' }, // butcher shop
+      // { id: 25, arabic: 'مَتْجَرُ مَلَابِسَ', image: '' }, // clothing store
+      // { id: 26, arabic: 'مَتْجَرُ أَحْذِيَةٍ', image: '' }, // shoe store
+      // { id: 27, arabic: 'مَتْجَرُ أَلْعَابٍ', image: '' }, // toy store
+      // { id: 28, arabic: 'مَتْجَرُ أَثَاثٍ', image: '' }, // furniture store
+      // { id: 29, arabic: 'مَتْجَرُ إِلِكْتْرُونِيَّاتٍ', image: '' }, // electronics store
+    ],
+  },
+  21:{
+    title: 'Adjectives',
+    category: 'Ism',
+    words:[
+    { id: 1, arabic: 'صَغِيرٌ', image: '' },    // small
+    { id: 2, arabic: 'كَبِيرٌ', image: '' },    // big
+    { id: 3, arabic: 'قَصِيرٌ', image: '' },    // short
+    { id: 4, arabic: 'طَوِيلٌ', image: '' },    // long
+    { id: 5, arabic: 'خَفِيفٌ', image: '' },    // light (weight)
+    { id: 6, arabic: 'ثَقِيلٌ', image: '' },    // heavy
+    { id: 7, arabic: 'جَدِيدٌ', image: '' },    // new
+    { id: 8, arabic: 'قَدِيمٌ', image: '' },    // old
+    { id: 9, arabic: 'سَرِيعٌ', image: '' },    // fast
+    { id: 10, arabic: 'بَطِيءٌ', image: '' },   // slow
+    { id: 11, arabic: 'ضَيِّقٌ', image: '' },   // narrow
+    { id: 12, arabic: 'عَرِيضٌ', image: '' },   // wide
+    { id: 13, arabic: 'كَثِيرٌ', image: '' },   // many / much
+    { id: 14, arabic: 'قَلِيلٌ', image: '' },   // few / little
+    { id: 15, arabic: 'قَرِيبٌ', image: '' },   // near
+    { id: 16, arabic: 'بَعِيدٌ', image: '' },   // far
+    { id: 17, arabic: 'صَعْبٌ', image: '' },    // difficult
+    { id: 18, arabic: 'سَهْلٌ', image: '' },    // easy
+    { id: 19, arabic: 'رَفِيعٌ', image: '' },   // high
+    { id: 20, arabic: 'ضَعِيفٌ', image: '' },   // weak
+    { id: 21, arabic: 'بَشِيعٌ', image: '' }    // ugly
+    ],
+  }
 };
 
 export function getTopicById(id) {
@@ -389,6 +508,7 @@ export function getAllTopics() {
     id: Number(id),
     title: data.title,
     path: `/topic/${id}`,
+    category: data.category, // add category for grouping
   }));
 }
 
