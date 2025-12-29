@@ -23,37 +23,6 @@ const choices = ref([]);
 const preparedUtterance = ref(null);
 const greyFinished = ref(true);
 
-// Arabic expressions for correct answers
-const correctExpressions = [
-  'أحسنت',      // Well done
-  'ممتاز',      // Excellent
-  'رائع',       // Wonderful
-  'صحيح',       // Correct
-  'برافو',      // Bravo
-  'عظيم',       // Great
-];
-
-// Arabic expressions for incorrect answers
-const incorrectExpressions = [
-  'حاول مرة أخرى',   // Try again
-  'لا بأس',          // It's okay
-  'يمكنك ذلك',       // You can do it
-  'استمر',           // Keep going
-];
-
-function getRandomExpression(expressions) {
-  return expressions[Math.floor(Math.random() * expressions.length)];
-}
-
-function speakExpression(text) {
-  if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'ar-SA';
-    utterance.rate = 1.0;
-    window.speechSynthesis.speak(utterance);
-  }
-}
-
 function setupGame() {
   // Do not randomize images; keep original order
   randomizedWords.value = [...allWords.value];
@@ -141,16 +110,8 @@ function handleChoice(word) {
     // Remove the word from remainingWords (by id)
     const idx = remainingWords.value.findIndex(w => w.id === targetWord.value.id);
     if (idx !== -1) remainingWords.value.splice(idx, 1);
-    // Speak encouraging expression
-    setTimeout(() => {
-      speakExpression(getRandomExpression(correctExpressions));
-    }, 300);
   } else {
     isCorrect.value = false;
-    // Speak supportive expression
-    setTimeout(() => {
-      speakExpression(getRandomExpression(incorrectExpressions));
-    }, 300);
   }
 
   setTimeout(() => {

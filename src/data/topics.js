@@ -70,37 +70,41 @@ export const topics = {
     type: 'standard',
     words: [
       // grandfather
-      { id: 1, arabic: 'جَدٌّ', emoji: '👴' },
+      { id: 1, arabic: 'جَدٌّ', image: 'https://i.pinimg.com/736x/37/e4/63/37e4636c1bfe56eb1798154fe882db4b.jpg' },
       // grandmother
-      { id: 2, arabic: 'جَدَّةٌ', emoji: '👵' },
+      { id: 2, arabic: 'جَدَّةٌ', image: 'https://i.pinimg.com/736x/ff/46/14/ff46143fd3abb88658daa7d61d360e11.jpg' },
       // father
-      { id: 3, arabic: 'أَبٌ', emoji: '👨' },
+      { id: 3, arabic: 'أَبٌ', image: 'https://i.pinimg.com/1200x/ea/45/b6/ea45b6b2d6e8c1b1a11c2d0fe885c6f0.jpg' },
       // mother
-      { id: 4, arabic: 'أُمٌّ', emoji: '👩' },
+      { id: 4, arabic: 'أُمٌّ', image: 'https://i.pinimg.com/1200x/54/38/e9/5438e93c54bc5f021cb2444068855ff8.jpg' },
       // father = walidi
-      { id: 5, arabic: 'وَالِدٌ', emoji: '👨' },
+      { id: 5, arabic: 'وَالِدٌ', image: 'https://i.pinimg.com/1200x/ea/45/b6/ea45b6b2d6e8c1b1a11c2d0fe885c6f0.jpg' },
       // mother = walida
-      { id: 6, arabic: 'وَالِدَةٌ', emoji: '👩' },
+      { id: 6, arabic: 'وَالِدَةٌ', image: 'https://i.pinimg.com/1200x/54/38/e9/5438e93c54bc5f021cb2444068855ff8.jpg' },
       // brother
-      { id: 7, arabic: 'أَخٌ', emoji: '👦' },
+      { id: 7, arabic: 'أَخٌ', image: 'https://i.pinimg.com/736x/83/76/da/8376dab5dba67670b3f376c2cddb96ae.jpg' },
       // sister
-      { id: 8, arabic: 'أُخْتٌ', emoji: '👧' },
+      { id: 8, arabic: 'أُخْتٌ', image: 'https://i.pinimg.com/736x/f5/e5/52/f5e55234f1a798dbc14720bded66f949.jpg' },
       // uncle (paternal)
-      { id: 9, arabic: 'عَمٌّ', emoji: '🧑' },
+      { id: 9, arabic: 'عَمٌّ', text: 'uncle (paternal)' },
       // aunt (paternal)
-      { id: 10, arabic: 'عَمَّةٌ', emoji: '🧑' },
+      { id: 10, arabic: 'عَمَّةٌ', text: 'aunt (paternal)' },
       // uncle (maternal)
-      { id: 11, arabic: 'خَالٌ', emoji: '🧑' },
+      { id: 11, arabic: 'خَالٌ', text: 'uncle (maternal)' },
       // aunt (maternal)
-      { id: 12, arabic: 'خَالَةٌ', emoji: '🧑' },
+      { id: 12, arabic: 'خَالَةٌ', text: 'aunt (maternal)' },
       // son
-      { id: 13, arabic: 'اِبْنٌ', emoji: '👦' },
+      { id: 13, arabic: 'اِبْنٌ', image: 'https://i.pinimg.com/736x/37/be/d9/37bed9a1bdac0745344640e9704ba9d6.jpg' },
       // daughter
-      { id: 14, arabic: 'اِبْنَةٌ', emoji: '👧' },
+      { id: 14, arabic: 'اِبْنَةٌ', image: 'https://i.pinimg.com/736x/ab/2b/5a/ab2b5aa2af8fe52989f0945a83cadac1.jpg' },
       // husband
-      { id: 15, arabic: 'زَوْجٌ', emoji: '🤵' },
+      { id: 15, arabic: 'زَوْجٌ', image: 'https://i.pinimg.com/736x/20/b6/3e/20b63ea9cab222f408291fed1a94713b.jpg' },
       // wife
-      { id: 16, arabic: 'زَوْجَةٌ', emoji: '👰' },
+      { id: 16, arabic: 'زَوْجَةٌ', image: 'https://i.pinimg.com/736x/66/6a/0c/666a0c2c03e7e6f2310a9aa1cfc2b383.jpg' },
+      // grandson
+      { id: 17, arabic: 'حَفِيدٌ', image: 'https://i.pinimg.com/736x/04/06/ca/0406ca51ca9051a7922a0f0fbd30b53e.jpg' },
+      // granddaughter
+      { id: 18, arabic: 'حَفِيدَةٌ', image: 'https://i.pinimg.com/1200x/9d/e3/c8/9de3c8ed24a21d969bdde3374a766041.jpg' },
     ],
   },
   // colors masculine only
