@@ -146,13 +146,6 @@ const isWordFinished = computed(() => (wordId) => {
       <span class="remaining">📋 {{ remainingWords.length }}</span>
     </div>
 
-    <div class="options">
-      <label class="grey-option">
-        <input type="checkbox" v-model="greyFinished" />
-        Grey finished words
-      </label>
-    </div>
-
     <div class="images-grid" :style="{ gridTemplateColumns: `repeat(${Math.min(7, randomizedWords.length)}, 1fr)` }">
       <div
         v-for="word in choices"

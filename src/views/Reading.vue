@@ -109,15 +109,17 @@ onMounted(async () => {
 
 <template>
   <div class="reading-container">
-    <div class="nav-buttons">
-      <button class="back-btn" @click="goBack">← Back</button>
-      <button class="home-btn" @click="goHome">🏠 Home</button>
-    </div>
-    
     <div class="progress">
       <span>{{ currentIndex + 1 }} / {{ words.length }}</span>
     </div>
 
+    <div class="instructions">
+      <p>🔊 Listen to the word</p>
+      <p>👆 Click once to continue</p>
+      <p>👆👆 Double-click to repeat</p>
+    </div>
+
+    <!-- Move word-card to the bottom, above nav-buttons -->
     <div class="word-card" @click="handleImageClick">
       <div class="word-image" :class="{ speaking: isSpeaking }">
         <!-- if words[currentIndex].image -->
@@ -144,10 +146,9 @@ onMounted(async () => {
       </div>
     </div>
 
-    <div class="instructions">
-      <p>🔊 Listen to the word</p>
-      <p>👆 Click once to continue</p>
-      <p>👆👆 Double-click to repeat</p>
+    <div class="nav-buttons">
+      <button class="back-btn" @click="goBack">←</button>
+      <button class="home-btn" @click="goHome">🏠</button>
     </div>
   </div>
 </template>
@@ -155,42 +156,38 @@ onMounted(async () => {
 <style scoped>
 .reading-container {
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Ensure content stretches to bottom */
+  justify-content: flex-start;
+  position: relative;
+  box-sizing: border-box;
 }
 
 .nav-buttons {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
+  z-index: 100;
 }
 
-.back-btn {
-  padding: 0.5rem 1rem;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.back-btn:hover {
-  background: #e0e0e0;
-}
-
+.back-btn,
 .home-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background: #f0f0f0;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+.back-btn:hover,
 .home-btn:hover {
   background: #e0e0e0;
 }
@@ -201,6 +198,7 @@ onMounted(async () => {
   color: #666;
 }
 
+/* Move word-card to bottom with spacing above nav-buttons */
 .word-card {
   background: white;
   border-radius: 20px;
@@ -211,6 +209,8 @@ onMounted(async () => {
   text-align: center;
   max-width: 400px;
   width: 100%;
+  margin-top: auto;
+  margin-bottom: 5.5rem; /* space for nav-buttons */
 }
 
 .word-card:hover {
@@ -246,11 +246,12 @@ onMounted(async () => {
   padding: 0.2rem 0.4rem;
 }
 .img-image {
-  width: 8rem;
-  height: 8rem;
+  width: 22rem;
+  height: 22rem;
   border-radius: 12px;
   display: block;
   margin: 0 auto;
+  object-fit: cover;
 }
 
 .word-text {
@@ -259,7 +260,7 @@ onMounted(async () => {
 
 .arabic {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 300;
   color: #333;
   margin-bottom: 0.5rem;
   direction: rtl;
@@ -277,19 +278,18 @@ onMounted(async () => {
 }
 
 @media (max-width: 768px) {
-  .reading-container {
-    padding: 1rem;
-  }
 
   .nav-buttons {
-    flex-direction: column;
-    gap: 0.25rem;
+    bottom: 0.75rem;
+    gap: 0.75rem;
+    flex-direction: row;
   }
 
   .back-btn,
   .home-btn {
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+    width: 5rem;
   }
 
   .progress {
@@ -300,6 +300,7 @@ onMounted(async () => {
   .word-card {
     padding: 2rem 1.5rem;
     max-width: 100%;
+    margin-bottom: 5.5rem;
   }
 
   .word-image {
@@ -314,15 +315,6 @@ onMounted(async () => {
 
   .img-text {
     font-size: 1rem;
-  }
-
-  .img-image {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .arabic {
-    font-size: 2rem;
   }
 
   .instructions {

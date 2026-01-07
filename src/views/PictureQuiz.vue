@@ -80,16 +80,12 @@ onMounted(() => {
 
 <template>
   <div class="picture-quiz-container">
-    <div class="nav-buttons">
-      <button class="back-btn" @click="goBack">← Back</button>
-      <button class="home-btn" @click="goHome">🏠 Home</button>
-    </div>
-
     <div class="progress">
       <span>{{ currentIndex + 1 }} / {{ shuffledWords.length }}</span>
       <span class="instruction">{{ clickState === 'show' ? '👆 Click to hear' : '👆 Click for next' }}</span>
     </div>
 
+    <!-- Move card above nav-buttons -->
     <div class="picture-card" @click="handleClick" :class="{ speaking: isSpeaking }">
       <div class="picture-visual">
         <img
@@ -111,6 +107,11 @@ onMounted(() => {
         {{ shuffledWords[currentIndex]?.arabic }}
       </div>
     </div>
+
+    <div class="nav-buttons">
+      <button class="back-btn" @click="goBack">←</button>
+      <button class="home-btn" @click="goHome">🏠</button>
+    </div>
   </div>
 </template>
 
@@ -121,27 +122,28 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .nav-buttons {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 0.5rem;
-  z-index: 10;
+  gap: 1rem;
+  z-index: 100;
 }
 
 .back-btn,
 .home-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background: #f0f0f0;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .back-btn:hover,
@@ -178,6 +180,8 @@ onMounted(() => {
   max-width: 500px;
   width: 100%;
   position: relative;
+  margin-top: auto;
+  margin-bottom: 1.5rem; /* reduced space so card sits just above nav */
 }
 
 .picture-card:hover {
@@ -259,14 +263,16 @@ onMounted(() => {
   }
 
   .nav-buttons {
-    flex-direction: column;
-    gap: 0.25rem;
+    bottom: 0.75rem;
+    gap: 0.75rem;
+    flex-direction: row;
   }
 
   .back-btn,
   .home-btn {
-    padding: 0.4rem 0.8rem;
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
+    width: 5rem;
   }
 
   .progress {
@@ -282,6 +288,7 @@ onMounted(() => {
   .picture-card {
     padding: 2rem;
     max-width: 100%;
+    margin-bottom: 4.5rem;
   }
 
   .picture-visual {

@@ -163,13 +163,6 @@ const isPairFinished = computed(() => (pairImage) => {
       <span class="remaining">📋 {{ remainingPairs.length }}</span>
     </div>
 
-    <div class="options">
-      <label class="grey-option">
-        <input type="checkbox" v-model="greyFinished" />
-        Grey finished pairs
-      </label>
-    </div>
-
     <div class="pairs-grid">
       <div
         v-for="(pair, index) in allPairs"

@@ -1,66 +1,40 @@
 export const topics = {
-  1: {
-    title: 'Food',
-    category: 'Ism',
-    type: 'standard',
-    words: [
-      { id: 1, arabic: 'تُفَّاحَةٌ', emoji: '🍎' },
-      { id: 2, arabic: 'مَوْزٌ', emoji: '🍌' },
-      { id: 3, arabic: 'بُرْتُقَالٌ', emoji: '🍊' },
-      { id: 4, arabic: 'عِنَبٌ', emoji: '🍇' },
-      { id: 5, arabic: 'خُبْزٌ', emoji: '🍞' },
-      { id: 6, arabic: 'مَاءٌ', emoji: '💧' },
-    ],
-  },
-  2: {
-    title: 'Animals',
-    category: 'Ism',
-    type: 'standard',
-    words: [
-      { id: 1, arabic: 'قِطٌّ', emoji: '🐱' },
-      { id: 2, arabic: 'كَلْبٌ', emoji: '🐕' },
-      { id: 3, arabic: 'طَائِرٌ', emoji: '🐦' },
-      { id: 4, arabic: 'سَمَكَةٌ', emoji: '🐟' },
-      { id: 5, arabic: 'أَسَدٌ', emoji: '🦁' },
-      { id: 6, arabic: 'فِيلٌ', emoji: '🐘' },
-    ],
-  },
   3:{
     title: 'Day 1',
     category: 'Ism',
     type: 'standard',
     words: [
-      { id: 1, arabic: 'بَابٌ', emoji: '🚪' },
-      { id: 2, arabic: 'بَيْتٌ', emoji: '🏠' },
-      { id: 3, arabic: 'خِزَانَةٌ', emoji: '🗄️' },
-      { id: 4, arabic: 'غَسَّالَةٌ', image: 'https://img.icons8.com/?size=160&id=ipTAwZOAAsqG&format=png' },
-      { id: 5, arabic: 'قُفْلٌ', emoji: '🔒' },
-      { id: 6, arabic: 'مِذْيَاعٌ', emoji: '📻' },
-      { id: 7, arabic: 'شَمْعَةٌ', emoji: '🕯️' },
-      { id: 8, arabic: 'هَاتِفٌ', emoji: '📱' },
-      { id: 9, arabic: 'مِفْتَاحٌ', emoji: '🗝️' },
-      { id: 10, arabic: 'أَرِيكَةٌ', emoji: '🛋️'},
-      { id: 11, arabic: 'سَرِيرٌ', emoji: '🛏️' },
-      { id: 12, arabic: 'وِسَادَةٌ', image: 'https://img.icons8.com/?size=160&id=6x8iBaTQZxHB&format=png' },
-      { id: 13, arabic: 'سَاعَةٌ', emoji: '⏰' },
-      { id: 14, arabic: 'نَافِذَةٌ', emoji: '🪟' },
-      { id: 15, arabic: 'شُبَّاكٌ', emoji: '🪟' },
-      { id: 16, arabic: 'مِكْوَاةٌ', image: 'https://img.icons8.com/?size=160&id=1raqAfhwkJ68&format=png' },
-      { id: 17, arabic: 'كِتَابٌ', emoji: '📖' },
-      { id: 18, arabic: 'دَفْتَرٌ', emoji: '📓' },
-      { id: 19, arabic: 'قَلَمٌ', emoji: '🖊️' },
-      { id: 20, arabic: 'مَكْتَبٌ', image: 'https://img.icons8.com/?size=160&id=aiLQpCJjX6Zs&format=png' },
-      { id: 21, arabic: 'كُرْسِيٌّ', emoji: '🪑' },
-      { id: 22, arabic: 'صُنْدُوقٌ', emoji: '📦' },
-      { id: 23, arabic: 'مِقَصٌّ', emoji: '✂️' },
-      { id: 24, arabic: 'حَاسُوبٌ', emoji: '💻' },
-      { id: 25, arabic: 'سَبُّورَةٌ', image: 'https://img.icons8.com/?size=160&id=MLgDJnT4Y0Jj&format=png' },
-      { id: 26, arabic: 'طَاوِلَةٌ', image: 'https://img.icons8.com/?size=160&id=5OwHmwmxM4ze&format=png' },
-      { id: 27, arabic: 'دَبَّاسَةٌ', image: 'https://img.icons8.com/?size=160&id=jKVK2Xxr9nJI&format=png' },
-      { id: 28, arabic: 'مِبْرَاةٌ', image: 'https://img.icons8.com/?size=160&id=I7WFghptRU52&format=png' },
-      { id: 29, arabic: 'مِسْطَرَةٌ', emoji: '📏' },
-      { id: 30, arabic: 'حَقِيبَةٌ', emoji: '🎒' },
-      { id: 31, arabic: 'كُرَةٌ', emoji: '⚽' },
+      { id: 1, arabic: 'بَابٌ', image: 'https://i.pinimg.com/736x/ce/88/d7/ce88d7d1c5144a2e1af431e71f6f6a43.jpg' }, // door
+      { id: 2, arabic: 'بَيْتٌ', image: 'https://i.pinimg.com/1200x/8c/a4/37/8ca4374a285ea57e6ed843d09c0b4f5e.jpg' }, // house
+      { id: 3, arabic: 'خِزَانَةٌ', image: 'https://i.pinimg.com/736x/2c/ba/f9/2cbaf95c8ae49871ee5c866b559c6a0e.jpg' }, // wardrobe
+      { id: 4, arabic: 'غَسَّالَةٌ', image: 'https://img.icons8.com/?size=160&id=ipTAwZOAAsqG&format=png' }, // washing machine
+      { id: 5, arabic: 'قُفْلٌ', image: 'https://i.pinimg.com/736x/c2/68/fd/c268fd255f531411b58fbbd49f3a4977.jpg' }, // lock
+      { id: 6, arabic: 'مِذْيَاعٌ', image: 'https://i.pinimg.com/1200x/11/1f/aa/111faabab1680275aff7023902ef758e.jpg' }, // radio
+      { id: 7, arabic: 'شَمْعَةٌ', image: 'https://i.pinimg.com/736x/c5/0f/9e/c50f9ec82d98b5eb7757e65119e4c7b6.jpg' }, // candle
+      { id: 8, arabic: 'هَاتِفٌ', image: 'https://i.pinimg.com/736x/8d/cb/d2/8dcbd2e7532bee58205b0192399e1dcd.jpg' }, // phone
+      { id: 9, arabic: 'مِفْتَاحٌ', image: 'https://i.pinimg.com/736x/d3/d8/ed/d3d8ed27675c2e8ec105f8d46502b37a.jpg' }, // key
+      { id: 10, arabic: 'أَرِيكَةٌ', image: 'https://i.pinimg.com/1200x/a8/28/6b/a8286b844cf00e2808234c3a89df0fcd.jpg'}, // sofa
+      { id: 11, arabic: 'سَرِيرٌ', image: 'https://i.pinimg.com/736x/db/b8/40/dbb840e53e78848eb81753ac6535bc07.jpg' }, // bed
+      { id: 12, arabic: 'وِسَادَةٌ', image: 'https://img.icons8.com/?size=160&id=6x8iBaTQZxHB&format=png' }, // pillow
+      { id: 13, arabic: 'سَاعَةٌ', image: 'https://i.pinimg.com/736x/33/ab/33/33ab33e20bcdfc3a1d025235dc5fec42.jpg' }, // clock
+      { id: 14, arabic: 'نَافِذَةٌ', image: 'https://i.pinimg.com/736x/90/ec/b0/90ecb01c24ce858260baa418348046d8.jpg' }, // window
+      { id: 15, arabic: 'شُبَّاكٌ', image: 'https://i.pinimg.com/736x/90/ec/b0/90ecb01c24ce858260baa418348046d8.jpg' }, // window
+      { id: 16, arabic: 'مِكْوَاةٌ', image: 'https://img.icons8.com/?size=160&id=1raqAfhwkJ68&format=png' }, // iron
+      { id: 17, arabic: 'كِتَابٌ', image: 'https://i.pinimg.com/1200x/a6/6d/d1/a66dd132c84f26f058c3f0f01afd5936.jpg' }, // book
+      { id: 18, arabic: 'دَفْتَرٌ', image: 'https://i.pinimg.com/736x/fe/f8/20/fef82092d33bf6d151505c006447dca1.jpg' }, // notebook
+      { id: 19, arabic: 'قَلَمٌ', image: 'https://i.pinimg.com/736x/29/c2/16/29c2168814bd3147b6b808505380a7dc.jpg' }, // pen
+      { id: 20, arabic: 'مَكْتَبٌ', image: 'https://img.icons8.com/?size=160&id=aiLQpCJjX6Zs&format=png' }, // desk
+      { id: 21, arabic: 'كُرْسِيٌّ', image: 'https://i.pinimg.com/736x/13/5c/69/135c69e33566c4f286b8e06fa1281c01.jpg' }, // chair
+      { id: 22, arabic: 'صُنْدُوقٌ', image: 'https://i.pinimg.com/736x/20/29/03/2029037b8c38d50cf722d3e891350929.jpg' }, // box
+      { id: 23, arabic: 'مِقَصٌّ', image: 'https://i.pinimg.com/1200x/52/72/95/52729506860cb009009c3fa162724ccc.jpg' }, // scissors
+      { id: 24, arabic: 'حَاسُوبٌ', image: 'https://i.pinimg.com/736x/2b/a7/3a/2ba73ac42636f7230f033a954d1af1f5.jpg' }, // computer
+      { id: 25, arabic: 'سَبُّورَةٌ', image: 'https://img.icons8.com/?size=160&id=MLgDJnT4Y0Jj&format=png' }, // board
+      { id: 26, arabic: 'طَاوِلَةٌ', image: 'https://img.icons8.com/?size=160&id=5OwHmwmxM4ze&format=png' }, // table
+      { id: 27, arabic: 'دَبَّاسَةٌ', image: 'https://img.icons8.com/?size=160&id=jKVK2Xxr9nJI&format=png' }, // stapler
+      { id: 28, arabic: 'مِبْرَاةٌ', image: 'https://img.icons8.com/?size=160&id=I7WFghptRU52&format=png' }, // sharpener
+      { id: 29, arabic: 'مِسْطَرَةٌ', image: 'https://i.pinimg.com/1200x/9b/49/10/9b49105782da79b0dc410f661e1eb49b.jpg' }, // ruler
+      { id: 30, arabic: 'حَقِيبَةٌ', image: 'https://i.pinimg.com/736x/38/af/d5/38afd5d45d186c0e93ab4a12322016fe.jpg' }, // bag
+      { id: 31, arabic: 'كُرَةٌ', image: 'https://i.pinimg.com/736x/3e/6b/48/3e6b4877bf6d610204cf7eec8db06d37.jpg' }, // ball
     ],
   },
   4:{
@@ -86,13 +60,13 @@ export const topics = {
       // sister
       { id: 8, arabic: 'أُخْتٌ', image: 'https://i.pinimg.com/736x/f5/e5/52/f5e55234f1a798dbc14720bded66f949.jpg' },
       // uncle (paternal)
-      { id: 9, arabic: 'عَمٌّ', text: 'uncle (paternal)' },
+      { id: 9, arabic: 'عَمٌّ', image: 'https://i.pinimg.com/736x/c3/35/67/c3356740e21cb374cc707f12655bffd8.jpg' },
       // aunt (paternal)
-      { id: 10, arabic: 'عَمَّةٌ', text: 'aunt (paternal)' },
+      { id: 10, arabic: 'عَمَّةٌ', image: 'https://i.pinimg.com/736x/ad/8a/c5/ad8ac5c297eef4b0a2add337560c05ec.jpg' },
       // uncle (maternal)
-      { id: 11, arabic: 'خَالٌ', text: 'uncle (maternal)' },
+      { id: 11, arabic: 'خَالٌ', image: 'https://i.pinimg.com/736x/ad/8a/c5/ad8ac5c297eef4b0a2add337560c05ec.jpg' },
       // aunt (maternal)
-      { id: 12, arabic: 'خَالَةٌ', text: 'aunt (maternal)' },
+      { id: 12, arabic: 'خَالَةٌ', image: 'https://i.pinimg.com/736x/cc/46/e7/cc46e76f59bf4b61b512d0297169ad95.jpg' },
       // son
       { id: 13, arabic: 'اِبْنٌ', image: 'https://i.pinimg.com/736x/37/be/d9/37bed9a1bdac0745344640e9704ba9d6.jpg' },
       // daughter
@@ -105,6 +79,10 @@ export const topics = {
       { id: 17, arabic: 'حَفِيدٌ', image: 'https://i.pinimg.com/736x/04/06/ca/0406ca51ca9051a7922a0f0fbd30b53e.jpg' },
       // granddaughter
       { id: 18, arabic: 'حَفِيدَةٌ', image: 'https://i.pinimg.com/1200x/9d/e3/c8/9de3c8ed24a21d969bdde3374a766041.jpg' },
+      // man
+      { id: 19, arabic: 'رَجُلٌ', image: 'https://i.pinimg.com/1200x/b0/af/7c/b0af7cae882c0897e8d48e5a8ed858b8.jpg' },
+      // woman
+      { id: 20, arabic: 'امْرَأَةٌ', image: 'https://i.pinimg.com/1200x/62/e9/34/62e934924808e23f7484f70d64ea2781.jpg' },
     ],
   },
   // colors masculine only
@@ -120,7 +98,7 @@ export const topics = {
       { id: 5, arabic: 'بُنِّيٌّ', emoji: '🟫' },
       { id: 6, arabic: 'أَبْيَضُ', emoji: '⬜' },
       { id: 7, arabic: 'أَسْوَدُ', emoji: '⬛' },
-      { id: 8, arabic: 'رَمَادِيٌّ', image: 'https://img.icons8.com/?size=100&id=78157&format=png' },
+      { id: 8, arabic: 'رَمَادِيٌّ', image: 'https://i.pinimg.com/736x/c4/12/cf/c412cff926f0e796e759496407a3105c.jpg' },
       { id: 9, arabic: 'وَرْدِيٌّ', emoji: '🌸' },
       { id: 10, arabic: 'بَنَفْسَجِيٌّ', emoji: '🟪' },
     ],
@@ -446,15 +424,22 @@ export const topics = {
       { id: 3, arabic: 'أَجْلِسُُ', image: 'https://i.pinimg.com/236x/7a/13/08/7a1308a5d7ca4ab5af8c0def867d657d.jpg' }, // poop
       { id: 4, arabic: 'أَسْتَحِمُُّ', image: 'https://i.pinimg.com/236x/c0/4e/6c/c04e6c47a126d2694197cf5575634b15.jpg' }, // take a shower
       { id: 5, arabic: 'آكُلُ فُطُورِي' , image:'https://i.pinimg.com/236x/bf/15/93/bf15932d79baa20068b7898a8a2b0af9.jpg'}, // I eat breakfast
-      { id: 6, arabic: 'أَتَنَاوَلُ فُطُورِي' , image:'https://i.pinimg.com/236x/bf/15/93/bf15932d79baa20068b7898a8a2b0af9.jpg'}, // he eats breakfast
+      { id: 6, arabic: 'أَتَنَاوَلُ فُطُورِي' , image:'https://i.pinimg.com/236x/bf/15/93/bf15932d79baa20068b7898a8a2b0af9.jpg'}, // I have my breakfast
       { id: 7, arabic: 'أَشْرَبُ' , image:'https://i.pinimg.com/736x/5c/b6/5f/5cb65f562f61f4bdd0f4c04bdfad4a75.jpg'}, // I drink
       { id: 8, arabic: 'أَجْرِي' , image:'https://i.pinimg.com/736x/c8/ed/50/c8ed50f0337175d61dc3be3e9649faf9.jpg'}, // I run
       { id: 9, arabic: 'أَمْشِي' , image:'https://i.pinimg.com/1200x/27/27/ae/2727ae90d50952ae6b76102f1233dd3c.jpg'}, // I walk
       { id: 10, arabic: 'أَذْهَبُ' , image:'https://i.pinimg.com/1200x/27/27/ae/2727ae90d50952ae6b76102f1233dd3c.jpg'}, // I go
       { id: 11, arabic: 'أَدْرُسُ' , image:'https://i.pinimg.com/736x/ed/d2/c8/edd2c8f977ecbe00cc251f3708091971.jpg'}, // I study
       { id: 12, arabic: 'أَتَعَلَّمُ' , image:'https://i.pinimg.com/736x/ed/d2/c8/edd2c8f977ecbe00cc251f3708091971.jpg'}, // I learn
-      { id: 13, arabic: 'يَغْسِلُ أَسْنَانَهُ' , image:'https://i.pinimg.com/1200x/ec/c7/0f/ecc70fbb9e754ba2acbfa1f7c6e34f64.jpg'}, // he brushes his teeth
-      { id: 14, arabic: 'أَغْسِلُ وَجْهِي' , image:'https://i.pinimg.com/736x/bd/a5/5f/bda55fb87a0efcefcfe50f40d4179bfc.jpg'} // I wash my face
+      { id: 13, arabic: 'أَغْسِلُ أَسْنَانِي', image:'https://i.pinimg.com/1200x/ec/c7/0f/ecc70fbb9e754ba2acbfa1f7c6e34f64.jpg'}, // I brush my teeth
+      { id: 14, arabic: 'أَغْسِلُ وَجْهِي' , image:'https://i.pinimg.com/736x/bd/a5/5f/bda55fb87a0efcefcfe50f40d4179bfc.jpg'}, // I wash my face
+      { id: 15, arabic: 'أَنَامُ' , image:'https://i.pinimg.com/736x/ec/9a/4a/ec9a4a26aeec1e507d920d5b55dd5c02.jpg'}, // I sleep
+      { id: 16, arabic: 'أَشْتَرِي' , image:'https://i.pinimg.com/736x/3a/1b/2c/3a1b2c1f4e8f4e8f4e8f4e8f4e8f4e8f.jpg'}, // I buy
+      { id: 17, arabic: 'أُشَاهِدُ' , image:'https://i.pinimg.com/736x/18/f6/cc/18f6ccccafa977f547e3479fa4e4ee1c.jpg'}, // I watch
+      { id: 18, arabic: 'آخَرُ', text:'other (m)'}, // other (m)
+      { id: 19, arabic: 'أُخْرَى', text:'other (f)'}, // other (f)
+      { id: 20, arabic: 'آخَرُونَ', text:'other (p)'}, // other (p)
+      { id: 21, arabic: 'آخَرِينَ', text:'other (p)'}, // other (p)
     ],
   },
   // places airport, quartier, university, restaurant, café, park, supermarket, mall, hospital, pharmacy, school, library, mosque, church, temple, beach, hotel, bank, post office, police station, fire station, gas station, bakery, butcher shop, clothing store, shoe store, toy store, furniture store, electronics store
@@ -597,7 +582,206 @@ export const topics = {
       { id: 13, text: 'temperature', arabic: 'دَرَجَةُ الْحَرَارَةِ' }, // temperature
       { id: 14, text: 'degree', arabic: 'دَرَجَةٌ' }, // degree
     ],
-  }
+  },
+  23:{
+    title: 'Hour',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      // assa3atul wahidatu
+      { id: 1, arabic: 'السَّاعَةُ الْوَاحِدَةُ', image: '' }, // 1:00
+      { id: 2, arabic: 'السَّاعَةُ الثَّانِيَةُ', image: '' }, // 2:00
+      { id: 3, arabic: 'السَّاعَةُ الثَّالِثَةُ', image: '' }, // 3:00
+      { id: 4, arabic: 'السَّاعَةُ الرَّابِعَةُ', image: '' }, // 4:00
+      { id: 5, arabic: 'السَّاعَةُ الْخَامِسَةُ', image: '' }, // 5:00
+      { id: 6, arabic: 'السَّاعَةُ السَّادِسَةُ', image: '' }, // 6:00
+      { id: 7, arabic: 'السَّاعَةُ السَّابِعَةُ', image: '' }, // 7:00
+      { id: 8, arabic: 'السَّاعَةُ الثَّامِنَةُ', image: '' }, // 8:00
+      { id: 9, arabic: 'السَّاعَةُ التَّاسِعَةُ', image: '' }, // 9:00
+      { id: 10, arabic: 'السَّاعَةُ الْعَاشِرَةُ', image: '' }, // 10:00
+      { id: 11, arabic: 'السَّاعَةُ الْحَادِيَةُ عَشَرَةُ', image: '' }, // 11:00
+      { id: 12, arabic: 'السَّاعَةُ الثَّانِيَةُ عَشَرَةُ', image: '' }, // 12:00
+    ],
+  },
+  24:{
+    title: 'Minutes',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'وَخُمْسٌ دَقَائِقُ', image: '' }, // 5 minutes
+      { id: 2, arabic: 'وَعَشْرٌ دَقَائِقُ', image: '' }, // 10 minutes
+      { id: 3, arabic: 'وَخَمْسَ عَشْرَةَ دَقَائِقُ', image: '' }, // 15 minutes
+      { id: 4, arabic: 'وَعِشْرُونَ دَقِيقَةً', image: '' }, // 20 minutes
+      { id: 5, arabic: 'وَخَمْسٌ وَعِشْرُونَ دَقِيقَةً', image: '' }, // 25 minutes
+      { id: 6, arabic: 'وَثَلَاثُونَ دَقِيقَةً', image: '' }, // 30 minutes
+      { id: 7, arabic: 'إِلَى خَمْسًا وَعِشْرِينَ دَقِيقَةً', image: '' }, // 35 minutes
+      { id: 8, arabic: 'إِلَى عَشْرِينَ دَقِيقَةً', image: '' }, // 40 minutes
+      { id: 9, arabic: 'إِلَى خَمْسَ عَشْرَةَ دَقَائِقُ', image: '' }, // 45 minutes
+      { id: 10, arabic: 'إِلَى عَشْرٍ دَقَائِقُ', image: '' }, // 50 minutes
+      { id: 11, arabic: 'إِلَى خُمْسٍ دَقَائِقُ', image: '' }, // 55 minutes
+    ],
+  },
+  25:{
+    title: 'Hour Expressions',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'صَبَاحًا', text: 'in the morning' }, // in the morning
+      { id: 2, arabic: 'ظُهْرًا', text: 'at noon' }, // at noon
+      { id: 3, arabic: 'مَسَاءً', text: 'in the evening' }, // in the evening
+      { id: 4, arabic: 'لَيْلًا', text: 'at night' }, // at night
+      { id: 5, arabic: 'مُنْتَصَفُ النَّهَارِ', text: 'midday' }, // midday
+      { id: 6, arabic: 'مُنْتَصَفُ اللَّيْلِ', text: 'midnight' }, // midnight
+    ],
+  },
+  26:{
+    title: 'Ordinal Numbers',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'الأَوَّلُ' , text: '1st'}, // 1st
+      { id: 2, arabic: 'الثَّانِي' , text: '2nd'}, // 2nd
+      { id: 3, arabic: 'الثَّالِثُ' , text: '3rd'}, // 3rd
+      { id: 4, arabic: 'الرَّابِعُ' , text: '4th'}, // 4th
+      { id: 5, arabic: 'الْخَامِسُ' , text: '5th'}, // 5th
+      { id: 6, arabic: 'السَّادِسُ' , text: '6th'}, // 6th
+      { id: 7, arabic: 'السَّابِعُ' , text: '7th'}, // 7th
+      { id: 8, arabic: 'الثَّامِنُ' , text: '8th'}, // 8th
+      { id: 9, arabic: 'التَّاسِعُ' , text: '9th'}, // 9th
+      { id: 10, arabic: 'الْعَاشِرُ' , text: '10th'}, // 10th
+    ],
+  },
+  27:{
+    title: 'Ordinal Numbers Feminine',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'الأُولَى' , text: '1st'}, // 1st
+      { id: 2, arabic: 'الثَّانِيَةُ' , text: '2nd'}, // 2nd
+      { id: 3, arabic: 'الثَّالِثَةُ' , text: '3rd'}, // 3rd
+      { id: 4, arabic: 'الرَّابِعَةُ' , text: '4th'}, // 4th
+      { id: 5, arabic: 'الْخَامِسَةُ' , text: '5th'}, // 5th
+      { id: 6, arabic: 'السَّادِسَةُ' , text: '6th'}, // 6th
+      { id: 7, arabic: 'السَّابِعَةُ' , text: '7th'}, // 7th
+      { id: 8, arabic: 'الثَّامِنَةُ' , text: '8th'}, // 8th
+      { id: 9, arabic: 'التَّاسِعَةُ' , text: '9th'}, // 9th
+      { id: 10, arabic: 'الْعَاشِرَةُ' , text: '10th'}, // 10th
+    ],
+  },
+  28:{
+    title: 'Cardinal Numbers',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'وَاحِدٌ' , text: '1'}, // 1
+      { id: 2, arabic: 'اِثْنَانِ' , text: '2'}, // 2
+      { id: 3, arabic: 'ثَلَاثَةٌ' , text: '3'}, // 3
+      { id: 4, arabic: 'أَرْبَعَةٌ' , text: '4'}, // 4
+      { id: 5, arabic: 'خَمْسَةٌ' , text: '5'}, // 5
+      { id: 6, arabic: 'سِتَّةٌ' , text: '6'}, // 6
+      { id: 7, arabic: 'سَبْعَةٌ' , text: '7'}, // 7
+      { id: 8, arabic: 'ثَمَانِيَةٌ' , text: '8'}, // 8
+      { id: 9, arabic: 'تِسْعَةٌ' , text: '9'}, // 9
+      { id: 10, arabic: 'عَشَرَةٌ' , text: '10'}, // 10
+    ],
+  },
+  29:{
+    title: 'Cardinal Numbers Feminine',
+    category: 'Arqam',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'وَاحِدَةٌ' , text: '1'}, // 1
+      { id: 2, arabic: 'اِثْنَتَانِ' , text: '2'}, // 2
+      { id: 3, arabic: 'ثَلَاثٌ' , text: '3'}, // 3
+      { id: 4, arabic: 'أَرْبَعٌ' , text: '4'}, // 4
+      { id: 5, arabic: 'خَمْسٌ' , text: '5'}, // 5
+      { id: 6, arabic: 'سِتٌّ' , text: '6'}, // 6
+      { id: 7, arabic: 'سَبْعٌ' , text: '7'}, // 7
+      { id: 8, arabic: 'ثَمَانٍ' , text: '8'}, // 8
+      { id: 9, arabic: 'تِسْعٌ' , text: '9'}, // 9
+      { id: 10, arabic: 'عَشْرٌ' , text: '10'}, // 10
+    ],
+  },
+  30:{
+    title: 'Demonstrative Pronouns',
+    category: 'Damaer',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'هَذَا', text: 'this (m)'}, // this (m)
+      { id: 2, arabic: 'هَذِهِ', text: 'this (f)'}, // this (f)
+      { id: 3, arabic: 'هَذَانِ', text: 'these 2 (m)'}, // these 2 (m)
+      { id: 4, arabic: 'هَاتَانِ', text: 'these 2 (f)'}, // these 2 (f)
+      { id: 5, arabic: 'هَؤُلَاءِ', text: 'these (p)'}, // these (p)
+      { id: 6, arabic: 'ذَلِكَ', text: 'that (m)'}, // that (m)
+      { id: 7, arabic: 'تِلْكَ', text: 'that (f)'}, // that (f)
+      { id: 8, arabic: 'ذَانِكَ', text: 'those 2 (m)'}, // those 2 (m)
+      { id: 9, arabic: 'تَانِكَ', text: 'those 2 (f)'}, // those 2 (f)
+      { id: 10, arabic: 'أُولَئِكَ', text: 'those (p)'}, // those (p)
+    ],
+  },
+  31:{
+    title: 'Taste Adjectives',
+    category: 'Ism',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'حُلْوٌ', image: 'https://i.pinimg.com/736x/95/9a/79/959a798444e6a02320f15e6bf097e910.jpg' }, // sweet
+      { id: 2, arabic: 'مُرٌّ', image: 'https://i.pinimg.com/736x/5e/e7/11/5ee711682fe694bb0cac095f241a4069.jpg' }, // bitter
+      { id: 3, arabic: 'حَامِضٌ', image: 'https://i.pinimg.com/1200x/63/e9/5f/63e95f4605fd5403a6bde53d308b18ce.jpg' }, // sour
+      { id: 4, arabic: 'مَالِحٌ', image: 'https://i.pinimg.com/1200x/60/51/44/605144689ed159c7249fbd05ed6f7faa.jpg' }, // salty
+      { id: 5, arabic: 'لَذِيذٌ', image: 'https://i.pinimg.com/736x/b9/d2/a2/b9d2a29fa0cddb3c4317ca244dd828c2.jpg' }, // delicious
+      { id: 6, arabic: 'بَاهِتٌ', image: 'https://i.pinimg.com/736x/78/c3/85/78c3852eae05a78cf298dbe4ef38bac9.jpg' }, // bland
+    ],
+  },
+  32:{
+    title: 'Vegetables',
+    category: 'Ism',
+    type: 'standard',
+    words: [
+      // fulfulun, fijlun, basolun, khiyarun, jazarun, basolun, kurashun, bazillaun, khossun, suumun, bazinjamun, karaun akhdor, batatis, tomatimun, brukuli, karnabit, yaktinun
+      { id: 1, arabic: 'فُولٌ', image: 'https://i.pinimg.com/1200x/d9/a3/e6/d9a3e639eefcb82d7f3d1d54a25e55d5.jpg' }, // fava bean
+      { id: 2, arabic: 'فِجْلٌ', image: 'https://i.pinimg.com/1200x/4c/13/ec/4c13ecbaf51aa1b895d76f2a9d022fd1.jpg' }, // radish
+      { id: 3, arabic: 'بَصَلٌ', image: 'https://i.pinimg.com/736x/71/49/01/714901ae65ac255519eee2bdeec6b1e8.jpg' }, // onion
+      { id: 4, arabic: 'خِيَارٌ', image: 'https://i.pinimg.com/736x/a9/89/1c/a9891cce1ab6e5a713ab539b36757211.jpg' }, // cucumber
+      { id: 5, arabic: 'جَزَرٌ', image: 'https://i.pinimg.com/736x/4a/cc/5f/4acc5f804f89cd17ef7efe9d87c2e37b.jpg' }, // carrot
+      { id: 6, arabic: 'بَصَلٌ', image: 'https://i.pinimg.com/736x/4a/29/3e/4a293ed61e579159b4324a5ad3b68fe8.jpg' }, // spring onion
+      { id: 7, arabic: 'كُرَّاثٌ', image: 'https://i.pinimg.com/1200x/fd/d3/93/fdd39363f9175f58bc98dc33e0c35a36.jpg' }, // leek
+      { id: 8, arabic: 'بَازِيلَاءٌ', image: 'https://i.pinimg.com/1200x/1e/ab/7a/1eab7a106646ece5e86dcbd3a25186bd.jpg' }, // pea
+      { id: 9, arabic: 'خُسٌّ', image: 'https://i.pinimg.com/1200x/e8/15/b8/e815b8f8285d460a197852538db8c2f6.jpg' }, // lettuce
+      { id: 10, arabic: 'ثُومٌ', image: 'https://i.pinimg.com/736x/fb/94/8e/fb948e9f71cab4f388687e87004d8398.jpg' }, // garlic
+      { id: 11, arabic: 'بَاذِنْجَانٌ', image: 'https://i.pinimg.com/1200x/75/73/6f/75736f14cca1a8f925e583a684addc96.jpg' }, // eggplant
+      { id: 12, arabic: 'فِلْفِلٌ أَخْضَرُ', image: 'https://i.pinimg.com/736x/a2/f1/d0/a2f1d0626b9ffb25d3a0bbbe5c0f14fa.jpg' }, // green pepper
+      { id: 13, arabic: 'بَطَاطِسٌ', image: 'https://i.pinimg.com/1200x/3a/42/bd/3a42bd02c9cb329a01a8a97fe1a1916f.jpg' }, // potato
+      { id: 14, arabic: 'طَمَاطِمٌ', image: 'https://i.pinimg.com/736x/dd/a7/df/dda7dfe31530b346cc694e40843e35de.jpg' }, // tomato
+      { id: 15, arabic: 'بُرُوكْلِيٌ', image: 'https://i.pinimg.com/736x/9c/fc/07/9cfc0799b21eff6895ad37688176deb8.jpg' }, // broccoli
+      { id: 16, arabic: 'قَرْنَبِيطٌ', image: 'https://i.pinimg.com/736x/c4/dd/7f/c4dd7fdd182cc42c9d46434c8e045728.jpg' }, // cauliflower
+      { id: 17, arabic: 'يَقْطِينٌ', image: 'https://i.pinimg.com/1200x/58/e6/5d/58e65d95ef2c32c77e4c020cc80dc46a.jpg' }, // pumpkin
+    ],
+  },
+  33:{
+    title: 'Fruits',
+    category: 'Ism',
+    type: 'standard',
+    words: [
+      { id: 1, arabic: 'تِينٌ', image: 'https://i.pinimg.com/1200x/bc/67/58/bc6758a007ca6ba6eb6d41f670745762.jpg' }, // fig
+      { id: 2, arabic: 'لَيْمُونٌ', image: 'https://i.pinimg.com/736x/fc/84/1f/fc841fd4f434cf27bdabae253f8985ce.jpg' }, // lemon
+      { id: 3, arabic: 'إِجَّاصٌ', image: 'https://i.pinimg.com/736x/d0/43/c2/d043c2518507d95497e130d787e04830.jpg' }, // pear
+      { id: 4, arabic: 'مَوْزٌ', image: 'https://i.pinimg.com/736x/28/f1/a1/28f1a139d8d4f12e4be142f59279f845.jpg' }, // banana
+      { id: 5, arabic: 'مَنْجُو', image: 'https://i.pinimg.com/736x/24/e2/07/24e20702cca2241cb0b4f7522cae387b.jpg' }, // mango
+      { id: 6, arabic: 'كِيوِي', image: 'https://i.pinimg.com/1200x/fd/5a/32/fd5a32a5c108571648dfd2125bf08643.jpg' }, // kiwi
+      { id: 7, arabic: 'مِشْمِشٌ', image: 'https://i.pinimg.com/1200x/0b/e9/0b/0be90bbc54178051b1df6fa657df896d.jpg' }, // apricot
+      { id: 8, arabic: 'بُرْتُقَالٌ', image: 'https://i.pinimg.com/736x/7a/aa/a5/7aaaa545e00e8a434850e80b8910dd94.jpg' }, // orange
+      { id: 9, arabic: 'أَفُوكَادُو', image: 'https://i.pinimg.com/736x/10/66/e2/1066e21e625a23571fe52b85568739ac.jpg' }, // avocado
+      { id: 10, arabic: 'أَنَانَاسٌ', image: 'https://i.pinimg.com/1200x/8b/f2/8e/8bf28e6b9a718175dd44a8e5103c1cae.jpg' }, // pineapple
+      { id: 11, arabic: 'جَوْزُ الْهِنْدِ', image: 'https://i.pinimg.com/1200x/81/a8/44/81a844459e1b5dfe26805970974df47b.jpg' }, // coconut
+      { id: 12, arabic: 'عِنَبٌ', image: 'https://i.pinimg.com/736x/93/90/e6/9390e6cd144f89705ab95dcb0c60fb41.jpg' }, // grape
+      { id: 13, arabic: 'خَوْخٌ', image: 'https://i.pinimg.com/736x/44/11/56/441156b237471a6009fe67f5d09b429a.jpg' }, // peach
+      { id: 14, arabic: 'تُوتٌ', image: 'https://i.pinimg.com/736x/d0/75/34/d07534fed4e096078d4d9027dbe4a93d.jpg' }, // berry
+      { id: 15, arabic: 'فَرَاوِلَةٌ', image: 'https://i.pinimg.com/1200x/2b/13/0b/2b130b5436fc3032520ec37674c5bdb4.jpg' }, // strawberry
+      { id: 16, arabic: 'تُفَّاحٌ', image: 'https://i.pinimg.com/1200x/4a/de/37/4ade3729109e48e14e0e3126f49df099.jpg' }, // apple
+      { id: 17, arabic: 'بَطِّيخٌ', image: 'https://i.pinimg.com/1200x/ed/69/3b/ed693bd66499dc00816b0a37cfc4035a.jpg' }, // watermelon
+      { id: 18, arabic: 'بَرْقُوقٌ', image: 'https://i.pinimg.com/736x/ac/99/f6/ac99f6c221cb1923120a951ae59ad548.jpg' }, // plum
+    ],
+  },
 };
 
 export function getTopicById(id) {
