@@ -37,6 +37,11 @@
         </div>
         <div class="choice-buttons">
             <Button v-if="!started" label="Begin" @click="started = true" />
+            <Button
+                v-if="started && currentWord"
+                label="Replay"
+                @click="speak(currentWord.ar)"
+            />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
         </div>

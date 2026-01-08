@@ -39,6 +39,11 @@
         </div>
         <div class="choice-buttons">
             <Button v-if="!started" label="Begin" @click="beginGame" />
+            <Button
+                v-if="started && !gameOver && currentGrid.length && currentIdx !== null"
+                label="Replay"
+                @click="speak(currentGrid[currentIdx]?.ar)"
+            />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
         </div>

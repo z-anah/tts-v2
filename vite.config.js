@@ -8,7 +8,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
     },
-    dedupe: ['vue'],
+    dedupe: ['vue','primevue'],
     extensions: ['.ts', '.vue'],
   },
   plugins: [vue()],

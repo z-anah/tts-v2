@@ -7,6 +7,7 @@
         <Button label="Reading" @click="go('reading')" />
         <Button label="Where am I" @click="go('where-am-i')" />
         <Button label="What am I" @click="go('what-am-i')" />
+        <Button label="List" @click="go('list')" />
         <Button label="Home" @click="goHome" />
       </div>
     </div>
@@ -28,6 +29,8 @@ function go(type) {
     router.push({ name: 'V2WhereAmI', params: { title } })
   } else if (type === 'what-am-i') {
     router.push({ name: 'V2WhatAmI', params: { title } })
+  } else if (type === 'list') {
+    router.push({ name: 'V2List', params: { title } })
   }
 }
 

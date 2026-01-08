@@ -28,20 +28,16 @@
             <span v-else-if="currentWord.emo" class="word-emo">{{ currentWord.emo }}</span>
             <span v-else-if="currentWord.txt" class="word-txt">{{ currentWord.txt }}</span>
           </div>
+          <div v-if="showAr" class="word-ar">{{ currentWord.ar }}</div>
         </template>
       </Card>
       <div class="choice-buttons">
-        <Button label="Show" @click="showAr = true" />
-        <Button label="Play" @click="playAr" />
+        <Button
+          label="Show and Play"
+          @click="showAndPlay"
+        />
         <Button label="Back" @click="goBack" />
         <Button label="Home" @click="goHome" />
-      </div>
-      <div v-if="showAr" class="ar-reveal">
-        <Card class="ar-card">
-          <template #content>
-            <div class="word-ar">{{ currentWord.ar }}</div>
-          </template>
-        </Card>
       </div>
     </div>
     <div v-else class="done-msg">
@@ -124,6 +120,11 @@ function playAr() {
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
   }
+}
+
+function showAndPlay() {
+  showAr.value = true
+  playAr()
 }
 
 function goBack() {

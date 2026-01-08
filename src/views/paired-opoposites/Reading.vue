@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, onMounted, computed, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTopicById } from '@/data/topics.js';
@@ -267,4 +267,6 @@ onMounted(async () => {
   }
   .back-btn, .home-btn { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
 }
-</style>
+</style> -->
+<template>
+</template>

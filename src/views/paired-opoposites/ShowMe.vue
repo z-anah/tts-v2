@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, onMounted, computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTopicById } from '@/data/topics.js';
@@ -445,4 +445,6 @@ const isPairFinished = computed(() => (pairImage) => {
     font-size: 0.8rem;
   }
 }
-</style>
+</style> -->
+<template>
+</template>

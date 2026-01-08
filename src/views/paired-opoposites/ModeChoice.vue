@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { getTopicById } from '@/data/topics.js';
@@ -205,4 +205,6 @@ const color = computed(() => getCategoryColor(topicCategory.value));
     font-size: 0.95rem;
   }
 }
-</style>
+</style> -->
+<template>
+</template>

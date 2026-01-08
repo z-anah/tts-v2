@@ -9,9 +9,7 @@ const arabicChatExpressions = {
 
   politeness: [
     { ar: "شكراً", en: "Thank you" },
-    { ar: "من فضلك", en: "Please" },
-    { ar: "لو سمحت", en: "Please (casual)" },
-    { ar: "آسف", en: "Sorry" },
+    { ar: "من فضلكِ", en: "Please" }, // feminine
     { ar: "عفواً", en: "You’re welcome / Excuse me" }
   ],
 
@@ -20,16 +18,14 @@ const arabicChatExpressions = {
     { ar: "الحمد لله", en: "Praise be to God" },
     { ar: "ما شاء الله", en: "What God has willed" },
     { ar: "الله يبارك", en: "May God bless" },
-    { ar: "الله يعافيك", en: "May God grant you health" },
+    { ar: "الله يعافيكي", en: "May God grant you health" }, // feminine
     { ar: "آمين يا رب العالمين", en: "Amen, Lord of all worlds" }
   ],
 
   agreement: [
     { ar: "نعم", en: "Yes" },
     { ar: "تمام", en: "Okay / All good" },
-    { ar: "أوكي", en: "OK" },
     { ar: "صح", en: "Correct" },
-    { ar: "مضبوط", en: "Exactly" }
   ],
 
   emotion: [
@@ -43,7 +39,6 @@ const arabicChatExpressions = {
   closing: [
     { ar: "مع السلامة", en: "Goodbye" },
     { ar: "في أمان الله", en: "In God’s protection" },
-    { ar: "نشوفك", en: "See you" },
     { ar: "إلى اللقاء", en: "See you later" }
   ],
 
@@ -52,13 +47,6 @@ const arabicChatExpressions = {
     { ar: "هههه", en: "Haha" },
     { ar: "ههههه", en: "Hahaha" },
     { ar: "هاها", en: "Haha" }
-  ],
-
-  shortcuts: [
-    { ar: "إن شاء", en: "Short for Inshallah" },
-    { ar: "الحمد", en: "Short for Alhamdulillah" },
-    { ar: "مش", en: "Not (colloquial)" },
-    { ar: "ماشي", en: "Okay / Agreed" }
   ],
 
   reactions: [
@@ -81,3 +69,5 @@ const arabicChatExpressions = {
     { ar: "لحظة", en: "Wait a moment" }
   ]
 };
+
+export default arabicChatExpressions;
