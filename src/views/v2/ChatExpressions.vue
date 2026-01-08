@@ -53,7 +53,8 @@ const categoryLabels = {
   laughter: 'Laughter',
   reactions: 'Reactions',
   casual: 'Casual',
-  fillers: 'Fillers'
+  fillers: 'Fillers',
+  questions: 'Questions',
 }
 
 const categories = arabicChatExpressions
@@ -110,7 +111,7 @@ function goHome() {
   background: #e0e0e0;
 }
 .expr-ar {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 0.3rem;
@@ -118,7 +119,7 @@ function goHome() {
   letter-spacing: 1px;
 }
 .expr-en {
-  font-size: 1rem;
+  font-size: 0.5rem;
   color: #666;
   text-align: center;
 }
