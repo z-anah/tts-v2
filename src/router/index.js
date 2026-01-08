@@ -8,6 +8,7 @@ import V2Reading from '../views/v2/Reading.vue';
 import V2WhereAmI from '../views/v2/WhereAmI.vue';
 import V2WhatAmI from '../views/v2/WhatAmI.vue';
 import V2ChatExpressions from '../views/v2/ChatExpressions.vue';
+import V2LanguageChoice from '../views/v2/LanguageChoice.vue';
 
 const routes = [
   {
@@ -26,42 +27,51 @@ const routes = [
     component: PairedOppositesShowMe,
   },
   {
-    path: '/v2',
+    path: '/',
+    name: 'V2LanguageChoice',
+    component: V2LanguageChoice,
+  },
+  {
+    path: '/v2/:lang',
     name: 'V2Index',
     component: V2Index,
+    props: true,
   },
   {
-    path: '/v2/choice/:title',
+    path: '/v2/:lang/choice/:title',
     name: 'V2Choice',
-    component: V2Choice, props: true,
+    component: V2Choice,
+    props: true,
   },
   {
-    path: '/v2/reading/:title',
+    path: '/v2/:lang/reading/:title',
     name: 'V2Reading',
     component: V2Reading,
     props: true,
   },
   {
-    path: '/v2/where-am-i/:title',
+    path: '/v2/:lang/where-am-i/:title',
     name: 'V2WhereAmI',
     component: V2WhereAmI,
     props: true,
   },
   {
-    path: '/v2/what-am-i/:title',
+    path: '/v2/:lang/what-am-i/:title',
     name: 'V2WhatAmI',
     component: V2WhatAmI,
     props: true,
   },
   {
-    path: '/v2/chat',
+    path: '/v2/:lang/chat',
     name: 'V2ChatExpressions',
-    component: V2ChatExpressions
+    component: V2ChatExpressions,
+    props: true,
   },
   {
-    path: '/v2/list/:title',
+    path: '/v2/:lang/list/:title',
     name: 'V2List',
-    component: () => import('@/views/v2/List.vue')
+    component: () => import('@/views/v2/List.vue'),
+    props: true,
   },
 ];
 

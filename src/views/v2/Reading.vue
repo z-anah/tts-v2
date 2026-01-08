@@ -21,7 +21,7 @@
                         {{ currentWord.txt }}
                     </div>
                     <div class="word-ar">
-                        {{ currentWord.ar }}
+                        {{ currentWord.target }}
                     </div>
                 </div>
             </template>
@@ -40,7 +40,7 @@
             <Button
                 v-if="started && currentWord"
                 label="Replay"
-                @click="speak(currentWord.ar)"
+                @click="speak(currentWord.target)"
             />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
@@ -52,13 +52,16 @@
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import { useRoute, useRouter } from 'vue-router'
-import { topics } from '@/data/topics-v2.js'
+import { topics as arabicTopics } from '@/data/topics-v2.js'
+import { topics as idTopics } from '@/data/topics-id.js'
 import { ref, computed, watch } from 'vue'
 
 const route = useRoute()
 const router = useRouter()
+const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
+const topics = lang === 'id' ? idTopics : arabicTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words || []
 
@@ -66,10 +69,10 @@ const index = ref(0)
 const started = ref(false)
 const currentWord = computed(() => started.value ? words[index.value] || null : null)
 
-function speak(ar) {
-    if (!ar) return
-    const utter = new window.SpeechSynthesisUtterance(ar)
-    utter.lang = 'ar-SA'
+function speak(target) {
+    if (!target) return
+    const utter = new window.SpeechSynthesisUtterance(target)
+    utter.lang = lang === 'id' ? 'id-ID' : lang === 'id' ? 'id-ID' : 'ar-SA'
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
 }
@@ -85,13 +88,13 @@ function goBack() {
 }
 
 function goHome() {
-    router.push({ name: 'V2Index' })
+    router.push({ name: 'V2Index', params: { lang } })
 }
 
 // Speak on word change
 watch(currentWord, (val) => {
-    if (started.value && val && val.ar) {
-        speak(val.ar)
+    if (started.value && val && val.target) {
+        speak(val.target)
     }
     if (started.value && val === null) {
         setTimeout(() => router.back(), 900)
@@ -131,8 +134,8 @@ watch(currentWord, (val) => {
 }
 
 .word-img img {
-    max-width: 370px;
-    max-height: 370px;
+    max-width: 200px;
+    max-height: 200px;
     margin-bottom: 16px;
     border-radius: 12px;
     background: #f8f8f8;

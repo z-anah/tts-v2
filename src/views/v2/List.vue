@@ -8,7 +8,7 @@
           v-for="(word, idx) in words"
           :key="idx"
           class="word-card"
-          @click="speak(word.ar)"
+          @click="speak(word.target)"
           style="cursor: pointer"
         >
           <template #content>
@@ -23,7 +23,7 @@
                 {{ word.txt }}
               </div>
               <div class="word-ar">
-                {{ word.ar }}
+                {{ word.target }}
               </div>
             </div>
           </template>
@@ -41,19 +41,22 @@
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import { useRoute, useRouter } from 'vue-router'
-import { topics } from '@/data/topics-v2.js'
+import { topics as arabicTopics } from '@/data/topics-v2.js'
+import { topics as idTopics } from '@/data/topics-id.js'
 
 const route = useRoute()
 const router = useRouter()
+const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
+const topics = lang === 'id' ? idTopics : arabicTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words || []
 
-function speak(ar) {
-  if (!ar) return
-  const utter = new window.SpeechSynthesisUtterance(ar)
-  utter.lang = 'ar-SA'
+function speak(target) {
+  if (!target) return
+  const utter = new window.SpeechSynthesisUtterance(target)
+  utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(utter)
 }
@@ -62,7 +65,7 @@ function goBack() {
   router.back()
 }
 function goHome() {
-  router.push({ name: 'V2Index' })
+  router.push({ name: 'V2Index', params: { lang } })
 }
 </script>
 

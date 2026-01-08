@@ -42,7 +42,7 @@
             <Button
                 v-if="started && !gameOver && currentGrid.length && currentIdx !== null"
                 label="Replay"
-                @click="speak(currentGrid[currentIdx]?.ar)"
+                @click="speak(currentGrid[currentIdx]?.target)"
             />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
@@ -54,13 +54,16 @@
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import { useRoute, useRouter } from 'vue-router'
-import { topics } from '@/data/topics-v2.js'
+import { topics as arabicTopics } from '@/data/topics-v2.js'
+import { topics as idTopics } from '@/data/topics-id.js'
 import { ref, computed, watch } from 'vue'
 
 const route = useRoute()
 const router = useRouter()
+const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
+const topics = lang === 'id' ? idTopics : arabicTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words || []
 
@@ -97,10 +100,10 @@ const gameOver = computed(() => {
 
 const currentGrid = computed(() => allGrids.value[rowIdx.value] || [])
 
-function speak(ar) {
-    if (!ar) return
-    const utter = new window.SpeechSynthesisUtterance(ar)
-    utter.lang = 'ar-SA'
+function speak(target) {
+    if (!target) return
+    const utter = new window.SpeechSynthesisUtterance(target)
+    utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
 }
@@ -134,7 +137,7 @@ function nextTarget() {
         idx = available[Math.floor(Math.random() * available.length)]
     } while (idx === currentIdx.value && available.length > 1)
     currentIdx.value = idx
-    speak(currentGrid.value[idx]?.ar)
+    speak(currentGrid.value[idx]?.target)
 }
 
 function guess(idx) {
@@ -167,7 +170,7 @@ function goBack() {
     router.back()
 }
 function goHome() {
-    router.push({ name: 'V2Index' })
+    router.push({ name: 'V2Index', params: { lang } })
 }
 </script>
 

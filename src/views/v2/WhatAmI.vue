@@ -16,7 +16,7 @@
       </div>
     </div>
     <div v-else-if="!gameOver">
-      <Card class="word-card" @click="nextWord">
+      <Card class="word-card" @click="handleCardClick">
         <template #content>
           <div class="word-content">
             <img
@@ -28,14 +28,10 @@
             <span v-else-if="currentWord.emo" class="word-emo">{{ currentWord.emo }}</span>
             <span v-else-if="currentWord.txt" class="word-txt">{{ currentWord.txt }}</span>
           </div>
-          <div v-if="showAr" class="word-ar">{{ currentWord.ar }}</div>
+          <div v-if="showAr" class="word-ar">{{ currentWord.target }}</div>
         </template>
       </Card>
       <div class="choice-buttons">
-        <Button
-          label="Show and Play"
-          @click="showAndPlay"
-        />
         <Button label="Back" @click="goBack" />
         <Button label="Home" @click="goHome" />
       </div>
@@ -60,13 +56,16 @@
 import Card from 'primevue/card'
 import Button from 'primevue/button'
 import { useRoute, useRouter } from 'vue-router'
-import { topics } from '@/data/topics-v2.js'
+import { topics as arabicTopics } from '@/data/topics-v2.js'
+import { topics as idTopics } from '@/data/topics-id.js'
 import { ref, computed } from 'vue'
 
 const route = useRoute()
 const router = useRouter()
+const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
+const topics = lang === 'id' ? idTopics : arabicTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words?.filter(w => w.img || w.emo || w.txt) || []
 
@@ -114,9 +113,9 @@ function nextWord() {
 }
 
 function playAr() {
-  if (currentWord.value && currentWord.value.ar) {
-    const utter = new window.SpeechSynthesisUtterance(currentWord.value.ar)
-    utter.lang = 'ar-SA'
+  if (currentWord.value && currentWord.value.target) {
+    const utter = new window.SpeechSynthesisUtterance(currentWord.value.target)
+    utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
   }
@@ -127,11 +126,20 @@ function showAndPlay() {
   playAr()
 }
 
+function handleCardClick() {
+  if (!showAr.value) {
+    showAr.value = true
+    showAndPlay()
+  } else {
+    nextWord()
+  }
+}
+
 function goBack() {
   router.back()
 }
 function goHome() {
-  router.push({ name: 'V2Index' })
+  router.push({ name: 'V2Index', params: { lang } })
 }
 </script>
 

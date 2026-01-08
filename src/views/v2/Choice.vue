@@ -20,22 +20,23 @@ import { useRouter, useRoute } from 'vue-router'
 
 const router = useRouter()
 const route = useRoute()
+const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
 function go(type) {
   if (type === 'reading') {
-    router.push({ name: 'V2Reading', params: { title } })
+    router.push({ name: 'V2Reading', params: { lang, title } })
   } else if (type === 'where-am-i') {
-    router.push({ name: 'V2WhereAmI', params: { title } })
+    router.push({ name: 'V2WhereAmI', params: { lang, title } })
   } else if (type === 'what-am-i') {
-    router.push({ name: 'V2WhatAmI', params: { title } })
+    router.push({ name: 'V2WhatAmI', params: { lang, title } })
   } else if (type === 'list') {
-    router.push({ name: 'V2List', params: { title } })
+    router.push({ name: 'V2List', params: { lang, title } })
   }
 }
 
 function goHome() {
-  router.push({ name: 'V2Index' })
+  router.push({ name: 'V2Index', params: { lang } })
 }
 </script>
 

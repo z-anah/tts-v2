@@ -14,7 +14,7 @@
             class="expression-card"
             @click="copyAr(expr.ar)"
           >
-            <div class="expr-ar">{{ expr.ar }}</div>
+            <div class="expr-ar">{{ expr.ar_t }}</div>
             <div class="expr-en">{{ expr.en }}</div>
           </div>
         </div>
@@ -33,14 +33,17 @@ import AccordionTab from 'primevue/accordiontab'
 import Button from 'primevue/button'
 import Toast from 'primevue/toast'
 import { useToast } from 'primevue/usetoast'
-import { useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { onMounted, ref } from 'vue'
 
 // Import expressions
 import arabicChatExpressions from '@/data/chat.js'
 
+const route = useRoute()
 const router = useRouter()
 const toast = useToast()
+
+const lang = route.params.lang || 'arabic'
 
 // Map for pretty category labels
 const categoryLabels = {
@@ -59,9 +62,18 @@ const categoryLabels = {
 
 const categories = arabicChatExpressions
 
+
+function speakAr(ar) {
+  if (!ar) return
+  const utterance = new window.SpeechSynthesisUtterance(ar)
+  utterance.lang = 'ar-SA'
+  window.speechSynthesis.speak(utterance)
+}
+
 function copyAr(ar) {
   if (!ar) return
   navigator.clipboard.writeText(ar)
+  speakAr(ar)
   toast.add({
     severity: 'success',
     summary: 'Copied!',
@@ -71,7 +83,7 @@ function copyAr(ar) {
 }
 
 function goHome() {
-  router.push({ name: 'V2Index' })
+  router.push({ name: 'V2Index', params: { lang } })
 }
 </script>
 
@@ -111,7 +123,7 @@ function goHome() {
   background: #e0e0e0;
 }
 .expr-ar {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 0.3rem;
@@ -119,7 +131,7 @@ function goHome() {
   letter-spacing: 1px;
 }
 .expr-en {
-  font-size: 0.5rem;
+  font-size: 0.3rem;
   color: #666;
   text-align: center;
 }
@@ -129,5 +141,13 @@ function goHome() {
   gap: 0.5rem;
   width: 100%;
   margin: 0 auto 16px auto;
+}
+:deep(.p-toast) {
+  max-width: 220px !important;
+  min-width: 120px !important;
+}
+:deep(.p-toast-message) {
+  max-width: 220px !important;
+  min-width: 120px !important;
 }
 </style>
