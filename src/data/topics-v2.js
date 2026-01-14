@@ -757,5 +757,27 @@ export const topics = [
             { native: 'on time', target: 'فِي الْوَقْتِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/2.jpg' },
             { native: 'late',    target: 'مُتَأَخِّرٌ',   img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/3.jpg' }
         ]
+    },
+    {
+        title: 'Time',
+        category: 'Ism',
+        type: 'standard',
+        words: 
+        [
+            { native: 'date', target: 'تَارِيخٌ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/4.jpg' },
+            { native: 'day', target: 'يَوْمٌ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/5.jpg' },
+            { native: 'month', target: 'شَهْرٌ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/6.jpg' },
+            { native: 'year', target: 'سَنَةٌ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/7.jpg' },
+            { native: 'today', target: 'الْيَوْمَ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/8.jpg' },
+            { native: 'tomorrow', target: 'غَدًا', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/9.jpg' },
+            { native: 'yesterday', target: 'أَمْسِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/10.jpg' },
+            { native: 'last week', target: 'الأُسْبُوعُ الْمَاضِي', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/11.jpg' },
+            { native: 'this week', target: 'هَذَا الأُسْبُوعُ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/12.jpg' },
+            { native: 'next week', target: 'الأُسْبُوعُ الْقَادِم', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/13.jpg' },
+            { native: 'daily', target: 'يَوْمِيًّا', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/14.png' },
+            { native: 'once a week', target: 'مَرَّةً فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/15.png' },
+            { native: 'twice a week', target: 'مَرَّتَيْنِ فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/16.png' },
+            { native: 'three times a week', target: 'ثَلَاثَ مَرَّاتٍ فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/17.png' }
+        ]
     }
 ];
