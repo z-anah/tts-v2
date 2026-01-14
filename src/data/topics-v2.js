@@ -747,4 +747,15 @@ export const topics = [
             { target: 'بَرْقُوقٌ', img: 'https://i.pinimg.com/736x/ac/99/f6/ac99f6c221cb1923120a951ae59ad548.jpg' }, // plum
         ],
     },
+    {
+        title: 'Time',
+        category: 'Ism',
+        type: 'standard',
+        words: 
+        [
+            { native: 'early',   target: 'مُبَكِّرٌ',     img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/1.jpg' },
+            { native: 'on time', target: 'فِي الْوَقْتِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/2.jpg' },
+            { native: 'late',    target: 'مُتَأَخِّرٌ',   img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/3.jpg' }
+        ]
+    }
 ];
