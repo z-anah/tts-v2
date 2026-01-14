@@ -1,11 +1,20 @@
 <template>
   <div class="chat-expressions-page">
     <div class="spacer"></div>
+    <div class="search-bar">
+      <InputText
+        v-model="search"
+        type="text"
+        placeholder="Search expressions..."
+        class="search-input"
+        ref="searchInputRef"
+      />
+    </div>
     <Accordion>
       <AccordionTab
-        v-for="(expressions, category) in categories"
+        v-for="(expressions, category) in filteredCategories"
         :key="category"
-        :header="categoryLabels[category] || category"
+        :header="category"
       >
         <div class="expressions-list">
           <div
@@ -23,6 +32,7 @@
     <Toast />
     <div class="choice-buttons">
       <Button label="Home" @click="goHome" />
+      <Button label="Focus Search" @click="focusSearch" severity="secondary" />
     </div>
   </div>
 </template>
@@ -32,9 +42,10 @@ import Accordion from 'primevue/accordion'
 import AccordionTab from 'primevue/accordiontab'
 import Button from 'primevue/button'
 import Toast from 'primevue/toast'
+import InputText from 'primevue/inputtext'
 import { useToast } from 'primevue/usetoast'
 import { useRoute, useRouter } from 'vue-router'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 
 // Import expressions
 import arabicChatExpressions from '@/data/chat.js'
@@ -45,23 +56,31 @@ const toast = useToast()
 
 const lang = route.params.lang || 'arabic'
 
-// Map for pretty category labels
-const categoryLabels = {
-  greetings: 'Greetings',
-  politeness: 'Politeness',
-  religious: 'Religious',
-  agreement: 'Agreement',
-  emotion: 'Emotion',
-  closing: 'Closing',
-  laughter: 'Laughter',
-  reactions: 'Reactions',
-  casual: 'Casual',
-  fillers: 'Fillers',
-  questions: 'Questions',
-}
-
 const categories = arabicChatExpressions
 
+const search = ref('')
+
+// Filtered categories based on search
+const filteredCategories = computed(() => {
+  if (!search.value.trim()) return categories
+  const q = search.value.trim().toLowerCase()
+  const result = {}
+  for (const [cat, exprs] of Object.entries(categories)) {
+    // Check if category matches
+    const catMatch = cat.toLowerCase().includes(q)
+    // Filter expressions
+    const filteredExprs = exprs.filter(expr =>
+      (expr.ar && expr.ar.toLowerCase().includes(q)) ||
+      (expr.en && expr.en.toLowerCase().includes(q)) ||
+      (expr.ar_t && expr.ar_t.toLowerCase().includes(q)) ||
+      catMatch
+    )
+    if (filteredExprs.length > 0) {
+      result[cat] = filteredExprs
+    }
+  }
+  return result
+})
 
 function speakAr(ar) {
   if (!ar) return
@@ -85,6 +104,18 @@ function copyAr(ar) {
 function goHome() {
   router.push({ name: 'V2Index', params: { lang } })
 }
+
+const searchInputRef = ref(null)
+
+function focusSearch() {
+  // PrimeVue InputText exposes the native input via $el.querySelector('input')
+  // or you can use $el.focus() if ref is on InputText
+  if (searchInputRef.value) {
+    // Try to focus the native input element
+    const el = searchInputRef.value.$el?.querySelector('input') || searchInputRef.value.$el || searchInputRef.value
+    if (el && typeof el.focus === 'function') el.focus()
+  }
+}
 </script>
 
 <style scoped>
@@ -100,6 +131,42 @@ function goHome() {
 }
 .spacer {
   flex: 1 1 auto;
+}
+.search-bar {
+  width: 100%;
+  margin: 1.2rem 0 1.2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+  background: #f5f5f5;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: border 0.2s, box-shadow 0.2s;
+  border: 2px solid #b3b3b3;
+}
+:deep(.p-inputtext) {
+  background: #f5f5f5;
+  border-radius: 16px;
+  font-size: 1.35rem;
+  font-weight: 500;
+  padding: 18px 20px;
+  border: none;
+  box-shadow: none;
+}
+.search-input:focus,
+:deep(.p-inputtext:focus) {
+  border: 2px solid #007bff !important;
+  background: #fff !important;
+  box-shadow: 0 4px 16px rgba(0,123,255,0.08) !important;
+  outline: none !important;
 }
 .expressions-list {
   display: flex;
