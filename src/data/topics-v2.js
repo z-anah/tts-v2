@@ -790,7 +790,12 @@ export const topics = [
                 { native: 'daily', target: 'يَوْمِيًّا', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/14.png' },
                 { native: 'once a week', target: 'مَرَّةً فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/15.png' },
                 { native: 'twice a week', target: 'مَرَّتَيْنِ فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/16.png' },
-                { native: 'three times a week', target: 'ثَلَاثَ مَرَّاتٍ فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/17.png' }
+                { native: 'three times a week', target: 'ثَلَاثَ مَرَّاتٍ فِي الأُسْبُوعِ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/17.png' },
+                { native: 'seasons', target: 'فُصُولٌ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/66.png' },
+                { native: 'spring', target: 'الرَّبِيعُ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/31.png' },
+                { native: 'summer', target: 'الصَّيْفُ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/32.png' },
+                { native: 'fall / autumn', target: 'الْخَرِيفُ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/33.png' },
+                { native: 'winter', target: 'الشِّتَاءُ', img: 'https://raw.githubusercontent.com/z-anah/tts-v2/refs/heads/main/public/images/34.png' }
             ]
     }
 ];
