@@ -154,7 +154,7 @@ watch(currentWord, (val) => {
 }
 
 .word-ar {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #222;
     letter-spacing: 1px;

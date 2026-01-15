@@ -27,7 +27,18 @@
                     }" @click="guess(idx)">
                         <template #content>
                             <div class="grid-content">
-                                <img v-if="word.img" :src="word.img" class="grid-img" alt="" />
+                                <img
+                                    v-if="word.img"
+                                    :src="word.img"
+                                    class="grid-img"
+                                    alt=""
+                                    @mousedown="startLongPress(word.img)"
+                                    @touchstart="startLongPress(word.img)"
+                                    @mouseup="cancelLongPress"
+                                    @mouseleave="cancelLongPress"
+                                    @touchend="cancelLongPress"
+                                    @touchcancel="cancelLongPress"
+                                />
                                 <span v-else-if="word.emo" class="grid-emo">{{ word.emo }}</span>
                                 <span v-else-if="word.txt" class="grid-txt">{{ word.txt }}</span>
                                 <span v-else class="grid-txt">?</span>
@@ -46,6 +57,9 @@
             />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
+        </div>
+        <div v-if="zoomImg" class="zoom-modal" @click="zoomImg = null">
+            <img :src="zoomImg" class="zoom-img" alt="Zoomed" />
         </div>
     </div>
 </template>
@@ -90,6 +104,10 @@ const foundIdxs = ref([])
 const currentIdx = ref(null)
 const wrongIdx = ref(null)
 const showCorrect = ref(false)
+
+// Zoom image state and long-press logic
+const zoomImg = ref(null)
+let longPressTimer = null
 
 const gameOver = computed(() => {
     if (!started.value) return false
@@ -163,6 +181,19 @@ function guess(idx) {
             showCorrect.value = false
             nextTarget()
         }, 900)
+    }
+}
+
+function startLongPress(img) {
+    cancelLongPress()
+    longPressTimer = setTimeout(() => {
+        zoomImg.value = img
+    }, 400)
+}
+function cancelLongPress() {
+    if (longPressTimer) {
+        clearTimeout(longPressTimer)
+        longPressTimer = null
     }
 }
 
@@ -250,8 +281,8 @@ function goHome() {
 }
 
 .grid-img {
-    max-width: 60px;
-    max-height: 60px;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 10px;
     margin-bottom: 8px;
     background: #f8f8f8;
@@ -289,5 +320,23 @@ function goHome() {
     gap: 0.5rem;
     width: 100%;
     margin: 0 auto 16px auto;
+}
+
+.zoom-modal {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+.zoom-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    background: #fff;
 }
 </style>
