@@ -292,4 +292,19 @@ export const topics = [
             { native: 'Emergency exit', target: 'Pintu darurat', img: '' },
         ],
     },
+    {
+        title: 'Free Diving',
+        category: 'free_diving',
+        words: [
+            { fr: 'apnée', en: 'freediving', id: 'selam bebas', ar: 'اَلْغَوْصُ بِحَبْسِ النَّفَسِ', mg: 'antsitrika tsy mampiasa fitaovana', img: '/tts-v2/Free Diving/cell_01.png' },
+            { fr: 'plongeur', en: 'freediver', id: 'penyelam bebas', ar: 'غَوَّاصٌ', mg: 'mpisitrika', img: '/tts-v2/Free Diving/cell_02.png' },
+            { fr: 'masque', en: 'mask', id: 'masker selam', ar: 'قِنَاعُ الْغَوْصِ', mg: 'saron-tava antsitrika', img: '/tts-v2/Free Diving/cell_03.png' },
+            { fr: 'tuba', en: 'snorkel', id: 'snorkel', ar: 'أُنْبُوبُ التَّنَفُّسِ', mg: 'fantsona fifohana rivotra', img: '/tts-v2/Free Diving/cell_04.png' },
+            { fr: 'palmes', en: 'fins', id: 'sirip', ar: 'زَعَانِفُ السِّبَاحَةِ', mg: 'vombon-tongotra', img: '/tts-v2/Free Diving/cell_05.png' },
+            { fr: 'océan', en: 'ocean', id: 'lautan', ar: 'اَلْمُحِيطُ', mg: 'ranomasina', img: '/tts-v2/Free Diving/cell_06.png' },
+            { fr: 'profondeur', en: 'depth', id: 'kedalaman', ar: 'اَلْعُمْقُ', mg: 'halalin-drano', img: '/tts-v2/Free Diving/cell_07.png' },
+            { fr: 'respiration', en: 'breathing', id: 'pernapasan', ar: 'اَلتَّنَفُّسُ', mg: 'fifohana rivotra', img: '/tts-v2/Free Diving/cell_08.png' },
+            { fr: 'remonter', en: 'surface', id: 'naik ke permukaan', ar: 'يَصْعَدُ إِلَى السَّطْحِ', mg: 'miakatra eny ambony', img: '/tts-v2/Free Diving/cell_09.png' }
+        ]
+    }
 ];

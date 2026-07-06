@@ -73,6 +73,13 @@ const routes = [
     component: () => import('@/views/v2/List.vue'),
     props: true,
   },
+  // Listening.vue
+  {
+    path: '/v2/:lang/listening',
+    name: 'V2Listening',
+    component: () => import('@/views/v2/Listening.vue'),
+    props: true,
+  },
 ];
 
 const router = createRouter({

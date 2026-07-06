@@ -1,11 +1,18 @@
 <template>
-    <div class="lang-switch">
+    <div class="lang-switch mb-5">
       <Button
         :label="lang === 'id' ? 'Learn Arabic' : 'Learn Indonesian'"
         @click="switchLang"
-        class="lang-switch-btn"
+        class="lang-switch-btn mb-3"
       />
     </div>
+
+    <Button
+      label="Listening Practice"
+      @click="goToListening"
+      severity="secondary"
+      class="mb-3 mt-3"
+    />
   <div class="topics-list">
     <Accordion>
       <AccordionTab
@@ -52,6 +59,10 @@ const groupedTopics = computed(() =>
 
 function goToChoice(topic) {
   router.push({ name: 'V2Choice', params: { lang: lang.value, title: topic.title } })
+}
+
+function goToListening() {
+  router.push({ name: 'V2Listening', params: { lang: lang.value } })
 }
 
 function switchLang() {

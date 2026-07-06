@@ -21,7 +21,7 @@
                         {{ currentWord.txt }}
                     </div>
                     <div class="word-ar">
-                        {{ currentWord.target }}
+                        {{ currentWord[lang] }}
                     </div>
                 </div>
             </template>
@@ -40,7 +40,7 @@
             <Button
                 v-if="started && currentWord"
                 label="Replay"
-                @click="speak(currentWord.target)"
+                @click="speak(currentWord[lang])"
             />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
@@ -72,7 +72,23 @@ const currentWord = computed(() => started.value ? words[index.value] || null : 
 function speak(target) {
     if (!target) return
     const utter = new window.SpeechSynthesisUtterance(target)
-    utter.lang = lang === 'id' ? 'id-ID' : lang === 'id' ? 'id-ID' : 'ar-SA'
+    switch (lang) {
+        case 'id':
+            utter.lang = 'id-ID'
+            break
+        case 'fr':
+            utter.lang = 'fr-FR'
+            break
+        case 'mg':
+            utter.lang = 'mg-MG'
+            break
+        case 'en':
+            utter.lang = 'en-US'
+            break
+        case 'ar':
+            utter.lang = 'ar-SA'
+            break
+    }
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
 }
@@ -93,8 +109,9 @@ function goHome() {
 
 // Speak on word change
 watch(currentWord, (val) => {
-    if (started.value && val && val.target) {
-        speak(val.target)
+    if (started.value && val && val[lang]) {
+        console.log('Speaking:', val[lang])
+        speak(val[lang])
     }
     if (started.value && val === null) {
         setTimeout(() => router.back(), 900)

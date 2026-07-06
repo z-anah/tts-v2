@@ -23,7 +23,7 @@
                 {{ word.txt }}
               </div>
               <div class="word-ar">
-                {{ word.target }}
+                {{ word[lang] }}
               </div>
             </div>
           </template>
@@ -49,14 +49,30 @@ const router = useRouter()
 const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
-const topics = lang === 'id' ? idTopics : arabicTopics
+const topics = lang !== 'id' ? arabicTopics : idTopics;
 const topic = topics.find(t => t.title === title)
 const words = topic?.words || []
 
 function speak(target) {
   if (!target) return
   const utter = new window.SpeechSynthesisUtterance(target)
-  utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
+  switch (lang) {
+    case 'id':
+      utter.lang = 'id-ID'
+      break
+    case 'fr':
+      utter.lang = 'fr-FR'
+      break
+    case 'mg':
+      utter.lang = 'mg-MG'
+      break
+    case 'en':
+      utter.lang = 'en-US'
+      break
+    case 'ar':
+      utter.lang = 'ar-SA'
+      break
+  }
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(utter)
 }
