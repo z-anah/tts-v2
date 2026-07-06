@@ -61,7 +61,7 @@ const router = useRouter()
 const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
-const topics = lang === 'id' ? idTopics : arabicTopics
+const topics = lang === 'arabic' ? arabicTopics : idTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words || []
 

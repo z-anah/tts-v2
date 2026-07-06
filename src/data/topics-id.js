@@ -306,5 +306,20 @@ export const topics = [
             { fr: 'respiration', en: 'breathing', id: 'pernapasan', ar: 'اَلتَّنَفُّسُ', mg: 'fifohana rivotra', img: '/tts-v2/Free Diving/cell_08.png' },
             { fr: 'remonter', en: 'surface', id: 'naik ke permukaan', ar: 'يَصْعَدُ إِلَى السَّطْحِ', mg: 'miakatra eny ambony', img: '/tts-v2/Free Diving/cell_09.png' }
         ]
+    },
+    {
+        title: 'Free Diving Verbs',
+        category: 'free_diving',
+        words: [
+            { fr: 'plonger', en: 'to dive', id: 'menyelam', ar: 'يَغُوصُ', mg: 'mitsitrika', img: '/tts-v2/Free Diving Verbs/cell_01.png' },
+            { fr: 'descendre', en: 'to descend', id: 'turun', ar: 'يَنْزِلُ', mg: 'midina', img: '/tts-v2/Free Diving Verbs/cell_02.png' },
+            { fr: 'remonter', en: 'to ascend', id: 'naik', ar: 'يَصْعَدُ', mg: 'miakatra', img: '/tts-v2/Free Diving Verbs/cell_03.png' },
+            { fr: 'nager', en: 'to swim', id: 'berenang', ar: 'يَسْبَحُ', mg: 'milomano', img: '/tts-v2/Free Diving Verbs/cell_04.png' },
+            { fr: 'respirer', en: 'to breathe', id: 'bernapas', ar: 'يَتَنَفَّسُ', mg: 'mifoka rivotra', img: '/tts-v2/Free Diving Verbs/cell_05.png' },
+            { fr: 'retenir son souffle', en: 'to hold one’s breath', id: 'menahan napas', ar: 'يَحْبِسُ نَفَسَهُ', mg: 'mitana fofonaina', img: '/tts-v2/Free Diving Verbs/cell_06.png' },
+            { fr: 'expirer', en: 'to exhale', id: 'menghembuskan napas', ar: 'يَزْفِرُ', mg: 'mamoaka rivotra', img: '/tts-v2/Free Diving Verbs/cell_07.png' },
+            { fr: 'égaliser', en: 'to equalize', id: 'menyamakan tekanan', ar: 'يُعَادِلُ الضَّغْطَ', mg: 'mampitovy tsindry', img: '/tts-v2/Free Diving Verbs/cell_08.png' },
+            { fr: 'flotter', en: 'to float', id: 'mengapung', ar: 'يَطْفُو', mg: 'mitsingevana', img: '/tts-v2/Free Diving Verbs/cell_09.png' }
+        ]
     }
 ];

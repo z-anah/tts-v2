@@ -1,10 +1,14 @@
 <template>
     <div class="lang-switch mb-5">
+      <!-- column of buttons id, en, mg, ar, fr to switch languages -->
       <Button
-        :label="lang === 'id' ? 'Learn Arabic' : 'Learn Indonesian'"
-        @click="switchLang"
-        class="lang-switch-btn mb-3"
+        v-for="language in ['id', 'en', 'mg', 'ar', 'fr']"
+        :key="language"
+        :label="language"
+        @click="switchLang(language)"
+        class="lang-switch-btn"
       />
+
     </div>
 
     <Button
@@ -46,7 +50,7 @@ const route = useRoute()
 const router = useRouter()
 
 const lang = computed(() => route.params.lang || 'arabic')
-const topics = computed(() => lang.value === 'id' ? idTopics : arabicTopics)
+const topics = computed(() => lang.value === 'arabic' ? arabicTopics : idTopics)
 
 // Group topics by category, topics in each category from last to first
 const groupedTopics = computed(() =>
@@ -65,8 +69,7 @@ function goToListening() {
   router.push({ name: 'V2Listening', params: { lang: lang.value } })
 }
 
-function switchLang() {
-  const newLang = lang.value === 'id' ? 'arabic' : 'id'
+function switchLang(newLang) {
   router.push({ name: 'V2Index', params: { lang: newLang } })
 }
 </script>
@@ -88,7 +91,8 @@ function switchLang() {
   justify-content: center;
 }
 .lang-switch-btn {
-  min-width: 180px;
+  width: 40px;
+  margin: 0 2px;
 }
 @media (min-width: 600px) {
   .topics-list {
