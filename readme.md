@@ -1,6 +1,7 @@
 ## links
 #### image creation
 
+https://gemini.google.com/app/0f94f1d0050dc485
 https://chatgpt.com/c/6a4b68fc-6320-83ec-8c12-583cec41a72c
 
 #### cropping image

@@ -321,5 +321,35 @@ export const topics = [
             { fr: 'égaliser', en: 'to equalize', id: 'menyamakan tekanan', ar: 'يُعَادِلُ الضَّغْطَ', mg: 'mampitovy tsindry', img: '/tts-v2/Free Diving Verbs/cell_08.png' },
             { fr: 'flotter', en: 'to float', id: 'mengapung', ar: 'يَطْفُو', mg: 'mitsingevana', img: '/tts-v2/Free Diving Verbs/cell_09.png' }
         ]
+    },
+    {
+        title: 'Free Diving Activities',
+        category: 'free_diving',
+        words: [
+            { fr: 'échauffement', en: 'warm-up', id: 'pemanasan', ar: 'اَلْإِحْمَاءُ', mg: 'fanomanana', img: '/tts-v2/Free Diving Activities/cell_01.png' },
+            { fr: 'étirement', en: 'stretching', id: 'peregangan', ar: 'اَلتَّمَدُّدُ', mg: 'fanenjanana', img: '/tts-v2/Free Diving Activities/cell_02.png' },
+            { fr: 'respiration', en: 'breathing exercise', id: 'latihan pernapasan', ar: 'تَمْرِينُ التَّنَفُّسِ', mg: 'fanazaran-tena fifohana rivotra', img: '/tts-v2/Free Diving Activities/cell_03.png' },
+            { fr: 'apnée statique', en: 'static apnea', id: 'apnea statis', ar: 'اَلْحَبْسُ الثَّابِتُ لِلنَّفَسِ', mg: 'fitanana fofonaina tsy mihetsika', img: '/tts-v2/Free Diving Activities/cell_04.png' },
+            { fr: 'apnée dynamique', en: 'dynamic apnea', id: 'apnea dinamis', ar: 'اَلْحَبْسُ الْمُتَحَرِّكُ لِلنَّفَسِ', mg: 'fitanana fofonaina mihetsika', img: '/tts-v2/Free Diving Activities/cell_05.png' },
+            { fr: 'descente', en: 'descent', id: 'turun', ar: 'اَلنُّزُولُ', mg: 'fidinana', img: '/tts-v2/Free Diving Activities/cell_06.png' },
+            { fr: 'remontée', en: 'ascent', id: 'naik ke permukaan', ar: 'اَلصُّعُودُ', mg: 'fiakarana', img: '/tts-v2/Free Diving Activities/cell_07.png' },
+            { fr: 'récupération', en: 'recovery breathing', id: 'pernapasan pemulihan', ar: 'تَنَفُّسُ التَّعَافِي', mg: 'fifohana rivotra fanarenana', img: '/tts-v2/Free Diving Activities/cell_08.png' },
+            { fr: 'observation de la vie marine', en: 'marine life observation', id: 'mengamati kehidupan laut', ar: 'مُرَاقَبَةُ اَلْحَيَاةِ اَلْبَحْرِيَّةِ', mg: 'fijerena ny fiainana an-dranomasina', img: '/tts-v2/Free Diving Activities/cell_09.png' }
+        ]
+    },
+    {
+        title: 'Marine Life Observation',
+        category: 'free_diving',
+        words: [
+            { fr: 'poisson', en: 'fish', id: 'ikan', ar: 'سَمَكَةٌ', mg: 'trondro', img: '/tts-v2/Marine Life Observation/cell_01.png' },
+            { fr: 'tortue de mer', en: 'sea turtle', id: 'penyu', ar: 'سُلَحْفَاةٌ بَحْرِيَّةٌ', mg: 'sokatra an-dranomasina', img: '/tts-v2/Marine Life Observation/cell_02.png' },
+            { fr: 'dauphin', en: 'dolphin', id: 'lumba-lumba', ar: 'دُلْفِينٌ', mg: 'delfina', img: '/tts-v2/Marine Life Observation/cell_03.png' },
+            { fr: 'requin', en: 'shark', id: 'hiu', ar: 'قِرْشٌ', mg: 'antsantsa', img: '/tts-v2/Marine Life Observation/cell_04.png' },
+            { fr: 'raie', en: 'ray', id: 'pari', ar: 'شِفْنِينٌ', mg: 'hazandrano fisaka', img: '/tts-v2/Marine Life Observation/cell_05.png' },
+            { fr: 'pieuvre', en: 'octopus', id: 'gurita', ar: 'أُخْطُبُوطٌ', mg: 'horita', img: '/tts-v2/Marine Life Observation/cell_06.png' },
+            { fr: 'méduse', en: 'jellyfish', id: 'ubur-ubur', ar: 'قِنْدِيلُ الْبَحْرِ', mg: 'medizy', img: '/tts-v2/Marine Life Observation/cell_07.png' },
+            { fr: 'corail', en: 'coral', id: 'karang', ar: 'مَرْجَانٌ', mg: 'haran-dranomasina', img: '/tts-v2/Marine Life Observation/cell_08.png' },
+            { fr: 'anémone de mer', en: 'sea anemone', id: 'anemon laut', ar: 'شَقِيقُ النُّعْمَانِ الْبَحْرِيُّ', mg: 'anemona an-dranomasina', img: '/tts-v2/Marine Life Observation/cell_09.png' }
+        ]
     }
 ];
