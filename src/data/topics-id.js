@@ -294,7 +294,7 @@ export const topics = [
     },
     {
         title: 'Free Diving',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'apnée', en: 'freediving', id: 'selam bebas', ar: 'اَلْغَوْصُ بِحَبْسِ النَّفَسِ', mg: 'antsitrika tsy mampiasa fitaovana', img: '/tts-v2/Free Diving/cell_01.png' },
             { fr: 'plongeur', en: 'freediver', id: 'penyelam bebas', ar: 'غَوَّاصٌ', mg: 'mpisitrika', img: '/tts-v2/Free Diving/cell_02.png' },
@@ -309,7 +309,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Verbs',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'plonger', en: 'to dive', id: 'menyelam', ar: 'يَغُوصُ', mg: 'mitsitrika', img: '/tts-v2/Free Diving Verbs/cell_01.png' },
             { fr: 'descendre', en: 'to descend', id: 'turun', ar: 'يَنْزِلُ', mg: 'midina', img: '/tts-v2/Free Diving Verbs/cell_02.png' },
@@ -324,7 +324,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Activities',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'échauffement', en: 'warm-up', id: 'pemanasan', ar: 'اَلْإِحْمَاءُ', mg: 'fanomanana', img: '/tts-v2/Free Diving Activities/cell_01.png' },
             { fr: 'étirement', en: 'stretching', id: 'peregangan', ar: 'اَلتَّمَدُّدُ', mg: 'fanenjanana', img: '/tts-v2/Free Diving Activities/cell_02.png' },
@@ -339,7 +339,7 @@ export const topics = [
     },
     {
         title: 'Marine Life Observation',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'poisson', en: 'fish', id: 'ikan', ar: 'سَمَكَةٌ', mg: 'trondro', img: '/tts-v2/Marine Life Observation/cell_01.png' },
             { fr: 'tortue de mer', en: 'sea turtle', id: 'penyu', ar: 'سُلَحْفَاةٌ بَحْرِيَّةٌ', mg: 'sokatra an-dranomasina', img: '/tts-v2/Marine Life Observation/cell_02.png' },
@@ -354,22 +354,22 @@ export const topics = [
     },
     {
         title: 'Corals',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'corail cerveau', en: 'brain coral', id: 'karang otak', ar: 'مَرْجَانٌ دِمَاغِيٌّ', mg: 'haran-dranomasina atidoha', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail corne de cerf', en: 'staghorn coral', id: 'karang tanduk rusa', ar: 'مَرْجَانٌ مُتَشَعِّبٌ', mg: 'haran-dranomasina tandroka serfa', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail de feu', en: 'fire coral', id: 'karang api', ar: 'مَرْجَانُ النَّارِ', mg: 'haran-dranomasina mirehitra', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail de table', en: 'table coral', id: 'karang meja', ar: 'مَرْجَانٌ مُسَطَّحٌ', mg: 'haran-dranomasina fisaka', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail mou', en: 'soft coral', id: 'karang lunak', ar: 'مَرْجَانٌ رَخْوٌ', mg: 'haran-dranomasina malefaka', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail dur', en: 'hard coral', id: 'karang keras', ar: 'مَرْجَانٌ صُلْبٌ', mg: 'haran-dranomasina mafy', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail en éventail', en: 'sea fan', id: 'kipas laut', ar: 'مِرْوَحَةُ الْبَحْرِ', mg: 'mpankafy an-dranomasina', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail fouet', en: 'whip coral', id: 'karang cambuk', ar: 'مَرْجَانٌ سَوْطِيٌّ', mg: 'haran-dranomasina karavasy', img: '/tts-v2/Corals/cell_01.png' },
-            { fr: 'corail champignon', en: 'mushroom coral', id: 'karang jamur', ar: 'مَرْجَانٌ فِطْرِيٌّ', mg: 'haran-dranomasina holatra', img: '/tts-v2/Corals/cell_01.png' }
+            { fr: 'corail corne de cerf', en: 'staghorn coral', id: 'karang tanduk rusa', ar: 'مَرْجَانٌ مُتَشَعِّبٌ', mg: 'haran-dranomasina tandroka serfa', img: '/tts-v2/Corals/cell_02.png' },
+            { fr: 'corail de feu', en: 'fire coral', id: 'karang api', ar: 'مَرْجَانُ النَّارِ', mg: 'haran-dranomasina mirehitra', img: '/tts-v2/Corals/cell_03.png' },
+            { fr: 'corail de table', en: 'table coral', id: 'karang meja', ar: 'مَرْجَانٌ مُسَطَّحٌ', mg: 'haran-dranomasina fisaka', img: '/tts-v2/Corals/cell_04.png' },
+            { fr: 'corail mou', en: 'soft coral', id: 'karang lunak', ar: 'مَرْجَانٌ رَخْوٌ', mg: 'haran-dranomasina malefaka', img: '/tts-v2/Corals/cell_05.png' },
+            { fr: 'corail dur', en: 'hard coral', id: 'karang keras', ar: 'مَرْجَانٌ صُلْبٌ', mg: 'haran-dranomasina mafy', img: '/tts-v2/Corals/cell_06.png' },
+            { fr: 'corail en éventail', en: 'sea fan', id: 'kipas laut', ar: 'مِرْوَحَةُ الْبَحْرِ', mg: 'mpankafy an-dranomasina', img: '/tts-v2/Corals/cell_07.png' },
+            { fr: 'corail fouet', en: 'whip coral', id: 'karang cambuk', ar: 'مَرْجَانٌ سَوْطِيٌّ', mg: 'haran-dranomasina karavasy', img: '/tts-v2/Corals/cell_08.png' },
+            { fr: 'corail champignon', en: 'mushroom coral', id: 'karang jamur', ar: 'مَرْجَانٌ فِطْرِيٌّ', mg: 'haran-dranomasina holatra', img: '/tts-v2/Corals/cell_09.png' }
         ]
     },
     {
         title: 'Free Diving Pro Equipment',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'combinaison', en: 'wetsuit', id: 'baju selam', ar: 'بَدْلَةُ الْغَوْصِ', mg: 'akanjo antsitrika', img: '/tts-v2/Free Diving Pro Equipment/cell_01.png' },
             { fr: 'ceinture de plomb', en: 'weight belt', id: 'sabuk pemberat', ar: 'حِزَامُ الْأَوْزَانِ', mg: 'fehikibo misy lanja', img: '/tts-v2/Free Diving Pro Equipment/cell_02.png' },
@@ -384,7 +384,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Boat & Platform',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'bateau', en: 'boat', id: 'perahu', ar: 'قَارِبٌ', mg: 'sambo', img: '/tts-v2/Free Diving Boat & Platform/cell_01.png' },
             { fr: 'bateau pneumatique', en: 'inflatable boat', id: 'perahu karet', ar: 'قَارِبٌ مُطَّاطِيٌّ', mg: 'sambo fingotra', img: '/tts-v2/Free Diving Boat & Platform/cell_02.png' },
@@ -399,7 +399,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Dive Site',
-        category: 'free_diving_dive_site',
+        category: 'Free Diving',
         words: [
             { fr: 'plage', en: 'beach', id: 'pantai', ar: 'شَاطِئٌ', mg: 'morontsiraka', img: '/tts-v2/Free Diving Dive Site/cell_01.png' },
             { fr: 'baie', en: 'bay', id: 'teluk', ar: 'خَلِيجٌ', mg: 'helodrano', img: '/tts-v2/Free Diving Dive Site/cell_02.png' },
@@ -414,7 +414,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Injuries',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'barotraumatisme', en: 'barotrauma', id: 'barotrauma', ar: 'رَضْحُ الضَّغْطِ', mg: 'ratran’ny tsindry', img: '/tts-v2/Free Diving Injuries/cell_01.png' },
             { fr: 'coupure', en: 'cut', id: 'luka sayat', ar: 'جُرْحٌ', mg: 'ratra', img: '/tts-v2/Free Diving Injuries/cell_02.png' },
@@ -429,7 +429,7 @@ export const topics = [
     },
     {
         title: 'Free Diving Sounds',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'bulle', en: 'bubble', id: 'gelembung', ar: 'فُقَاعَةٌ', mg: 'pôka', img: '/tts-v2/Free Diving Sounds/cell_01.png' },
             { fr: 'éclaboussure', en: 'splash', id: 'cipratan', ar: 'رَذَاذٌ', mg: 'fitsipitsipika', img: '/tts-v2/Free Diving Sounds/cell_02.png' },
@@ -504,7 +504,7 @@ export const topics = [
     },
     {
         title: 'Pier to Island',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'embarcadère', en: 'pier', id: 'dermaga', ar: 'رَصِيفُ الْمِينَاءِ', mg: 'seranana', img: '/tts-v2/Pier to Island/cell_01.png' },
             { fr: 'île', en: 'island', id: 'pulau', ar: 'جَزِيرَةٌ', mg: 'nosy', img: '/tts-v2/Pier to Island/cell_02.png' },
@@ -519,7 +519,7 @@ export const topics = [
     },
     {
         title: 'Speedboat',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'coque', en: 'hull', id: 'lambung kapal', ar: 'هَيْكَلُ الْقَارِبِ', mg: 'vatan-tsambo', img: '/tts-v2/Speedboat/cell_01.png' },
             { fr: 'moteur hors-bord', en: 'outboard motor', id: 'mesin tempel', ar: 'مُحَرِّكٌ خَارِجِيٌّ', mg: 'motera ivelany', img: '/tts-v2/Speedboat/cell_02.png' },
@@ -534,7 +534,7 @@ export const topics = [
     },
     {
         title: 'Sea Anemone',
-        category: 'free_diving',
+        category: 'Free Diving',
         words: [
             { fr: 'tentacule', en: 'tentacle', id: 'tentakel', ar: 'لَامِسَةٌ', mg: 'sandry', img: '/tts-v2/Sea Anemone/cell_01.png' },
             { fr: 'disque oral', en: 'oral disc', id: 'cakram mulut', ar: 'اَلْقُرْصُ الْفَمِيُّ', mg: 'kapila am-bava', img: '/tts-v2/Sea Anemone/cell_02.png' },

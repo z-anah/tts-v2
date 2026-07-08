@@ -165,7 +165,7 @@ watch(currentWord, (val) => {
 }
 
 .word-txt {
-    font-size: 2rem;
+    font-size: 0.7rem;
     margin-bottom: 16px;
     color: #555;
 }
