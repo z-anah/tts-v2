@@ -27,18 +27,10 @@
                     }" @click="guess(idx)">
                         <template #content>
                             <div class="grid-content">
-                                <img
-                                    v-if="word.img"
-                                    :src="'/tts-v2/' + topic.title + word.img"
-                                    class="grid-img"
-                                    alt=""
-                                    @mousedown="startLongPress(word.img)"
-                                    @touchstart="startLongPress(word.img)"
-                                    @mouseup="cancelLongPress"
-                                    @mouseleave="cancelLongPress"
-                                    @touchend="cancelLongPress"
-                                    @touchcancel="cancelLongPress"
-                                />
+                                <img v-if="word.img" :src="'/tts-v2/' + topic.title + word.img" class="grid-img" alt=""
+                                    @mousedown="startLongPress(word.img)" @touchstart="startLongPress(word.img)"
+                                    @mouseup="cancelLongPress" @mouseleave="cancelLongPress" @touchend="cancelLongPress"
+                                    @touchcancel="cancelLongPress" />
                                 <span v-else-if="word.emo" class="grid-emo">{{ word.emo }}</span>
                                 <span v-else-if="word.txt" class="grid-txt">{{ word.txt }}</span>
                                 <span v-else class="grid-txt">?</span>
@@ -50,20 +42,14 @@
         </div>
         <div class="choice-buttons">
             <Button v-if="!started" label="Begin" @click="beginGame" />
-            <Button
-                v-if="started && !gameOver && currentGrid.length && currentIdx !== null"
-                label="Replay"
-                @click="speak(currentGrid[currentIdx][lang])"
-            />
+            <Button v-if="started && !gameOver && currentGrid.length && currentIdx !== null" label="Replay"
+                @click="speak(currentGrid[currentIdx][lang])" />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
         </div>
         <div v-if="zoomImg" class="zoom-modal" @click="zoomImg = null">
-            <img 
-                :src="'/tts-v2/' + topic.title + zoomImg"
-                class="zoom-img" 
-                alt="Zoomed" 
-            />
+            <img :src="'/tts-v2/' + topic.title + zoomImg" class="zoom-img" alt="Zoomed" loading="lazy"
+                decoding="async" />
         </div>
     </div>
 </template>
@@ -127,22 +113,22 @@ function speak(target) {
     const utter = new window.SpeechSynthesisUtterance(target)
     switch (lang) {
         case 'id':
-        utter.lang = 'id-ID'
-        break
+            utter.lang = 'id-ID'
+            break
         case 'fr':
-        utter.lang = 'fr-FR'
-        break
+            utter.lang = 'fr-FR'
+            break
         case 'mg':
-        utter.lang = 'mg-MG'
-        break
+            utter.lang = 'mg-MG'
+            break
         case 'en':
-        utter.lang = 'en-US'
-        break
+            utter.lang = 'en-US'
+            break
         case 'ar':
-        utter.lang = 'ar-SA'
-        break
+            utter.lang = 'ar-SA'
+            break
     }
-    
+
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
 }
@@ -347,17 +333,18 @@ function goHome() {
     position: fixed;
     z-index: 1000;
     inset: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: zoom-out;
 }
+
 .zoom-img {
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
     background: #fff;
 }
 </style>

@@ -21,9 +21,11 @@
           <div class="word-content">
             <img
               v-if="currentWord.img"
-              :src="currentWord.img"
+              :src="'/tts-v2/' + topic.title + currentWord.img"
               class="word-img"
               alt=""
+              loading="lazy"
+              decoding="async"
             />
             <span v-else-if="currentWord.emo" class="word-emo">{{ currentWord.emo }}</span>
             <span v-else-if="currentWord.txt" class="word-txt">{{ currentWord.txt }}</span>

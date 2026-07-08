@@ -12,7 +12,7 @@
             <template #content>
                 <div class="word-content">
                     <div v-if="currentWord.img" class="word-img">
-                        <img :src="'/tts-v2/' + topic.title + currentWord.img" alt="" />
+                        <img :src="'/tts-v2/' + topic.title + currentWord.img" alt="" loading="lazy" decoding="async" />
                     </div>
                     <div v-else-if="currentWord.emo" class="word-emo">
                         {{ currentWord.emo }}
