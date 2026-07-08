@@ -45,12 +45,12 @@ export const topics = [
         category: 'Mobil',
         type: 'standard',
         words: [
-            { native: 'Webbing', target: 'Sabuk kain', img:'https://i.pinimg.com/1200x/52/17/46/5217469b2c1cfbae4238c488a1c1b908.jpg'},
-            { native: 'Buckle', target: 'Pengunci', img:'https://i.pinimg.com/736x/ed/b7/ce/edb7ce066c3f7d75f412c42c657fb555.jpg'},
-            { native: 'Tongue', target: 'Lidah sabuk', img:'https://i.pinimg.com/736x/fb/9e/d8/fb9ed8af5667d4b463f754799bb37ed9.jpg'},
-            { native: 'Retractor', target: 'Penarik otomatis', img:'https://i.pinimg.com/1200x/71/06/01/7106014601b783d5963635c709b3a6c8.jpg'},
-            { native: 'Anchor points', target: 'Titik jangkar', img:'https://i.pinimg.com/736x/ab/17/cc/ab17cc3ccba76538ae107bb4a7af8970.jpg'},
-            { native: 'Adjuster', target: 'Penyetel', img:'https://i.pinimg.com/1200x/43/4e/68/434e68e341d64601c2d3ee30a0b29b4e.jpg'},
+            { native: 'Webbing', target: 'Sabuk kain', img: 'https://i.pinimg.com/1200x/52/17/46/5217469b2c1cfbae4238c488a1c1b908.jpg' },
+            { native: 'Buckle', target: 'Pengunci', img: 'https://i.pinimg.com/736x/ed/b7/ce/edb7ce066c3f7d75f412c42c657fb555.jpg' },
+            { native: 'Tongue', target: 'Lidah sabuk', img: 'https://i.pinimg.com/736x/fb/9e/d8/fb9ed8af5667d4b463f754799bb37ed9.jpg' },
+            { native: 'Retractor', target: 'Penarik otomatis', img: 'https://i.pinimg.com/1200x/71/06/01/7106014601b783d5963635c709b3a6c8.jpg' },
+            { native: 'Anchor points', target: 'Titik jangkar', img: 'https://i.pinimg.com/736x/ab/17/cc/ab17cc3ccba76538ae107bb4a7af8970.jpg' },
+            { native: 'Adjuster', target: 'Penyetel', img: 'https://i.pinimg.com/1200x/43/4e/68/434e68e341d64601c2d3ee30a0b29b4e.jpg' },
         ],
     },
     {
@@ -351,5 +351,201 @@ export const topics = [
             { fr: 'corail', en: 'coral', id: 'karang', ar: 'مَرْجَانٌ', mg: 'haran-dranomasina', img: '/tts-v2/Marine Life Observation/cell_08.png' },
             { fr: 'anémone de mer', en: 'sea anemone', id: 'anemon laut', ar: 'شَقِيقُ النُّعْمَانِ الْبَحْرِيُّ', mg: 'anemona an-dranomasina', img: '/tts-v2/Marine Life Observation/cell_09.png' }
         ]
-    }
+    },
+    {
+        title: 'Corals',
+        category: 'free_diving',
+        words: [
+            { fr: 'corail cerveau', en: 'brain coral', id: 'karang otak', ar: 'مَرْجَانٌ دِمَاغِيٌّ', mg: 'haran-dranomasina atidoha', img: 'empty.png' },
+            { fr: 'corail corne de cerf', en: 'staghorn coral', id: 'karang tanduk rusa', ar: 'مَرْجَانٌ مُتَشَعِّبٌ', mg: 'haran-dranomasina tandroka serfa', img: 'empty.png' },
+            { fr: 'corail de feu', en: 'fire coral', id: 'karang api', ar: 'مَرْجَانُ النَّارِ', mg: 'haran-dranomasina mirehitra', img: 'empty.png' },
+            { fr: 'corail de table', en: 'table coral', id: 'karang meja', ar: 'مَرْجَانٌ مُسَطَّحٌ', mg: 'haran-dranomasina fisaka', img: 'empty.png' },
+            { fr: 'corail mou', en: 'soft coral', id: 'karang lunak', ar: 'مَرْجَانٌ رَخْوٌ', mg: 'haran-dranomasina malefaka', img: 'empty.png' },
+            { fr: 'corail dur', en: 'hard coral', id: 'karang keras', ar: 'مَرْجَانٌ صُلْبٌ', mg: 'haran-dranomasina mafy', img: 'empty.png' },
+            { fr: 'corail en éventail', en: 'sea fan', id: 'kipas laut', ar: 'مِرْوَحَةُ الْبَحْرِ', mg: 'mpankafy an-dranomasina', img: 'empty.png' },
+            { fr: 'corail fouet', en: 'whip coral', id: 'karang cambuk', ar: 'مَرْجَانٌ سَوْطِيٌّ', mg: 'haran-dranomasina karavasy', img: 'empty.png' },
+            { fr: 'corail champignon', en: 'mushroom coral', id: 'karang jamur', ar: 'مَرْجَانٌ فِطْرِيٌّ', mg: 'haran-dranomasina holatra', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Free Diving Pro Equipment',
+        category: 'free_diving',
+        words: [
+            { fr: 'combinaison', en: 'wetsuit', id: 'baju selam', ar: 'بَدْلَةُ الْغَوْصِ', mg: 'akanjo antsitrika', img: 'empty.png' },
+            { fr: 'ceinture de plomb', en: 'weight belt', id: 'sabuk pemberat', ar: 'حِزَامُ الْأَوْزَانِ', mg: 'fehikibo misy lanja', img: 'empty.png' },
+            { fr: 'longues palmes', en: 'long fins', id: 'sirip panjang', ar: 'زَعَانِفُ طَوِيلَةٌ', mg: 'vombon-tongotra lava', img: 'empty.png' },
+            { fr: 'ordinateur d’apnée', en: 'freediving computer', id: 'komputer selam bebas', ar: 'حَاسُوبُ الْغَوْصِ بِحَبْسِ النَّفَسِ', mg: 'solosaina antsitrika', img: 'empty.png' },
+            { fr: 'bouée', en: 'dive buoy', id: 'pelampung selam', ar: 'عَوَّامَةُ الْغَوْصِ', mg: 'boay antsitrika', img: 'empty.png' },
+            { fr: 'ligne de plongée', en: 'dive line', id: 'tali selam', ar: 'حَبْلُ الْغَوْصِ', mg: 'tady antsitrika', img: 'empty.png' },
+            { fr: 'longe', en: 'lanyard', id: 'lanyard keselamatan', ar: 'حَبْلُ الْأَمَانِ', mg: 'tady fiarovana', img: 'empty.png' },
+            { fr: 'pince-nez', en: 'nose clip', id: 'penjepit hidung', ar: 'مِشْبَكُ الْأَنْفِ', mg: 'famihin-orona', img: 'empty.png' },
+            { fr: 'monopalme', en: 'monofin', id: 'monofin', ar: 'زَعْنَفَةٌ أُحَادِيَّةٌ', mg: 'vombon-tongotra tokana', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Free Diving Boat & Platform',
+        category: 'free_diving',
+        words: [
+            { fr: 'bateau', en: 'boat', id: 'perahu', ar: 'قَارِبٌ', mg: 'sambo', img: 'empty.png' },
+            { fr: 'bateau pneumatique', en: 'inflatable boat', id: 'perahu karet', ar: 'قَارِبٌ مُطَّاطِيٌّ', mg: 'sambo fingotra', img: 'empty.png' },
+            { fr: 'plateforme', en: 'platform', id: 'platform', ar: 'مِنَصَّةٌ', mg: 'sehatra', img: 'empty.png' },
+            { fr: 'échelle', en: 'ladder', id: 'tangga', ar: 'سُلَّمٌ', mg: 'tohatra', img: 'empty.png' },
+            { fr: 'pont', en: 'deck', id: 'geladak', ar: 'سَطْحُ الْقَارِبِ', mg: 'tokotanin-tsambo', img: 'empty.png' },
+            { fr: 'ancre', en: 'anchor', id: 'jangkar', ar: 'مِرْسَاةٌ', mg: 'vatofantsika', img: 'empty.png' },
+            { fr: 'corde', en: 'rope', id: 'tali', ar: 'حَبْلٌ', mg: 'tady', img: 'empty.png' },
+            { fr: 'bouée', en: 'buoy', id: 'pelampung', ar: 'عَوَّامَةٌ', mg: 'boay', img: 'empty.png' },
+            { fr: 'capitaine', en: 'captain', id: 'kapten', ar: 'رُبَّانٌ', mg: 'kapiteny', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Free Diving Dive Site',
+        category: 'free_diving_dive_site',
+        words: [
+            { fr: 'plage', en: 'beach', id: 'pantai', ar: 'شَاطِئٌ', mg: 'morontsiraka', img: 'empty.png' },
+            { fr: 'baie', en: 'bay', id: 'teluk', ar: 'خَلِيجٌ', mg: 'helodrano', img: 'empty.png' },
+            { fr: 'récif', en: 'reef', id: 'terumbu karang', ar: 'شُعْبَةٌ مَرْجَانِيَّةٌ', mg: 'haran-dranomasina', img: 'empty.png' },
+            { fr: 'mur', en: 'wall', id: 'dinding karang', ar: 'جُرْفٌ بَحْرِيٌّ', mg: 'rindrina an-dranomasina', img: 'empty.png' },
+            { fr: 'grotte', en: 'cave', id: 'gua', ar: 'كَهْفٌ', mg: 'lava-bato', img: 'empty.png' },
+            { fr: 'lagon', en: 'lagoon', id: 'laguna', ar: 'بُحَيْرَةٌ شَاطِئِيَّةٌ', mg: 'lagona', img: 'empty.png' },
+            { fr: 'eau libre', en: 'open water', id: 'perairan terbuka', ar: 'مِيَاهٌ مَفْتُوحَةٌ', mg: 'rano malalaka', img: 'empty.png' },
+            { fr: 'fond marin', en: 'seabed', id: 'dasar laut', ar: 'قَاعُ الْبَحْرِ', mg: 'fanambanin-dranomasina', img: 'empty.png' },
+            { fr: 'point d’entrée', en: 'entry point', id: 'titik masuk', ar: 'نُقْطَةُ الدُّخُولِ', mg: 'toerana idirana', img: 'empty.png' },
+        ]
+    },
+    {
+        title: 'Free Diving Injuries',
+        category: 'free_diving',
+        words: [
+            { fr: 'barotraumatisme', en: 'barotrauma', id: 'barotrauma', ar: 'رَضْحُ الضَّغْطِ', mg: 'ratran’ny tsindry', img: 'empty.png' },
+            { fr: 'coupure', en: 'cut', id: 'luka sayat', ar: 'جُرْحٌ', mg: 'ratra', img: 'empty.png' },
+            { fr: 'égratignure', en: 'scratch', id: 'lecet', ar: 'خَدْشٌ', mg: 'rangotra', img: 'empty.png' },
+            { fr: 'ecchymose', en: 'bruise', id: 'memar', ar: 'كَدْمَةٌ', mg: 'mangana', img: 'empty.png' },
+            { fr: 'crampe', en: 'cramp', id: 'kram', ar: 'تَشَنُّجٌ عَضَلِيٌّ', mg: 'hozatra mifanintona', img: 'empty.png' },
+            { fr: 'piqûre', en: 'sting', id: 'sengatan', ar: 'لَسْعَةٌ', mg: 'fanindrona', img: 'empty.png' },
+            { fr: 'brûlure', en: 'burn', id: 'luka bakar', ar: 'حَرْقٌ', mg: 'may', img: 'empty.png' },
+            { fr: 'entorse', en: 'sprain', id: 'keseleo', ar: 'اِلْتِوَاءٌ', mg: 'kitro', img: 'empty.png' },
+            { fr: 'fracture', en: 'fracture', id: 'patah tulang', ar: 'كَسْرٌ', mg: 'tapaka taolana', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Free Diving Sounds',
+        category: 'free_diving',
+        words: [
+            { fr: 'bulle', en: 'bubble', id: 'gelembung', ar: 'فُقَاعَةٌ', mg: 'pôka', img: 'empty.png' },
+            { fr: 'éclaboussure', en: 'splash', id: 'cipratan', ar: 'رَذَاذٌ', mg: 'fitsipitsipika', img: 'empty.png' },
+            { fr: 'vague', en: 'wave sound', id: 'suara ombak', ar: 'صَوْتُ الْمَوْجِ', mg: 'feon-dranomasina', img: 'empty.png' },
+            { fr: 'respiration', en: 'breathing sound', id: 'suara napas', ar: 'صَوْتُ التَّنَفُّسِ', mg: 'feon\'ny fofonaina', img: 'empty.png' },
+            { fr: 'battement de cœur', en: 'heartbeat', id: 'detak jantung', ar: 'نَبَضُ الْقَلْبِ', mg: 'fitempon\'ny fo', img: 'empty.png' },
+            { fr: 'clic', en: 'click', id: 'bunyi klik', ar: 'نَقْرَةٌ', mg: 'tsindry', img: 'empty.png' },
+            { fr: 'craquement', en: 'crackling', id: 'bunyi berderak', ar: 'طَقْطَقَةٌ', mg: 'feo mikitroka', img: 'empty.png' },
+            { fr: 'chant des dauphins', en: 'dolphin calls', id: 'suara lumba-lumba', ar: 'أَصْوَاتُ الدَّلَافِينِ', mg: 'feon-delfina', img: 'empty.png' },
+            { fr: 'silence', en: 'silence', id: 'keheningan', ar: 'صَمْتٌ', mg: 'fahanginana', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Hand Tools',
+        category: 'hand_tools',
+        words: [
+            { fr: 'marteau', en: 'hammer', id: 'palu', ar: 'مِطْرَقَةٌ', mg: 'tantanana', img: 'empty.png' },
+            { fr: 'tournevis', en: 'screwdriver', id: 'obeng', ar: 'مِفَكٌّ', mg: 'visy', img: 'empty.png' },
+            { fr: 'clé', en: 'wrench', id: 'kunci inggris', ar: 'مِفْتَاحُ رَبْطٍ', mg: 'fanalahidy', img: 'empty.png' },
+            { fr: 'pince', en: 'pliers', id: 'tang', ar: 'كَمَّاشَةٌ', mg: 'pince', img: 'empty.png' },
+            { fr: 'scie', en: 'saw', id: 'gergaji', ar: 'مِنْشَارٌ', mg: 'fandriana', img: 'empty.png' },
+            { fr: 'ciseau', en: 'chisel', id: 'pahat', ar: 'إِزْمِيلٌ', mg: 'fandraka', img: 'empty.png' },
+            { fr: 'lime', en: 'file', id: 'kikir', ar: 'مِبْرَدٌ', mg: 'fikarakarana', img: 'empty.png' },
+            { fr: 'cutter', en: 'utility knife', id: 'pisau cutter', ar: 'سِكِّينُ قَطْعٍ', mg: 'antsy fanapahana', img: 'empty.png' },
+            { fr: 'mètre ruban', en: 'tape measure', id: 'meteran', ar: 'شَرِيطُ الْقِيَاسِ', mg: 'metatra fandrefesana', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Smartphone Keyboard',
+        category: 'it',
+        words: [
+            { fr: 'touche', en: 'key', id: 'tombol', ar: 'مِفْتَاحٌ', mg: 'bokotra', img: 'empty.png' },
+            { fr: 'barre d’espace', en: 'space bar', id: 'spasi', ar: 'مِفْتَاحُ الْمَسَافَةِ', mg: 'bokotra elanelana', img: 'empty.png' },
+            { fr: 'retour arrière', en: 'backspace', id: 'hapus', ar: 'مِفْتَاحُ الْحَذْفِ', mg: 'famafana', img: 'empty.png' },
+            { fr: 'entrée', en: 'enter', id: 'enter', ar: 'مِفْتَاحُ الْإِدْخَالِ', mg: 'bokotra fidirana', img: 'empty.png' },
+            { fr: 'majuscules', en: 'shift', id: 'shift', ar: 'مِفْتَاحُ التَّحْوِيلِ', mg: 'shift', img: 'empty.png' },
+            { fr: 'emoji', en: 'emoji', id: 'emoji', ar: 'إِيمُوجِي', mg: 'emoji', img: 'empty.png' },
+            { fr: 'microphone', en: 'microphone', id: 'mikrofon', ar: 'مِيكْرُوفُونٌ', mg: 'mikrô', img: 'empty.png' },
+            { fr: 'clavier numérique', en: 'number keyboard', id: 'keyboard angka', ar: 'لَوْحَةُ الْأَرْقَامِ', mg: 'fitendry isa', img: 'empty.png' },
+            { fr: 'clavier des symboles', en: 'symbol keyboard', id: 'keyboard simbol', ar: 'لَوْحَةُ الرُّمُوزِ', mg: 'fitendry marika', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Jakarta Transportation',
+        category: 'indonesia',
+        words: [
+            { fr: 'MRT', en: 'MRT', id: 'MRT', ar: 'مِتْرُو جَاكَرْتَا', mg: 'MRT', img: 'empty.png' },
+            { fr: 'LRT', en: 'LRT', id: 'LRT', ar: 'الْقِطَارُ الْخَفِيفُ', mg: 'LRT', img: 'empty.png' },
+            { fr: 'TransJakarta', en: 'TransJakarta bus', id: 'TransJakarta', ar: 'حَافِلَةُ تْرَانْسْجَاكَرْتَا', mg: 'TransJakarta', img: 'empty.png' },
+            { fr: 'KRL', en: 'commuter train', id: 'KRL Commuter Line', ar: 'قِطَارُ الرُّكَّابِ', mg: 'fiaran-dalamby mpitatitra mpandeha', img: 'empty.png' },
+            { fr: 'Mikrotrans', en: 'minibus', id: 'Mikrotrans', ar: 'حَافِلَةٌ صَغِيرَةٌ', mg: 'fitateram-bahoaka madinika', img: 'empty.png' },
+            { fr: 'ojek', en: 'motorcycle taxi', id: 'ojek', ar: 'دَرَّاجَةٌ أُجْرَةٌ', mg: 'môtô fitaterana', img: 'empty.png' },
+            { fr: 'taxi', en: 'taxi', id: 'taksi', ar: 'سَيَّارَةُ أُجْرَةٍ', mg: 'taxi', img: 'empty.png' },
+            { fr: 'vélo', en: 'bicycle', id: 'sepeda', ar: 'دَرَّاجَةٌ', mg: 'bisikileta', img: 'empty.png' },
+            { fr: 'ferry', en: 'ferry', id: 'feri', ar: 'عَبَّارَةٌ', mg: 'sambo mpitatitra', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Indonesian Kampung',
+        category: 'indonesia',
+        words: [
+            { fr: 'ruelle', en: 'alley', id: 'gang', ar: 'زُقَاقٌ', mg: 'lalantsara', img: 'empty.png' },
+            { fr: 'maison', en: 'house', id: 'rumah', ar: 'بَيْتٌ', mg: 'trano', img: 'empty.png' },
+            { fr: 'échoppe', en: 'small shop', id: 'warung', ar: 'دُكَّانٌ صَغِيرٌ', mg: 'fivarotana kely', img: 'empty.png' },
+            { fr: 'mosquée', en: 'mosque', id: 'masjid', ar: 'مَسْجِدٌ', mg: 'moskea', img: 'empty.png' },
+            { fr: 'terrain de badminton', en: 'badminton court', id: 'lapangan badminton', ar: 'مَلْعَبُ الرِّيشَةِ الطَّائِرَةِ', mg: 'kianja badminton', img: 'empty.png' },
+            { fr: 'banc', en: 'bench', id: 'bangku', ar: 'مِقْعَدٌ', mg: 'seza lava', img: 'empty.png' },
+            { fr: 'lampadaire', en: 'street lamp', id: 'lampu jalan', ar: 'مِصْبَاحُ الشَّارِعِ', mg: 'jiro an-dalambe', img: 'empty.png' },
+            { fr: 'caniveau', en: 'drainage ditch', id: 'selokan', ar: 'مَجْرَى التَّصْرِيفِ', mg: 'tatatra', img: 'empty.png' },
+            { fr: 'portail', en: 'gate', id: 'gerbang', ar: 'بَوَّابَةٌ', mg: 'vavahady', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Pier to Island',
+        category: 'free_diving',
+        words: [
+            { fr: 'embarcadère', en: 'pier', id: 'dermaga', ar: 'رَصِيفُ الْمِينَاءِ', mg: 'seranana', img: 'empty.png' },
+            { fr: 'île', en: 'island', id: 'pulau', ar: 'جَزِيرَةٌ', mg: 'nosy', img: 'empty.png' },
+            { fr: 'ferry', en: 'ferry', id: 'kapal feri', ar: 'عَبَّارَةٌ', mg: 'sambo mpitatitra', img: 'empty.png' },
+            { fr: 'bateau rapide', en: 'speedboat', id: 'kapal cepat', ar: 'قَارِبٌ سَرِيعٌ', mg: 'sambo haingam-pandeha', img: 'empty.png' },
+            { fr: 'quai', en: 'dock', id: 'pelabuhan', ar: 'رَصِيفٌ', mg: 'tokotanin-tsambo', img: 'empty.png' },
+            { fr: 'passerelle', en: 'gangway', id: 'jembatan kapal', ar: 'مَمَرٌّ', mg: 'tetezana fidirana', img: 'empty.png' },
+            { fr: 'gilet de sauvetage', en: 'life jacket', id: 'jaket pelampung', ar: 'سِتْرَةُ النَّجَاةِ', mg: 'palitao famonjena', img: 'empty.png' },
+            { fr: 'billet', en: 'ticket', id: 'tiket', ar: 'تَذْكِرَةٌ', mg: 'tapakila', img: 'empty.png' },
+            { fr: 'passager', en: 'passenger', id: 'penumpang', ar: 'رَاكِبٌ', mg: 'mpandeha', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Speedboat',
+        category: 'free_diving',
+        words: [
+            { fr: 'coque', en: 'hull', id: 'lambung kapal', ar: 'هَيْكَلُ الْقَارِبِ', mg: 'vatan-tsambo', img: 'empty.png' },
+            { fr: 'moteur hors-bord', en: 'outboard motor', id: 'mesin tempel', ar: 'مُحَرِّكٌ خَارِجِيٌّ', mg: 'motera ivelany', img: 'empty.png' },
+            { fr: 'hélice', en: 'propeller', id: 'baling-baling', ar: 'مِرْوَحَةٌ', mg: 'propeller', img: 'empty.png' },
+            { fr: 'volant', en: 'steering wheel', id: 'kemudi', ar: 'عَجَلَةُ الْقِيَادَةِ', mg: 'familiana', img: 'empty.png' },
+            { fr: 'pare-brise', en: 'windshield', id: 'kaca depan', ar: 'زُجَاجُ الرِّيحِ', mg: 'fitaratra anoloana', img: 'empty.png' },
+            { fr: 'siège', en: 'seat', id: 'kursi', ar: 'مِقْعَدٌ', mg: 'seza', img: 'empty.png' },
+            { fr: 'réservoir de carburant', en: 'fuel tank', id: 'tangki bahan bakar', ar: 'خَزَّانُ الْوَقُودِ', mg: 'fitahirizana solika', img: 'empty.png' },
+            { fr: 'ancre', en: 'anchor', id: 'jangkar', ar: 'مِرْسَاةٌ', mg: 'vatofantsika', img: 'empty.png' },
+            { fr: 'corde d’amarrage', en: 'mooring rope', id: 'tali tambat', ar: 'حَبْلُ الرَّبْطِ', mg: 'tady famatorana', img: 'empty.png' }
+        ]
+    },
+    {
+        title: 'Sea Anemone',
+        category: 'free_diving',
+        words: [
+            { fr: 'tentacule', en: 'tentacle', id: 'tentakel', ar: 'لَامِسَةٌ', mg: 'sandry', img: 'empty.png' },
+            { fr: 'disque oral', en: 'oral disc', id: 'cakram mulut', ar: 'اَلْقُرْصُ الْفَمِيُّ', mg: 'kapila am-bava', img: 'empty.png' },
+            { fr: 'bouche', en: 'mouth', id: 'mulut', ar: 'فَمٌ', mg: 'vava', img: 'empty.png' },
+            { fr: 'colonne', en: 'column', id: 'batang tubuh', ar: 'اَلْعَمُودُ', mg: 'vatana', img: 'empty.png' },
+            { fr: 'disque basal', en: 'basal disc', id: 'cakram dasar', ar: 'اَلْقُرْصُ الْقَاعِدِيُّ', mg: 'kapila fototra', img: 'empty.png' },
+            { fr: 'cellule urticante', en: 'stinging cell', id: 'sel penyengat', ar: 'خَلِيَّةٌ لَاسِعَةٌ', mg: 'sela manindrona', img: 'empty.png' },
+            { fr: 'symbiose', en: 'symbiosis', id: 'simbiosis', ar: 'تَكَافُلٌ', mg: 'fiaraha-miaina', img: 'empty.png' },
+            { fr: 'poisson-clown', en: 'clownfish', id: 'ikan badut', ar: 'سَمَكَةُ الْمُهَرِّجِ', mg: 'trondro clown', img: 'empty.png' },
+            { fr: 'polype', en: 'polyp', id: 'polip', ar: 'سَلِيلَةٌ', mg: 'polipy', img: 'empty.png' }
+        ]
+    },
+
 ];
