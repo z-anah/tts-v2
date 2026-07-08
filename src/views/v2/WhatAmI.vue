@@ -28,7 +28,7 @@
             <span v-else-if="currentWord.emo" class="word-emo">{{ currentWord.emo }}</span>
             <span v-else-if="currentWord.txt" class="word-txt">{{ currentWord.txt }}</span>
           </div>
-          <div v-if="showAr" class="word-ar">{{ currentWord.target }}</div>
+          <div v-if="showAr" class="word-ar">{{ currentWord[lang] }}</div>
         </template>
       </Card>
       <div class="choice-buttons">
@@ -113,8 +113,8 @@ function nextWord() {
 }
 
 function playAr() {
-  if (currentWord.value && currentWord.value.target) {
-    const utter = new window.SpeechSynthesisUtterance(currentWord.value.target)
+  if (currentWord.value && currentWord.value[lang]) {
+    const utter = new window.SpeechSynthesisUtterance(currentWord.value[lang])
     utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)

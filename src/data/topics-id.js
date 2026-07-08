@@ -379,7 +379,7 @@ export const topics = [
             { fr: 'ligne de plongée', en: 'dive line', id: 'tali selam', ar: 'حَبْلُ الْغَوْصِ', mg: 'tady antsitrika', img: '/tts-v2/Free Diving Pro Equipment/cell_06.png' },
             { fr: 'longe', en: 'lanyard', id: 'lanyard keselamatan', ar: 'حَبْلُ الْأَمَانِ', mg: 'tady fiarovana', img: '/tts-v2/Free Diving Pro Equipment/cell_07.png' },
             { fr: 'pince-nez', en: 'nose clip', id: 'penjepit hidung', ar: 'مِشْبَكُ الْأَنْفِ', mg: 'famihin-orona', img: '/tts-v2/Free Diving Pro Equipment/cell_08.png' },
-            { fr: 'monopalme', en:'monofin', id: 'monofin', ar: 'زَعْنَفَةٌ أُحَادِيَّةٌ', mg: 'vombon-tongotra tokana', img: '/tts-v2/Free Diving Pro Equipment/cell_09.png' }
+            { fr: 'monopalme', en: 'monofin', id: 'monofin', ar: 'زَعْنَفَةٌ أُحَادِيَّةٌ', mg: 'vombon-tongotra tokana', img: '/tts-v2/Free Diving Pro Equipment/cell_09.png' }
         ]
     },
     {
@@ -444,7 +444,7 @@ export const topics = [
     },
     {
         title: 'Hand Tools',
-        category: 'hand_tools',
+        category: 'Hand Tools',
         words: [
             { fr: 'marteau', en: 'hammer', id: 'palu', ar: 'مِطْرَقَةٌ', mg: 'tantanana', img: '/tts-v2/Hand Tools/cell_01.png' },
             { fr: 'tournevis', en: 'screwdriver', id: 'obeng', ar: 'مِفَكٌّ', mg: 'visy', img: '/tts-v2/Hand Tools/cell_02.png' },
@@ -459,7 +459,7 @@ export const topics = [
     },
     {
         title: 'Smartphone Keyboard',
-        category: 'it',
+        category: 'IT',
         words: [
             { fr: 'touche', en: 'key', id: 'tombol', ar: 'مِفْتَاحٌ', mg: 'bokotra', img: '/tts-v2/Smartphone Keyboard/cell_01.png' },
             { fr: 'barre d’espace', en: 'space bar', id: 'spasi', ar: 'مِفْتَاحُ الْمَسَافَةِ', mg: 'bokotra elanelana', img: '/tts-v2/Smartphone Keyboard/cell_02.png' },
@@ -470,11 +470,11 @@ export const topics = [
             { fr: 'microphone', en: 'microphone', id: 'mikrofon', ar: 'مِيكْرُوفُونٌ', mg: 'mikrô', img: '/tts-v2/Smartphone Keyboard/cell_07.png' },
             { fr: 'clavier numérique', en: 'number keyboard', id: 'keyboard angka', ar: 'لَوْحَةُ الْأَرْقَامِ', mg: 'fitendry isa', img: '/tts-v2/Smartphone Keyboard/cell_08.png' },
             { fr: 'clavier des symboles', en: 'symbol keyboard', id: 'keyboard simbol', ar: 'لَوْحَةُ الرُّمُوزِ', mg: 'fitendry marika', img: '/tts-v2/Smartphone Keyboard/cell_09.png' }
-                ]
+        ]
     },
     {
         title: 'Jakarta Transportation',
-        category: 'indonesia',
+        category: 'Indonesia',
         words: [
             { fr: 'MRT', en: 'MRT', id: 'MRT', ar: 'مِتْرُو جَاكَرْتَا', mg: 'MRT', img: '/tts-v2/Jakarta Transportation/cell_01.png' },
             { fr: 'LRT', en: 'LRT', id: 'LRT', ar: 'الْقِطَارُ الْخَفِيفُ', mg: 'LRT', img: '/tts-v2/Jakarta Transportation/cell_02.png' },
@@ -489,7 +489,7 @@ export const topics = [
     },
     {
         title: 'Indonesian Kampung',
-        category: 'indonesia',
+        category: 'Indonesia',
         words: [
             { fr: 'ruelle', en: 'alley', id: 'gang', ar: 'زُقَاقٌ', mg: 'lalantsara', img: '/tts-v2/Indonesian Kampung/cell_01.png' },
             { fr: 'maison', en: 'house', id: 'rumah', ar: 'بَيْتٌ', mg: 'trano', img: '/tts-v2/Indonesian Kampung/cell_02.png' },
@@ -514,7 +514,7 @@ export const topics = [
             { fr: 'passerelle', en: 'gangway', id: 'jembatan kapal', ar: 'مَمَرٌّ', mg: 'tetezana fidirana', img: '/tts-v2/Pier to Island/cell_06.png' },
             { fr: 'gilet de sauvetage', en: 'life jacket', id: 'jaket pelampung', ar: 'سِتْرَةُ النَّجَاةِ', mg: 'palitao famonjena', img: '/tts-v2/Pier to Island/cell_07.png' },
             { fr: 'billet', en: 'ticket', id: 'tiket', ar: 'تَذْكِرَةٌ', mg: 'tapakila', img: '/tts-v2/Pier to Island/cell_08.png' },
-            { fr: 'passager', en:'passenger', id: 'penumpang', ar: 'رَاكِبٌ', mg: 'mpandeha', img: '/tts-v2/Pier to Island/cell_09.png' }
+            { fr: 'passager', en: 'passenger', id: 'penumpang', ar: 'رَاكِبٌ', mg: 'mpandeha', img: '/tts-v2/Pier to Island/cell_09.png' }
         ]
     },
     {
@@ -545,6 +545,50 @@ export const topics = [
             { fr: 'symbiose', en: 'symbiosis', id: 'simbiosis', ar: 'تَكَافُلٌ', mg: 'fiaraha-miaina', img: '/tts-v2/Sea Anemone/cell_07.png' },
             { fr: 'poisson-clown', en: 'clownfish', id: 'ikan badut', ar: 'سَمَكَةُ الْمُهَرِّجِ', mg: 'trondro clown', img: '/tts-v2/Sea Anemone/cell_08.png' },
             { fr: 'polype', en: 'polyp', id: 'polip', ar: 'سَلِيلَةٌ', mg: 'polipy', img: '/tts-v2/Sea Anemone/cell_09.png' }
+        ]
+    },
+    {
+        title: 'Free Diving Skin Reaction',
+        category: 'Free Diving',
+        words: [
+            { fr: 'chair de poule', en: 'goosebumps', id: 'merinding', ar: 'قُشْعَرِيرَةٌ', mg: 'hoditra mitsangam-bolo', img: 'cell_01.png' },
+            { fr: 'rougeur', en: 'redness', id: 'kemerahan', ar: 'اِحْمِرَارٌ', mg: 'mena', img: 'cell_02.png' },
+            { fr: 'pâleur', en: 'paleness', id: 'kepucatan', ar: 'شُحُوبٌ', mg: 'hatsatra', img: 'cell_03.png' },
+            { fr: 'bleuissement', en: 'bluish skin', id: 'kulit membiru', ar: 'اِزْرِقَاقُ الْجِلْدِ', mg: 'hoditra manga', img: 'cell_04.png' },
+            { fr: 'bronzage', en: 'tan', id: 'kulit kecokelatan', ar: 'اِسْمِرَارُ الْجِلْدِ', mg: 'hoditra manja', img: 'cell_05.png' },
+            { fr: 'ride', en: 'wrinkle', id: 'keriput', ar: 'تَجَعُّدٌ', mg: 'ketrona', img: 'cell_06.png' },
+            { fr: 'peau sèche', en: 'dry skin', id: 'kulit kering', ar: 'جِلْدٌ جَافٌّ', mg: 'hoditra maina', img: 'cell_07.png' },
+            { fr: 'peau humide', en: 'wet skin', id: 'kulit basah', ar: 'جِلْدٌ مُبَلَّلٌ', mg: 'hoditra lena', img: 'cell_08.png' },
+            { fr: 'frisson', en: 'shiver', id: 'menggigil', ar: 'اِرْتِجَافٌ', mg: 'mangovitra', img: 'cell_09.png' },
+            { fr: 'éruption', en: 'rash', id: 'ruam', ar: 'طَفَحٌ جِلْدِيٌّ', mg: 'fivontosana amin’ny hoditra', img: 'cell_10.png' },
+            { fr: 'démangeaison', en: 'itch', id: 'gatal', ar: 'حِكَّةٌ', mg: 'mangidihidy', img: 'cell_11.png' },
+            { fr: 'gonflement', en: 'swelling', id: 'bengkak', ar: 'تَوَرُّمٌ', mg: 'fivontosana', img: 'cell_12.png' },
+            { fr: 'cicatrice', en: 'scar', id: 'bekas luka', ar: 'نَدْبَةٌ', mg: 'holatra', img: 'cell_13.png' },
+            { fr: 'coup de soleil', en: 'sunburn', id: 'kulit terbakar matahari', ar: 'حَرْقُ الشَّمْسِ', mg: 'may noho ny masoandro', img: 'cell_14.png' },
+            { fr: 'peau qui pèle', en: 'peeling skin', id: 'kulit mengelupas', ar: 'تَقَشُّرُ الْجِلْدِ', mg: 'hoditra mihintsana', img: 'cell_15.png' },
+            { fr: 'engourdissement', en: 'numbness', id: 'mati rasa', ar: 'خَدَرٌ', mg: 'fanentsenana', img: 'cell_16.png' }
+        ]
+    },
+    {
+        title: 'Pregnancy Signs',
+        category: 'Pregnancy',
+        words: [
+            { fr: 'retard de règles', en: 'missed period', id: 'telat haid', ar: 'تَأَخُّرُ الدَّوْرَةِ الشَّهْرِيَّةِ', mg: 'tara fadimbolana', img: 'cell_01.png' },
+            { fr: 'nausée', en: 'nausea', id: 'mual', ar: 'غَثَيَانٌ', mg: 'maloiloy', img: 'cell_02.png' },
+            { fr: 'vomissement', en: 'vomiting', id: 'muntah', ar: 'قَيْءٌ', mg: 'mandoa', img: 'cell_03.png' },
+            { fr: 'fatigue', en: 'fatigue', id: 'kelelahan', ar: 'إِرْهَاقٌ', mg: 'havizanana', img: 'cell_04.png' },
+            { fr: 'somnolence', en: 'sleepiness', id: 'mengantuk', ar: 'نُعَاسٌ', mg: 'rendremana', img: 'cell_05.png' },
+            { fr: 'seins sensibles', en: 'breast tenderness', id: 'payudara nyeri', ar: 'أَلَمُ الثَّدْيَيْنِ', mg: 'nono marary', img: 'cell_06.png' },
+            { fr: 'envie fréquente d’uriner', en: 'frequent urination', id: 'sering buang air kecil', ar: 'كَثْرَةُ التَّبَوُّلِ', mg: 'mipipy matetika', img: 'cell_07.png' },
+            { fr: 'fringale', en: 'food craving', id: 'ngidam', ar: 'اِلْوَحْمُ', mg: 'faniriana sakafo', img: 'cell_08.png' },
+            { fr: 'aversion alimentaire', en: 'food aversion', id: 'tidak suka makanan tertentu', ar: 'نُفُورٌ مِنَ الطَّعَامِ', mg: 'tsy tia sakafo sasany', img: 'cell_09.png' },
+            { fr: 'odorat sensible', en: 'sensitive smell', id: 'penciuman sensitif', ar: 'حَاسَّةُ شَمٍّ حَسَّاسَةٌ', mg: 'fofona mora tsapa', img: 'cell_10.png' },
+            { fr: 'ballonnement', en: 'bloating', id: 'perut kembung', ar: 'اِنْتِفَاخٌ', mg: 'kibo mibontsina', img: 'cell_11.png' },
+            { fr: 'crampes', en: 'cramps', id: 'kram', ar: 'تَشَنُّجَاتٌ', mg: 'hozatra mifanintona', img: 'cell_12.png' },
+            { fr: 'sautes d’humeur', en: 'mood swings', id: 'perubahan suasana hati', ar: 'تَقَلُّبَاتُ الْمِزَاجِ', mg: 'fiovan-toe-po', img: 'cell_13.png' },
+            { fr: 'vertige', en: 'dizziness', id: 'pusing', ar: 'دُوَارٌ', mg: 'fanina', img: 'cell_14.png' },
+            { fr: 'constipation', en: 'constipation', id: 'sembelit', ar: 'إِمْسَاكٌ', mg: 'fitohanana', img: 'cell_15.png' },
+            { fr: 'test de grossesse positif', en: 'positive pregnancy test', id: 'tes kehamilan positif', ar: 'اِخْتِبَارُ حَمْلٍ إِيجَابِيٌّ', mg: 'fitsapana fitondrana vohoka miabo', img: 'cell_16.png' }
         ]
     },
 
