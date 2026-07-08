@@ -14,7 +14,7 @@
           <template #content>
             <div class="word-content">
               <div v-if="word.img" class="word-img">
-                <img :src="word.img" alt="" />
+                <img :src="'/tts-v2/' + topic.title + word.img" alt="" />
               </div>
               <div v-else-if="word.emo" class="word-emo">
                 {{ word.emo }}

@@ -12,7 +12,7 @@
             <template #content>
                 <div class="word-content">
                     <div v-if="currentWord.img" class="word-img">
-                        <img :src="currentWord.img" alt="" />
+                        <img :src="'/tts-v2/' + topic.title + currentWord.img" alt="" />
                     </div>
                     <div v-else-if="currentWord.emo" class="word-emo">
                         {{ currentWord.emo }}
@@ -37,11 +37,7 @@
         </div>
         <div class="choice-buttons">
             <Button v-if="!started" label="Begin" @click="started = true" />
-            <Button
-                v-if="started && currentWord"
-                label="Replay"
-                @click="speak(currentWord[lang])"
-            />
+            <Button v-if="started && currentWord" label="Replay" @click="speak(currentWord[lang])" />
             <Button label="Back" @click="goBack" />
             <Button label="Home" @click="goHome" />
         </div>

@@ -29,7 +29,7 @@
                             <div class="grid-content">
                                 <img
                                     v-if="word.img"
-                                    :src="word.img"
+                                    :src="'/tts-v2/' + topic.title + word.img"
                                     class="grid-img"
                                     alt=""
                                     @mousedown="startLongPress(word.img)"
@@ -59,7 +59,11 @@
             <Button label="Home" @click="goHome" />
         </div>
         <div v-if="zoomImg" class="zoom-modal" @click="zoomImg = null">
-            <img :src="zoomImg" class="zoom-img" alt="Zoomed" />
+            <img 
+                :src="'/tts-v2/' + topic.title + zoomImg"
+                class="zoom-img" 
+                alt="Zoomed" 
+            />
         </div>
     </div>
 </template>
