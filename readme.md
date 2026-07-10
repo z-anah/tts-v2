@@ -13,22 +13,23 @@ https://chatgpt.com/c/6a4b6ffb-9a3c-83ec-9b4e-b487f6ae98d9
 file:///Users/anah/Documents/GitHub/tts-v2/grid_generator.html
 
 # prompt image creation
-#### tasks
-- create image
-- add object in each cell
 
-#### Drawing style: 
-- Clean crayon sketch, dominant black pencil outlines, simple colors.
 
-#### technical
-- no text, no title, no number, erase grid guide, no label, delete all label, delete all grid, delete all line
-- white plain background
-- 5 x 5 cells, 1:1 image, 1:1 cells
-- topic (word=cell)
 
-#### words
 
-xxx
+
+**Prompt:** A 5x5 grid layout featuring 25 individual, sequential illustrations, arranged in a perfect square format. There are absolutely no grid lines separating the drawings, and no text, labels, words, or numbers anywhere on the image.
+**Drawing Style:** Clean crayon sketch with dominant black pencil outlines and simple, soft colors against a plain white background.
+**Content of the 25 panels (ordered left-to-right, top-to-bottom, containing ONLY illustrations and NO text and NO lines for separation):**
+
+
+
+
+
+
+
+
+
 
 # cmd create multiple folder with name list
 <!-- eg. Home, Office, Garden, Sister Mia, Sister Ana

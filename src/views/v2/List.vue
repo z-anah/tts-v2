@@ -80,6 +80,10 @@ function speak(target) {
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(utter)
 }
+function logAllEnglishWordsAndTitle() {
+  const englishWords = words.map(word => word.en).join(', ')
+  console.log(`Describe the visual in one sentence of each word. Give only the description, no labels. Add numbers.\nTitle:\n${title}\n\n#### Words:\n${englishWords}`)
+}
 
 function goBack() {
   router.back()
@@ -87,6 +91,7 @@ function goBack() {
 function goHome() {
   router.push({ name: 'V2Index', params: { lang } })
 }
+logAllEnglishWordsAndTitle()
 </script>
 
 <style scoped>
