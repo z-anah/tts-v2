@@ -20,8 +20,10 @@
                     <div v-else-if="currentWord.txt" class="word-txt">
                         {{ currentWord.txt }}
                     </div>
-                    <div class="word-ar">
-                        {{ currentWord[lang] }}
+                    <div class="ar-container">
+                        <div class="word-ar">
+                            {{ currentWord[lang] }}
+                        </div>
                     </div>
                 </div>
             </template>
@@ -167,12 +169,16 @@ watch(currentWord, (val) => {
 }
 
 .word-ar {
-    font-size: 2rem;
+    font-size: 0.7rem;
     font-weight: 600;
     color: #222;
     letter-spacing: 1px;
     margin-top: 8px;
     text-align: center;
+}
+
+.ar-container {
+  height: 2.5rem;
 }
 
 .done-msg {

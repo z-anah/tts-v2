@@ -19,18 +19,14 @@
       <Card class="word-card" @click="handleCardClick">
         <template #content>
           <div class="word-content">
-            <img
-              v-if="currentWord.img"
-              :src="'/tts-v2/' + topic.title + currentWord.img"
-              class="word-img"
-              alt=""
-              loading="lazy"
-              decoding="async"
-            />
+            <img v-if="currentWord.img" :src="'/tts-v2/' + topic.title + currentWord.img" class="word-img" alt=""
+              loading="lazy" decoding="async" />
             <span v-else-if="currentWord.emo" class="word-emo">{{ currentWord.emo }}</span>
             <span v-else-if="currentWord.txt" class="word-txt">{{ currentWord.txt }}</span>
           </div>
-          <div v-if="showAr" class="word-ar">{{ currentWord[lang] }}</div>
+          <div class="ar-container">
+            <div v-if="showAr" class="word-ar">{{ currentWord[lang] }}</div>
+          </div>
         </template>
       </Card>
       <div class="choice-buttons">
@@ -67,7 +63,7 @@ const router = useRouter()
 const lang = route.params.lang || 'arabic'
 const title = route.params.title
 
-const topics = lang === 'id' ? idTopics : arabicTopics
+const topics = lang === 'arabic' ? arabicTopics : idTopics
 const topic = topics.find(t => t.title === title)
 const words = topic?.words?.filter(w => w.img || w.emo || w.txt) || []
 
@@ -117,7 +113,25 @@ function nextWord() {
 function playAr() {
   if (currentWord.value && currentWord.value[lang]) {
     const utter = new window.SpeechSynthesisUtterance(currentWord.value[lang])
-    utter.lang = lang === 'id' ? 'id-ID' : 'ar-SA'
+
+    switch (lang) {
+      case 'id':
+        utter.lang = 'id-ID'
+        break
+      case 'fr':
+        utter.lang = 'fr-FR'
+        break
+      case 'mg':
+        utter.lang = 'mg-MG'
+        break
+      case 'en':
+        utter.lang = 'en-US'
+        break
+      case 'ar':
+        utter.lang = 'ar-SA'
+        break
+    }
+
     window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utter)
   }
@@ -156,25 +170,29 @@ function goHome() {
   justify-content: flex-end;
   background: #fff;
 }
+
 .spacer {
   flex: 1 1 auto;
 }
+
 .word-card {
   width: 100%;
   max-width: 360px;
   margin: 0 auto 24px auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   cursor: pointer;
   user-select: none;
   text-align: center;
 }
+
 .word-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 24px 0;
 }
+
 .word-img {
   max-width: 200px;
   max-height: 200px;
@@ -183,27 +201,36 @@ function goHome() {
   background: #f8f8f8;
   object-fit: contain;
 }
+
 .word-emo {
   font-size: 3rem;
   margin-bottom: 16px;
 }
+
 .word-txt {
   font-size: 2rem;
   margin-bottom: 16px;
   color: #555;
 }
+
 .word-ar {
-  font-size: 2.2rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #222;
   letter-spacing: 1px;
   margin-top: 8px;
   text-align: center;
 }
+
+.ar-container {
+  height: 2.5rem;
+}
+
 .done-msg {
   width: 100%;
   margin-bottom: 24px;
 }
+
 .choice-buttons {
   display: flex;
   flex-direction: column;
@@ -212,11 +239,13 @@ function goHome() {
   max-width: 360px;
   margin: 0 auto 16px auto;
 }
+
 .ar-reveal {
   width: 100%;
   max-width: 360px;
   margin: 0 auto 16px auto;
 }
+
 .ar-card {
   margin-top: 0.5rem;
 }

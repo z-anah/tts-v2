@@ -2,7 +2,7 @@
     <div class="lang-switch mb-5">
       <!-- column of buttons id, en, mg, ar, fr to switch languages -->
       <Button
-        v-for="language in ['id', 'en', 'mg', 'ar', 'fr']"
+        v-for="language in ['en', 'id', 'ar', 'fr', 'mg']"
         :key="language"
         :label="language"
         @click="switchLang(language)"
@@ -10,13 +10,6 @@
       />
 
     </div>
-
-    <Button
-      label="Listening Practice"
-      @click="goToListening"
-      severity="secondary"
-      class="mb-3 mt-3"
-    />
   <div class="topics-list">
     <Accordion>
       <AccordionTab
@@ -35,6 +28,14 @@
       </AccordionTab>
     </Accordion>
   </div>
+
+
+    <Button
+      label="Listening Practice"
+      @click="goToListening"
+      severity="secondary"
+      class="mb-3 mt-3"
+    />
 </template>
 
 <script setup>
